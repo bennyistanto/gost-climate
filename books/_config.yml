@@ -8,7 +8,7 @@
 # Book settings
 title: GOST Climate
 author: Benny Istanto
-logo: ./assets/wb_logo.jpeg
+logo: ./assets/wb_logo.png
 copyright: "2022"
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
@@ -85,6 +85,7 @@ html:
   comments:
     hypothesis: true
   extra_footer: ""
+  extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
 
 
 
@@ -93,14 +94,11 @@ html:
 sphinx:
   extra_extensions:
   # - sphinx_tabs.tabs
-  - sphinxext.opengraph
-  - sphinx_click.ext
-  - sphinx_panels
+  # - sphinxext.opengraph
+  # - sphinx_click.ext
+  # - sphinx_panels
   html_show_copyright: false
   config:
-    ogp_site_url: "https://bennyistanto.github.io/gost-climate/"
-    ogp_image: "https://bennyistanto.github.io/gost-climate/img/gost-global-spei12-20201201.png"
-    ogp_description_length: 200
     mathjax_config:
       TeX:
         Macros:

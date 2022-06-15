@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MODIS &#8212; GOST Climate</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TerraClimate" href="terraclimate.html" />
+    <link rel="prev" title="IMERG" href="imerg.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/wb_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   GOST Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  climate-indices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indices/cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indices/cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indices/dry.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indices/wet.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indices/spi.html">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indices/spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  case
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case/p176471-stp.html">
+   Drought intensity in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/data/modis.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bennyistanto/gost-climate"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Fdata/modis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bennyistanto/gost-climate/edit/main/books/data/modis.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mod11a1">
+   MOD11A1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#about-the-data">
+     About the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-datasets">
+     List datasets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#symbology">
+     Symbology
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-access">
+     Data access
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>MODIS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mod11a1">
+   MOD11A1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#about-the-data">
+     About the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-datasets">
+     List datasets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#symbology">
+     Symbology
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-access">
+     Data access
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="modis">
+<h1>MODIS<a class="headerlink" href="#modis" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://modis.gsfc.nasa.gov/about/">MODIS</a> (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the <a class="reference external" href="http://terra.nasa.gov/">Terra</a> (originally known as EOS AM-1) and <a class="reference external" href="http://aqua.nasa.gov/">Aqua</a> (originally known as EOS PM-1) satellites. Terra MODIS and Aqua MODIS are viewing the entire Earth’s surface every 1 to 2 days, acquiring data in 36 spectral bands, or groups of wavelengths (see MODIS Technical Specifications). These data will improve our understanding of global dynamics and processes occurring on the land, in the oceans, and in the lower atmosphere.</p>
+<p>There are so many MODIS products, complete list ara available here <a class="reference external" href="https://modis.gsfc.nasa.gov/data/dataprod/">https://modis.gsfc.nasa.gov/data/dataprod/</a></p>
+<div class="section" id="mod11a1">
+<h2>MOD11A1<a class="headerlink" href="#mod11a1" title="Permalink to this headline">¶</a></h2>
+<p>The MOD11A1 V6 product provides daily land surface temperature (LST) and emissivity values in a 1200 x 1200 kilometer grid. The temperature value is derived from the MOD11_L2 swath product. Above 30 degrees latitude, some pixels may have multiple observations where the criteria for clear-sky are met. When this occurs, the pixel value is the average of all qualifying observations. Provided along with both the day-time and night-time surface temperature bands and their quality indicator layers are MODIS bands 31 and 32 and six observation layers.</p>
+<div class="section" id="about-the-data">
+<h3>About the data<a class="headerlink" href="#about-the-data" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Characteristic</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Function</p></td>
+<td><p>Displays daily day and nighttime LST</p></td>
+</tr>
+<tr class="row-odd"><td><p>Variable</p></td>
+<td><p>Listed below</p></td>
+</tr>
+<tr class="row-even"><td><p>Geographic coverage</p></td>
+<td><p>Global 90N-90S, 180W-180E</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spatial resolution</p></td>
+<td><p>1-km at equator</p></td>
+</tr>
+<tr class="row-even"><td><p>Temporal resolution</p></td>
+<td><p>daily</p></td>
+</tr>
+<tr class="row-odd"><td><p>Original format</p></td>
+<td><p>HDF-EOS</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit</p></td>
+<td><p>See list below</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="list-datasets">
+<h3>List datasets<a class="headerlink" href="#list-datasets" title="Permalink to this headline">¶</a></h3>
+<p>We are utilising Google Earth Engine (<a class="reference external" href="https://earthengine.google.com">GEE</a>) to get <a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD11A1#bands">MOD11A1</a> data, and below are list of MOD11A1 bands that available at GEE.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Scale</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LST_Day_1km</span></code></p></td>
+<td><p>Daytime Land Surface Temperature</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Kelvin</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.02</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">QC_Day</span></code></p></td>
+<td><p>Daytime LST Quality Indicators</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Day_view_time</span></code></p></td>
+<td><p>Local time of day observation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Day_view_angle</span></code></p></td>
+<td><p>View zenith angle of day observation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Degrees</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LST_Night_1km</span></code></p></td>
+<td><p>Nighttime Land Surface Temperature</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Kelvin</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.02</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">QC_Night</span></code></p></td>
+<td><p>Nighttime LST Quality Indicators</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Night_view_time</span></code></p></td>
+<td><p>Local time of night observation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Night_view_angle</span></code></p></td>
+<td><p>View zenith angle of night observation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Degrees</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Emis_31</span></code></p></td>
+<td><p>Band 31 emissivity</p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.002</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Emis_32</span></code></p></td>
+<td><p>Band 32 emissivity</p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.002</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Clear_day_cov</span></code></p></td>
+<td><p>Day clear-sky coverage</p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.0005</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Clear_night_cov</span></code></p></td>
+<td><p>Night clear-sky coverage</p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.0005</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>We wrote a GEE <a class="reference external" href="https://code.earthengine.google.com/c8733dbad095ad6e5b259142e9d882e7">code</a> to get some variables that required by the team for different purposes. Currently we have data covering Indonesia and Latin America Countries, and the variables are listed below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variables</p></th>
+<th class="head"><p>Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Annual 24h mean LST</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">degC</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Annual daytime mean LST</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">degC</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Number of annual hotdays based on 24h mean daily LST</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">days</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Number of annual hotdays based on daytime daily LST</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">days</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="symbology">
+<h3>Symbology<a class="headerlink" href="#symbology" title="Permalink to this headline">¶</a></h3>
+<p>The threshold and the symbology for the <code class="docutils literal notranslate"><span class="pre">daily</span></code> land surface temperature in degree celcius (°C) can follow below colorcodes and image.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Class</p></th>
+<th class="head"><p>Hex</p></th>
+<th class="head"><p>RGB</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-40 and below</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#b2182b</span></code> <img alt="#b2182b" src="https://via.placeholder.com/15/b2182b/000000?text=+" /></p></td>
+<td><p>rgb(178, 24, 43)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-40 to -30</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#d6604d</span></code> <img alt="#d6604d" src="https://via.placeholder.com/15/d6604d/000000?text=+" /></p></td>
+<td><p>rgb(214, 96, 77)</p></td>
+</tr>
+<tr class="row-even"><td><p>-30 to -20</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#f4a582</span></code> <img alt="#f4a582" src="https://via.placeholder.com/15/f4a582/000000?text=+" /></p></td>
+<td><p>rgb(244, 165, 130)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-20 to -10</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#fddbc7</span></code> <img alt="#fddbc7" src="https://via.placeholder.com/15/fddbc7/000000?text=+" /></p></td>
+<td><p>rgb(253, 219, 199)</p></td>
+</tr>
+<tr class="row-even"><td><p>-10 to +10</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#f7f7f7</span></code> <img alt="#f7f7f7" src="https://via.placeholder.com/15/f7f7f7/000000?text=+" /></p></td>
+<td><p>rgb(247, 247, 247)</p></td>
+</tr>
+<tr class="row-odd"><td><p>+10 to +20</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#d1e5f0</span></code> <img alt="#d1e5f0" src="https://via.placeholder.com/15/d1e5f0/000000?text=+" /></p></td>
+<td><p>rgb(209, 229, 240)</p></td>
+</tr>
+<tr class="row-even"><td><p>+20 to +30</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#92c5de</span></code> <img alt="#92c5de" src="https://via.placeholder.com/15/92c5de/000000?text=+" /></p></td>
+<td><p>rgb(146, 197, 222)</p></td>
+</tr>
+<tr class="row-odd"><td><p>+30 to +40</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#4393c3</span></code> <img alt="#4393c3" src="https://via.placeholder.com/15/4393c3/000000?text=+" /></p></td>
+<td><p>rgb(67, 147, 195)</p></td>
+</tr>
+<tr class="row-even"><td><p>+40 and above</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#2166ac</span></code> <img alt="#2166ac" src="https://via.placeholder.com/15/2166ac/000000?text=+" /></p></td>
+<td><p>rgb(33, 102, 172)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="data-access">
+<h3>Data access<a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h3>
+<p>Annual temperature and hotdays also available at DEC S3: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate/data/modis/mod11a1/annual</span></code></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./data"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="imerg.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">IMERG</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="terraclimate.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">TerraClimate</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Benny Istanto<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

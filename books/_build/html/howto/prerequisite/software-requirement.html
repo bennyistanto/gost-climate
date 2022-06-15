@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Requirement &#8212; GOST Climate</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/wb_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   GOST Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data/chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data/chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data/imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data/modis.html">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data/terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  climate-indices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indices/cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indices/cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indices/dry.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indices/wet.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indices/spi.html">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indices/spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  case
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../case/p176471-stp.html">
+   Drought intensity in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/howto/prerequisite/software-requirement.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bennyistanto/gost-climate"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Fhowto/prerequisite/software-requirement.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bennyistanto/gost-climate/edit/main/books/howto/prerequisite/software-requirement.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#macos-linux">
+   macOS/Linux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-software-for-macos-linux">
+     Installing software for macOS/Linux
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#homebrew-and-other-package">
+       Homebrew and other package
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#panoply">
+       Panoply
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#anaconda">
+       Anaconda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#windows">
+   Windows
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enable-the-windows-subsytem-for-linux">
+     Enable the Windows Subsytem for Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-software-for-windows">
+     Installing software for Windows
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Homebrew and other package
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Panoply
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Anaconda
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#arcgis">
+       ArcGIS
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Software Requirement</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#macos-linux">
+   macOS/Linux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-software-for-macos-linux">
+     Installing software for macOS/Linux
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#homebrew-and-other-package">
+       Homebrew and other package
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#panoply">
+       Panoply
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#anaconda">
+       Anaconda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#windows">
+   Windows
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enable-the-windows-subsytem-for-linux">
+     Enable the Windows Subsytem for Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-software-for-windows">
+     Installing software for Windows
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Homebrew and other package
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Panoply
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Anaconda
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#arcgis">
+       ArcGIS
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="software-requirement">
+<h1>Software Requirement<a class="headerlink" href="#software-requirement" title="Permalink to this headline">¶</a></h1>
+<p>If you encounter a problem, please look for a online solution. The installation and configuration described below is mostly performed using a bash shell on macOS. Windows users will need to install and configure a bash shell in order to follow the usage shown below. Try to use <a class="reference external" href="#enable-the-windows-subsytem-for-linux">Windows Subsystem for Linux</a> for this purpose.</p>
+<div class="section" id="macos-linux">
+<h2>macOS/Linux<a class="headerlink" href="#macos-linux" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-software-for-macos-linux">
+<h3>Installing software for macOS/Linux<a class="headerlink" href="#installing-software-for-macos-linux" title="Permalink to this headline">¶</a></h3>
+<p>If you are new to using Bash refer to the following lessons with Software Carpentry: <a class="reference external" href="http://swcarpentry.github.io/shell-novice/">http://swcarpentry.github.io/shell-novice/</a></p>
+<div class="section" id="homebrew-and-other-package">
+<h4>Homebrew and other package<a class="headerlink" href="#homebrew-and-other-package" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>If you don’t have <a class="reference external" href="https://brew.sh"><strong>Homebrew</strong></a>, you can install it by pasting below code in your macOS/Linux terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">wget</span></code> (for downloading data). Use Hombrew to install it by pasting below code in your macOS terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install wget
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="panoply">
+<h4>Panoply<a class="headerlink" href="#panoply" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Download and install <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/">Panoply Data Viewer</a> from <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/download/">NASA GISS</a> on your machine for <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-4.12.2.dmg">macOS</a> or <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/download/PanoplyJ-4.12.2.zip">Linux</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="anaconda">
+<h4>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Download and install <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda Python</a> on your machine for <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2020.11-MacOSX-x86_64.pkg">macOS</a> or <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh">Linux</a>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enable-the-windows-subsytem-for-linux">
+<h3>Enable the Windows Subsytem for Linux<a class="headerlink" href="#enable-the-windows-subsytem-for-linux" title="Permalink to this headline">¶</a></h3>
+<p>If you are using Windows machine, it’s recomended to follow below step. You will experience an error during SPEI calculation cause by <code class="docutils literal notranslate"><span class="pre">NCO</span></code> if you use standard Windows 10 and not using Windows Subsytem for Linux.</p>
+<p>Guideline below are specific for Windows 10. If you are using Windows Server 2019, please follow <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-on-server">Windows Server Installation Guide</a></p>
+<p>Reference: <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a></p>
+<p>You must first enable the “Windows Subsystem for Linux - WSL” optional feature before installing any Linux distributions on Windows.</p>
+</div>
+<div class="section" id="installing-software-for-windows">
+<h3>Installing software for Windows<a class="headerlink" href="#installing-software-for-windows" title="Permalink to this headline">¶</a></h3>
+<p>If you have a Bash shell already installed on your Windows OS (e.g. Ubuntu Bash) you can use that for the exercise, but it must be a Bash shell</p>
+<p>If you are new to using Bash refer to the following lessons with Software Carpentry: <a class="reference external" href="http://swcarpentry.github.io/shell-novice/">http://swcarpentry.github.io/shell-novice/</a></p>
+<div class="section" id="id1">
+<h4>Homebrew and other package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>If you don’t have <a class="reference external" href="https://brew.sh">Homebrew</a>, you can install it by pasting below code in your WSL Ubuntu terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">wget</span></code> (for downloading data). Use Hombrew to install it by pasting below code in your WSL Ubuntu  terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install wget
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h4>Panoply<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Download and install <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/">Panoply Data Viewer</a> from <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/download/">NASA GISS</a> on your machine: <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/download/PanoplyWin-4.12.2.zip">Windows</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h4>Anaconda<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Download and install <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda Python</a> on your WSL Ubuntu Linux: <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh">Ubuntu Linux on WSL</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">climate-indices</span></code> python package used for SPEI calculation is rely on <a class="reference external" href="http://nco.sourceforge.net"><strong>netCDF Operator (NCO)</strong></a> and pyNCO wrapper sometimes produce an error in Windows. That’s the reason why we will use Anaconda for Linux if you are using Windows machine.</p>
+</li>
+<li><p>Go to <a class="reference external" href="https://repo.anaconda.com/archive/">https://repo.anaconda.com/archive/</a> to find the list of Anaconda releases</p></li>
+<li><p>Select the release you want. I have a 64-bit computer, so I chose the latest release ending in <code class="docutils literal notranslate"><span class="pre">x86_64.sh</span></code>. If I had a 32-bit computer, I’d select the <code class="docutils literal notranslate"><span class="pre">x86.sh</span></code> version. If you accidentally try to install the wrong one, you’ll get a warning in the terminal. I chose <code class="docutils literal notranslate"><span class="pre">Anaconda3-2020.11-Linux-x86_64.sh</span></code>.</p></li>
+<li><p>From the terminal run <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">https://repo.anaconda.com/archive/[YOUR</span> <span class="pre">VERSION]</span></code>. Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+</pre></div>
+</div>
+</li>
+<li><p>After download process completed, Run the installation script: <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">Anaconda[YOUR</span> <span class="pre">VERSION].sh</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash Anaconda3-2020.11-Linux-x86_64.sh
+</pre></div>
+</div>
+</li>
+<li><p>Read the license agreement and follow the prompts to press Return/Enter to accept. Later will follow with question on accept the license terms, type <code class="docutils literal notranslate"><span class="pre">yes</span></code> and Enter. When asks you if you’d like the installer to prepend it to the path, press Return/Enter to confirm the location. Last question will be about initialize Anaconda3, type <code class="docutils literal notranslate"><span class="pre">yes</span></code> then Enter.</p></li>
+<li><p>Close the terminal and reopen it to reload .bash configs. It will automatically activate <code class="docutils literal notranslate"><span class="pre">base</span></code> environment.</p></li>
+<li><p>Deactivate <code class="docutils literal notranslate"><span class="pre">base</span></code> environment then set to <code class="docutils literal notranslate"><span class="pre">false</span></code> the confirguration of auto activate the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment by typing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda deactivate <span class="o">&amp;&amp;</span> conda config --set auto_activate_base <span class="nb">false</span>
+</pre></div>
+</div>
+</li>
+<li><p>To test that it worked, <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code> in your Terminal. It should print a path that has anaconda in it. Mine is <code class="docutils literal notranslate"><span class="pre">/home/gost/anaconda3/bin/python</span></code>. If it doesn’t have anaconda in the path, do the next step.</p></li>
+<li><p>Manually add the Anaconda bin folder to your PATH. To do this, I added <code class="docutils literal notranslate"><span class="pre">&quot;export</span> <span class="pre">PATH=/home/gost/anaconda3/bin:$PATH&quot;</span></code> to the bottom of my <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file.</p></li>
+<li><p>Optionally install <a class="reference external" href="https://code.visualstudio.com"><strong>Visual Studio Code</strong></a> when prompted</p></li>
+</ul>
+</div>
+<div class="section" id="arcgis">
+<h4>ArcGIS<a class="headerlink" href="#arcgis" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Some analysis also required <code class="docutils literal notranslate"><span class="pre">arcpy</span></code> python package, so you also required to install ArcGIS Desktop or Pro. Follow this giudeline for the Desktop <a class="reference external" href="https://desktop.arcgis.com/en/arcmap/latest/get-started/installation-guide/introduction.htm">https://desktop.arcgis.com/en/arcmap/latest/get-started/installation-guide/introduction.htm#</a> and Pro <a class="reference external" href="https://pro.arcgis.com/en/pro-app/latest/get-started/install-and-sign-in-to-arcgis-pro.htm">https://pro.arcgis.com/en/pro-app/latest/get-started/install-and-sign-in-to-arcgis-pro.htm</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./howto/prerequisite"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Benny Istanto<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

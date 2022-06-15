@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOST Climate &#8212; GOST Climate</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CHELSA" href="data/chelsa.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/wb_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   GOST Climate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data/chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data/chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data/imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data/modis.html">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data/terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  climate-indices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/dry.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/wet.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/spi.html">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  case
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="case/p176471-stp.html">
+   Drought intensity in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/bennyistanto/gost-climate"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/bennyistanto/gost-climate/edit/main/books/intro.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#climate-indices">
+     Climate Indices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-guides">
+     How-to guides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case">
+     Case
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-to-find">
+   Where to find?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aws-s3">
+     AWS S3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#development-data-hub">
+     Development Data Hub
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disclaimer">
+   Disclaimer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help">
+   Help
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>GOST Climate</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#climate-indices">
+     Climate Indices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-guides">
+     How-to guides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case">
+     Case
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-to-find">
+   Where to find?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aws-s3">
+     AWS S3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#development-data-hub">
+     Development Data Hub
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disclaimer">
+   Disclaimer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help">
+   Help
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="gost-climate">
+<h1>GOST Climate<a class="headerlink" href="#gost-climate" title="Permalink to this headline">¶</a></h1>
+<p>This is the climate analytics repository from the <strong>Global Operational Support Team</strong> (<a class="reference external" href="https://www.worldbank.org/en/research/brief/geospatial-operations-support-team-at-the-world-bank">GOST</a>).</p>
+<hr class="docutils" />
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<p>This section describes in detail list of data provider, derived products, step-by-step to do the analysis and some example of use case of the data, to meet the user requirements of the GOST team of the World Bank at country, regional and global level.</p>
+<p>Currently, GOST Climate contains:</p>
+<div class="section" id="data">
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
+<p>The climate are varies by location and by time of year. Daily and monthly rainfall, daily and monthly temperature and potential evapotranspiration are a few of the many datasets from various data providers.</p>
+</div>
+<div class="section" id="climate-indices">
+<h3>Climate Indices<a class="headerlink" href="#climate-indices" title="Permalink to this headline">¶</a></h3>
+<p>A climate index is here defined as a calculated value that can be used to describe the state and the changes in the climate system. Climate indices allow a statistical study of variations of the dependent climatological aspects, such as analysis and comparison of time series, means, extremes and trends.</p>
+</div>
+<div class="section" id="how-to-guides">
+<h3>How-to guides<a class="headerlink" href="#how-to-guides" title="Permalink to this headline">¶</a></h3>
+<p>You will find step-by-step guideline to calculate climate indices, and can try different (data source and format) approach in How-to? section.</p>
+</div>
+<div class="section" id="case">
+<h3>Case<a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h3>
+<p>Example of use case from the WBG project.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="where-to-find">
+<h2>Where to find?<a class="headerlink" href="#where-to-find" title="Permalink to this headline">¶</a></h2>
+<p>You can access the data via <a class="reference external" href="https://aws.amazon.com/s3/">AWS S3</a> and soon at Development Data Hub (<a class="reference external" href="https://datacatalog.worldbank.org/home">DDH</a>)</p>
+<div class="section" id="aws-s3">
+<h3>AWS S3<a class="headerlink" href="#aws-s3" title="Permalink to this headline">¶</a></h3>
+<p>All the data and derivative product are located at DEC S3 bucket: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate</span></code> with below structure</p>
+<p>??? info “Folder structure”
+<code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">├──</span> <span class="pre">data</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Data</span> <span class="pre">folder</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">chelsa</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">original</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc-precip</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc-tmax</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc-tmean</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc-tmin</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">global</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">lac</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">chirps</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">monthly</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">geotiff</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">imerg</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">geotiff</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">rainfall_1days</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">rainfall_1days_annual_max</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">rainfall_1days_monthly_max</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">rainfall_annual</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">rainfall_monthly</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">rainfall_monthly_statistics</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">modis</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">mod11a1</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">annual</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">hotdays_from_lst_24h_mean</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">hotdays_from_lst_day_mean</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">lst_24h_mean</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">lst_day_mean</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">terraclimate</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">aet</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">climatologies</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">def</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">layers</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">pdsi</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">pet</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">plus2c</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">plus4c</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">ppt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">q</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">soil</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">srad</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">summaries</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">swe</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">tas</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">tmax</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">tmin</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">vap</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">vpd</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">ws</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">├──</span> <span class="pre">products</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Producst</span> <span class="pre">folder</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">cdd-imerg</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">cdd_1mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">cdd_5mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">cwd-imerg</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">cwd_1mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">cwd_5mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">drydays-imerg</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">drydays_1mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">drydays_5mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spei-terraclimate</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">geotiff</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spei12</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spei12-derivative-product</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">consecutive_dry_month</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">consecutive_dry_month_max</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">dry_month</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">dry_month_total</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi-chirps</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">geotiff</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi01</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi02</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi03</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi06</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi09</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi12</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi24</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi36</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi48</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi60</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">spi72</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">nc</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">wetdays-imerg</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">wetdays_1mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">wetdays_5mm</span>&#160;&#160;&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">│</span>&#160;&#160; <span class="pre">├──</span> <span class="pre">README.txt</span>&#160;&#160;&#160; </code></p>
+</div>
+<div class="section" id="development-data-hub">
+<h3>Development Data Hub<a class="headerlink" href="#development-data-hub" title="Permalink to this headline">¶</a></h3>
+<p>Currently we are still working on it, hope the data available at DDH soon. Stay tune!</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="disclaimer">
+<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
+<p>The data, climate derivative product and code available in this repository may produce results containing geographic information with limitations due to the scale, resolution, date and interpretation of the original source materials. No liability concerning the content or the use thereof is assumed by the producer.</p>
+</div>
+<div class="section" id="help">
+<h2>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>This documentation is created and maintained by the GOST team. You can help us improve this guide by simply sending your feedback or by contributing directly to it via <a class="reference external" href="http://github.com/bennyistanto/gost-climate">Github</a>.</p>
+<p>For further information about this documentation, please contact:</p>
+<p><strong>The Global Operational Support Team</strong><br>
+Data Analytics and Tools, DEC Data Group<br>
+The World Bank<br></p>
+<img src="./img/WBG_Horizontal-RGB-web.png" width="150">
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="data/chelsa.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CHELSA</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Benny Istanto<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
