@@ -20,7 +20,6 @@ only_build_toc_files: false
 #######################################################################################
 # Parse and render settings
 parse:
-  myst_extended_syntax: true
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
     # - amsmath
     - colon_fence
@@ -93,7 +92,7 @@ html:
 # Advanced and power-user settings
 sphinx:
   extra_extensions:
-  - sphinx_tabs.tabs
+  # - sphinx_tabs.tabs
   - sphinxext.opengraph
   - sphinx_click.ext
   - sphinx_panels
