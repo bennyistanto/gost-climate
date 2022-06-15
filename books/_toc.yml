@@ -1,0 +1,40 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro
+
+- part: data
+  chapters:
+  - file: data/chelsa
+  - file: data/chirps
+  - file: data/imerg
+  - file: data/modis
+  - file: data/terraclimate
+
+- part: climate-indices
+  chapters:
+  - file: indices/cdd
+  - file: indices/cwd
+  - file: indices/dry
+  - file: indices/wet
+  - file: indices/spi
+  - file: indices/spei
+
+- part: how-to
+  chapters:
+  - file: howto/prerequisite
+    expand_sections: true
+    sections: 
+    - file: howto/prerequisite/overview
+    - file: howto/prerequisite/software-requirement
+    - file: howto/prerequisite/python-env
+  - file: howto/topic
+    expand_sections: true
+    sections: 
+    - file: howto/topic/spei-terraclimate
+
+- part: case
+  chapters:
+  - file: case/p176471-stp
+  - file: case/p177249-sdflagship
+  - file: case/p177566-ssd

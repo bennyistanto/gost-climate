@@ -1,0 +1,114 @@
+#######################################################################################
+# A default configuration that will be loaded for all jupyter books
+# Users are expected to override these values in their own `_config.yml` file.
+# This is also the "master list" of all allowed keys and values.
+
+#######################################################################################
+# Learn more at https://jupyterbook.org/customize/config.html
+# Book settings
+title: GOST Climate
+author: Benny Istanto
+logo: ./assets/wb_logo.jpeg
+copyright: "2022"
+# Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+# Auto-exclude files not in the toc
+only_build_toc_files: false
+
+
+
+#######################################################################################
+# Parse and render settings
+parse:
+  myst_extended_syntax: true
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    # - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+  myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
+  myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
+
+
+
+#######################################################################################
+# Execution settings
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: off # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+
+
+
+#######################################################################################
+# Launch button settings
+launch_buttons:
+  notebook_interface: classic  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url: https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url: ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebe: false  # Add a thebe button to pages (requires the repository to run on Binder)
+  colab_url: https://colab.research.google.com # The URL of Google Colab (https://colab.research.google.com)
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/bennyistanto/gost-climate  # Online location of your book
+  path_to_book: books  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+
+
+#######################################################################################
+# HTML-specific settings
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  favicon: ./assets/favicon.png # A path to a favicon image
+  use_issues_button: true # Whether to add an "open an issue" button
+  use_repository_button: true # Whether to add a link to your repository button
+  home_page_in_navbar: true # Whether to include your home page in the left Navigation Bar
+  use_edit_page_button: true # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_multitoc_numbering: true # Continuous numbering across parts/chapters
+  google_analytics_id: G-GRNV20PEN1 # A GA id that can be used to track book views.
+  comments:
+    hypothesis: true
+  extra_footer: ""
+
+
+
+#######################################################################################
+# Advanced and power-user settings
+sphinx:
+  extra_extensions:
+  - sphinx_tabs.tabs
+  - sphinxext.opengraph
+  - sphinx_click.ext
+  - sphinx_panels
+  html_show_copyright: false
+  config:
+    ogp_site_url: "https://bennyistanto.github.io/gost-climate/"
+    ogp_image: "https://bennyistanto.github.io/gost-climate/img/gost-global-spei12-20201201.png"
+    ogp_description_length: 200
+    mathjax_config:
+      TeX:
+        Macros:
+          "N": "\\mathbb{N}"
+          "indep": "{\\perp\\kern-5pt\\perp}"
+          "floor": ["\\lfloor#1\\rfloor", 1]
+          "bmat": ["\\left[\\begin{array}"]
+          "emat": ["\\end{array}\\right]"]
+          "bered": ["\\color{#DC2830}{#1}",1]
+          "ecol": ["}}"]
