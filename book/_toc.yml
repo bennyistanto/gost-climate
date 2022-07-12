@@ -1,0 +1,54 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: DATA
+    chapters:
+    - file: data/chelsa
+    - file: data/chirps
+    - file: data/imerg
+    - file: data/modis
+    - file: data/terraclimate
+
+  - caption: CLIMATE-INDICES
+    chapters:
+    - file: indices/cdd
+    - file: indices/cwd
+    - file: indices/dry
+    - file: indices/wet
+    - file: indices/spi
+    - file: indices/spei
+
+  - caption: HOW-TO
+    chapters:
+    - file: howto/prerequisite
+      # expand_sections: true
+      sections: 
+      - file: howto/prerequisite/software-requirement
+      - file: howto/prerequisite/python-env
+    - file: howto/topic
+      # expand_sections: true
+      sections: 
+      - file: howto/topic/precipitation-index
+        # expand_sections: true
+        sections: 
+        - file: howto/topic/precipitation-index/background
+        - file: howto/topic/precipitation-index/input-preparation
+          # expand_sections: true
+          sections: 
+          - file: howto/topic/precipitation-index/working-directory
+          - file: howto/topic/precipitation-index/input-data-and-specification
+          - file: howto/topic/precipitation-index/monthly-imerg-netcdf
+          - file: howto/topic/precipitation-index/monthly-chirps-geotiff
+          - file: howto/topic/precipitation-index/monthly-chirps-netcdf
+          - file: howto/topic/precipitation-index/monthly-terraclimate-netcdf
+        - file: howto/topic/precipitation-index/index-calculation
+        - file: howto/topic/precipitation-index/example-output
+
+  - caption: CASE
+    chapters:
+    - file: case/p176471-stp
+    - file: case/p177249-sdflagship
+    - file: case/p177566-ssd

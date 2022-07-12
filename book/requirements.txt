@@ -1,0 +1,11 @@
+jupyter-book
+matplotlib
+numpy
+scipy
+nco
+netcdf4
+gdal
+xarray
+ghp-import
+sphinx-inline-tabs
+pyppeteer
