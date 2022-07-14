@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Index calculation &#8212; GOST Climate</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/wb_logo_large.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    GOST Climate
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/modis.html">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CLIMATE-INDICES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/dry.html">
+   Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/wet.html">
+   Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spi.html">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p176471-stp.html">
+   Drought in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Fhowto/topic/precipitation-index/index-calculation.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/edit/main/book/howto/topic/precipitation-index/index-calculation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/howto/topic/precipitation-index/index-calculation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spi">
+   SPI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spei">
+   SPEI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output-translation">
+   Output translation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-processing">
+   Time processing
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Index calculation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spi">
+   SPI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spei">
+   SPEI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output-translation">
+   Output translation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-processing">
+   Time processing
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="index-calculation">
+<h1>Index calculation<a class="headerlink" href="#index-calculation" title="Permalink to this headline">#</a></h1>
+<p>Before starting the calculatio, please make sure below points:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> You are still inside <code class="docutils literal notranslate"><span class="pre">climate_indices</span></code> environment to start working on SPI/SPEI calculation.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Variable name on precipitation <code class="docutils literal notranslate"><span class="pre">--var_name_precip</span></code>, usually TerraClimate data use <code class="docutils literal notranslate"><span class="pre">ppt</span></code> as name while other precipitation data like CHIRPS using <code class="docutils literal notranslate"><span class="pre">precip</span></code> and IMERG using <code class="docutils literal notranslate"><span class="pre">precipitation</span></code> as a variable name. To make sure, check using command <code class="docutils literal notranslate"><span class="pre">ncdump</span> <span class="pre">-h</span> <span class="pre">file.nc</span></code> then adjust it (along with folder location, input and output filenames) in SPI/SPEI script if needed.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Variable name on potential evapotranspiration <code class="docutils literal notranslate"><span class="pre">--var_name_pet</span></code>, usually TerraClimate data use <code class="docutils literal notranslate"><span class="pre">pet</span></code> as name.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Precipitation and potential evapotranspiration unit must be written as <code class="docutils literal notranslate"><span class="pre">millimeters</span></code>, <code class="docutils literal notranslate"><span class="pre">milimeter</span></code>, <code class="docutils literal notranslate"><span class="pre">mm</span></code>, <code class="docutils literal notranslate"><span class="pre">inches</span></code>, <code class="docutils literal notranslate"><span class="pre">inch</span></code> or <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Data dimension and order must be written as <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code> (Windows machine required this order) or <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code> (Works tested on Mac/Linux and Linux running on WSL).</p></li>
+</ul>
+<p>Let’s start the calculation!</p>
+<section id="spi">
+<h2>SPI<a class="headerlink" href="#spi" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>In order to pre-compute fitting parameters for later use as inputs to subsequent SPI calculations, I can save both gamma and Pearson distribution fitting parameters to NetCDF, and later use this file as input for SPI calculations over the same calibration period.</p></li>
+<li><p>In your Terminal, run the following code then parallelization will occur utilizing all CPUs.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spi --periodicity monthly --scales <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">6</span> <span class="m">9</span> <span class="m">12</span> <span class="m">24</span> <span class="m">36</span> <span class="m">48</span> <span class="m">60</span> <span class="m">72</span> --calibration_start_year <span class="m">2000</span> --calibration_end_year <span class="m">2020</span> --netcdf_precip /input_nc/java_cli_imerg_1months_2000_2020.nc --var_name_precip precipitation --output_file_base /output_nc/spi_imerg/java_IMERG --multiprocessing all --save_params /fitting/java_IMERG_fitting.nc --overwrite
+</pre></div>
+</div>
+</li>
+<li><p>If you does not have plan to save the fitting parameters, you can run the following code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>process_climate_indices --index spi --periodicity monthly --scales <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">6</span> <span class="m">9</span> <span class="m">12</span> <span class="m">24</span> <span class="m">36</span> <span class="m">48</span> <span class="m">60</span> <span class="m">72</span> --calibration_start_year <span class="m">2000</span> --calibration_end_year <span class="m">2020</span> --netcdf_precip /input_nc/java_cli_imerg_1months_2000_2020.nc --var_name_precip precipitation --output_file_base /output_nc/spi_imerg/java_IMERG --multiprocessing all
+</pre></div>
+</div>
+</li>
+<li><p>Above code is example for calculating SPI 1 to 72-months. It’s ok if you think you only need some of them. Example: you are interested to calculate SPI 1 - 3-months, then adjust above code into <code class="docutils literal notranslate"><span class="pre">--scales</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span></code></p></li>
+<li><p>The above command will compute SPI (both gamma and Pearson Type III distributions) from an input precipitation dataset (in this case, IMERG precipitation dataset). The input dataset is monthly rainfall accumulation data and the calibration period used will be Jun-2000 through Dec-2020. The index will be computed at <code class="docutils literal notranslate"><span class="pre">1</span></code>,<code class="docutils literal notranslate"><span class="pre">2</span></code>,<code class="docutils literal notranslate"><span class="pre">3</span></code>,<code class="docutils literal notranslate"><span class="pre">6</span></code>,<code class="docutils literal notranslate"><span class="pre">9</span></code>,<code class="docutils literal notranslate"><span class="pre">12</span></code>,<code class="docutils literal notranslate"><span class="pre">24</span></code>,<code class="docutils literal notranslate"><span class="pre">36</span></code>,<code class="docutils literal notranslate"><span class="pre">48</span></code>,<code class="docutils literal notranslate"><span class="pre">60</span></code> and <code class="docutils literal notranslate"><span class="pre">72-month</span></code> timescales. The output files will be <code class="docutils literal notranslate"><span class="pre">&lt;out_dir&gt;/java_IMERG_spi_gamma_xx.nc</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;out_dir&gt;/java_IMERG_spi_pearson_xx.nc</span></code>.</p>
+<p>The output files will be:</p>
+<p>Gamma</p>
+<ol class="simple">
+<li><p>1-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_1_month.nc</span></code></br></p></li>
+<li><p>2-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_2_month.nc</span></code></br></p></li>
+<li><p>3-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_3_month.nc</span></code></br></p></li>
+<li><p>6-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_6_month.nc</span></code></br></p></li>
+<li><p>9-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_9_month.nc</span></code></br></p></li>
+<li><p>12-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_12_month.nc</span></code></br></p></li>
+<li><p>24-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_24_month.nc</span></code></br></p></li>
+<li><p>36-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_36_month.nc</span></code></br></p></li>
+<li><p>48-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_48_month.nc</span></code></br></p></li>
+<li><p>60-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_60_month.nc</span></code></br></p></li>
+<li><p>72-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_gamma_72_month.nc</span></code></br></p></li>
+</ol>
+<p>Pearson</p>
+<ol class="simple">
+<li><p>1-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_1_month.nc</span></code></br></p></li>
+<li><p>2-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_2_month.nc</span></code></br></p></li>
+<li><p>3-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_3_month.nc</span></code></br></p></li>
+<li><p>6-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_6_month.nc</span></code></br></p></li>
+<li><p>9-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_9_month.nc</span></code></br></p></li>
+<li><p>12-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_12_month.nc</span></code></br></p></li>
+<li><p>24-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_24_month.nc</span></code></br></p></li>
+<li><p>36-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_36_month.nc</span></code></br></p></li>
+<li><p>48-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_48_month.nc</span></code></br></p></li>
+<li><p>60-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_60_month.nc</span></code></br></p></li>
+<li><p>72-month: <code class="docutils literal notranslate"><span class="pre">/output_nc/spi_imerg/java_IMERG_spi_pearson_72_month.nc</span></code></br></p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="spei">
+<h2>SPEI<a class="headerlink" href="#spei" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>In your Terminal, run the following code then parallelization will occur utilizing all CPUs.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>process_climate_indices --index spei --periodicity monthly --netcdf_precip /downloads/terraclimate/ppt/nc_merge/stp_cli_terraclimate_ppt_1958_2020.nc --var_name_precip ppt --netcdf_pet /downloads/terraclimate/pet/nc_merge/stp_cli_terraclimate_pet_1958_2020.nc --var_name_pet pet --output_file_base /Users/gost/temp/terraclimate/spei/output/nc_original/spt_cli_spei --scales <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">6</span> <span class="m">9</span> <span class="m">12</span> <span class="m">18</span> <span class="m">24</span> <span class="m">36</span> <span class="m">48</span> <span class="m">60</span> <span class="m">72</span> --calibration_start_year <span class="m">1958</span> --calibration_end_year <span class="m">2020</span> --multiprocessing all
+</pre></div>
+</div>
+</li>
+<li><p>Above code is example for calculating SPEI 1 to 72-months. It’s ok if you think you only need some of them. Example: you are interested to calculate SPEI 1 - 3-months or SPEI 12-months, then adjust above code into <code class="docutils literal notranslate"><span class="pre">--scales</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">--scales</span> <span class="pre">12</span></code>.</p></li>
+<li><p>The above command will compute SPEI (both gamma and Pearson Type III distributions) from monthly precipitation dataset and potential evapotranspiration, and the calibration period used will be Jan-1958 through Dec-2020. The index will be computed at <code class="docutils literal notranslate"><span class="pre">1</span></code>,<code class="docutils literal notranslate"><span class="pre">2</span></code>,<code class="docutils literal notranslate"><span class="pre">3</span></code>,<code class="docutils literal notranslate"><span class="pre">6</span></code>,<code class="docutils literal notranslate"><span class="pre">9</span></code>,<code class="docutils literal notranslate"><span class="pre">12</span></code>,<code class="docutils literal notranslate"><span class="pre">18</span></code>,<code class="docutils literal notranslate"><span class="pre">24</span></code>,<code class="docutils literal notranslate"><span class="pre">36</span></code>,<code class="docutils literal notranslate"><span class="pre">48</span></code>,<code class="docutils literal notranslate"><span class="pre">60</span></code> and <code class="docutils literal notranslate"><span class="pre">72-month</span></code> timescales. The output files will be &lt;<code class="docutils literal notranslate"><span class="pre">out_dir&gt;/stp_cli_spei_gamma_xx.nc</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;out_dir&gt;/stp_cli_spei_pearson_xx.nc</span></code>.</p>
+<p>The output files will be:</p>
+<p>Gamma</p>
+<ol class="simple">
+<li><p>1-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_01.nc</span></code></br></p></li>
+<li><p>2-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_02.nc</span></code></br></p></li>
+<li><p>3-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_03.nc</span></code></br></p></li>
+<li><p>6-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_06.nc</span></code></br></p></li>
+<li><p>9-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_09.nc</span></code></br></p></li>
+<li><p>12-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_12.nc</span></code></br></p></li>
+<li><p>18-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_18.nc</span></code></br></p></li>
+<li><p>24-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_24.nc</span></code></br></p></li>
+<li><p>36-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_36.nc</span></code></br></p></li>
+<li><p>48-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_48.nc</span></code></br></p></li>
+<li><p>60-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_60.nc</span></code></br></p></li>
+<li><p>72-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_gamma_72.nc</span></code></br></p></li>
+</ol>
+<p>Pearson</p>
+<ol class="simple">
+<li><p>1-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_01.nc</span></code></br></p></li>
+<li><p>2-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_02.nc</span></code></br></p></li>
+<li><p>3-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_03.nc</span></code></br></p></li>
+<li><p>6-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_06.nc</span></code></br></p></li>
+<li><p>9-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_09.nc</span></code></br></p></li>
+<li><p>12-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_12.nc</span></code></br></p></li>
+<li><p>18-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_18.nc</span></code></br></p></li>
+<li><p>24-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_24.nc</span></code></br></p></li>
+<li><p>36-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_36.nc</span></code></br></p></li>
+<li><p>48-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_48.nc</span></code></br></p></li>
+<li><p>60-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_60.nc</span></code></br></p></li>
+<li><p>72-month: <code class="docutils literal notranslate"><span class="pre">/output/nc_original/stp_cli_spei_pearson_72.nc</span></code></br></p></li>
+</ol>
+</li>
+</ul>
+<p>When the SPEI calculation completed, move arrange all the output by moving SPEI files with gamma to <code class="docutils literal notranslate"><span class="pre">gamma</span></code>folder and with pearson to <code class="docutils literal notranslate"><span class="pre">pearson</span></code> folder.</p>
+</section>
+<section id="output-translation">
+<h2>Output translation<a class="headerlink" href="#output-translation" title="Permalink to this headline">#</a></h2>
+<p>For the translation to GeoTIFF as a final output, we will use gamma version.</p>
+</section>
+<section id="time-processing">
+<h2>Time processing<a class="headerlink" href="#time-processing" title="Permalink to this headline">#</a></h2>
+<p>For small area of interest, the calculation will fast and don’t take much time. Monthly IMERG data, global coverage 180W - 180E, 60N - 60S, 0.1 deg spatial resolution, it takes almost 9-hours to process SPI 1-72 months.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "bennyistanto/gost-climate",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./howto/topic/precipitation-index"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Benny Istanto<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

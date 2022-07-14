@@ -25,15 +25,15 @@ parse:
     - colon_fence
     - deflist
     - dollarmath
-    - fieldlist
     - html_admonition
     - html_image
     - linkify
     - replacements
     - smartquotes
-    - strikethrough
     - substitution
     - tasklist
+    #- fieldlist
+    #- strikethrough
   myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
   myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
 
@@ -101,7 +101,7 @@ sphinx:
   
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    mathjax_config:
+    mathjax3_config:
       TeX:
         Macros:
           "N": "\\mathbb{N}"
