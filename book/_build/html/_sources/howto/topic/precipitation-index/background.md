@@ -1,4 +1,4 @@
-# Precipitation Index
+# Background
 
 The Standardized Precipitation Index ([SPI](https://library.wmo.int/doc_num.php?explnum_id=7768)) is a drought index first developed by T. B. McKee, N.J. Doesken, and J. Kleist and in 1993 ([McKee et al. 1993](https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#McKee1993)). The SPI is used for estimating wet or dry condition based on `precipitation` variable. This wet or dry condition can be monitored by the SPI on a variety of time scales from subseasonal to interannual scales. 
 
