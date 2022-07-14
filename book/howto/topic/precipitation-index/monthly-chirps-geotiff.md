@@ -23,7 +23,7 @@ This section will explain on how to download CHIRPS [monthly data in GeoTIFF](ht
 gunzip *.gz
 ```
 
-![CHIRPS gunzip](../../../img/pi-chirps-tif-cgunzip.png)
+![CHIRPS gunzip](../../../img/pi-chirps-tif-gunzip.png)
 
 ## Extract data based on area of interest
 
@@ -224,7 +224,7 @@ You MUST adjust the folder location (replace `/path/to/directory/` with yours, e
 
     Make sure the file `java_cli_chirps_1months_1981_2020.nc` is available at `input_nc` folder
 
-    ![CHIRPS inputnc](../../../img/chirps-inputnc.png)
+    ![CHIRPS inputnc](../../../img/pi-chirps-tif-inputnc.png)
 
 
 * You also can get this data: `java_cli_chirps_1months_1981_2020.nc` via this link [https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc](https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc)

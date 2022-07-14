@@ -2,7 +2,7 @@
 
 The Temperature Condition Index (VCI) compares the current Land Surface Temperature (LST) to the range of values observed in the same period in previous years. The TCI is expressed in % and gives an idea where the observed value is situated between the extreme values (minimum and maximum) in the previous years. TCI used to determine stress on vegetation caused by temperatures and excessive wetness. Conditions are estimated relative to the maximum and minimum temperatures and modified to reflect different vegetation responses to temperature.
 
-### How it works
+**How it works**
 
 The TCI is calculated using the equation, 
 
@@ -16,7 +16,7 @@ where:
 
 LST max and min derived from MODIS data
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -28,6 +28,6 @@ LST max and min derived from MODIS data
 | Format  | GeoTIFF  |
 | Unit  | Percent (%)  |
 
-### Data access
+**Data access**
 
 Global TCI data available at DEC S3: 

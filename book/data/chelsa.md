@@ -3,7 +3,7 @@
 [CHELSA](https://chelsa-climate.org) (Climatologies at high resolution for the earth’s land surface areas) is a very high resolution (`30 arcsec`, `~1km`) global downscaled climate data set currently hosted by the Swiss Federal Institute for Forest, Snow and Landscape Research WSL. It is built to provide free access to high resolution climate data for research and application, and is constantly updated and refined.
 
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -16,11 +16,11 @@
 | Unit  | See list below  |
 
 
-### List datasets
+**List datasets**
 
 CHELSA provides `daily timeseries`, `monthly timeseries`,  `Bioclimate/Köppen-Geiger`, `Future` and `Paleo Climate` data. To support current project, GOST utilise daily timeseries temperature data from CHELSA-W5E5.
 
-#### CHELSA-W5E5 v1.0
+**CHELSA-W5E5 v1.0**
 
 [CHELSA-W5E5](https://chelsa-climate.org/chelsa-w5e5-v1-0-daily-climate-data-at-1km-resolution/) dataset covers the entire globe at `30 arcsec` horizontal and daily temporal resolution from 1979 to 2016. Variables (with short names and units in brackets) included in the CHELSA-W5E5 dataset are:
 
@@ -37,7 +37,7 @@ CHELSA provides `daily timeseries`, `monthly timeseries`,  `Bioclimate/Köppen-G
 ![chelsa](../img/data-chelsa.png)
 
 
-### Data access
+**Data access**
 
 Individual monthly download link: [https://data.isimip.org/10.48364/ISIMIP.836809](https://data.isimip.org/10.48364/ISIMIP.836809)
 

@@ -10,7 +10,7 @@ Negative SPEI values represent rainfall deficit and less than median precipitati
 
 SPEI derived from TerraClimate data
 
-## About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -22,7 +22,7 @@ SPEI derived from TerraClimate data
 | Format  | GeoTIFF  |
 | Unit  | unitless  |
 
-## Symbology
+**Symbology**
 
 The threshold and the symbology for the SPEI can follow below color codes and image.
 
@@ -40,6 +40,6 @@ The threshold and the symbology for the SPEI can follow below color codes and im
 | Extremely Moist  | +1.50 to +2.00  | `#2a23eb` ![#2a23eb](https://via.placeholder.com/15/2a23eb/000000?text=+)  | rgb(42, 35, 235)  |
 | Exceptionally Moist  | +2.00 and above  | `#a21fec` ![#a21fec](https://via.placeholder.com/15/a21fec/000000?text=+)  | rgb(162, 31, 236)  |
 
-## Data access
+**Data access**
 
 Global SPEI-12 data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/spei-terraclimate`

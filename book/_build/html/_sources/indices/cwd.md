@@ -2,7 +2,7 @@
 
 The number of consecutive wet days (CWD) is similar to the above CDD, the largest number of consecutive days with daily precipitation amount more than 1 mm (or depend on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the wet level.
 
-### How it works
+**How it works**
 
 Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a dry day or the most recent consecutive string of days that meet the threshold criteria is summed.
 
@@ -15,7 +15,7 @@ ELSEIF todayRAIN < 1 AND previousCWD == 0 THEN previousCWD + 1
 
 CWD derived from IMERG data
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -27,7 +27,7 @@ CWD derived from IMERG data
 | Format  | GeoTIFF  |
 | Unit  | Number of day  |
 
-### Symbology
+**Symbology**
 
 The threshold and the symbology for the CWD can follow below color codes and image.
 
@@ -41,6 +41,6 @@ The threshold and the symbology for the CWD can follow below color codes and ima
 | Very Long  | 31 - 60  | `#2c80b8` ![#2c80b8](https://via.placeholder.com/15/2c80b8/000000?text=+)  | rgb(44, 128, 184)  |
 | Extreme Wet  | +60  | `#253494` ![#253494](https://via.placeholder.com/15/253494/000000?text=+)  | rgb(37, 52, 148)  |
 
-### Data access
+**Data access**
 
 Global CWD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/cwd-imerg`

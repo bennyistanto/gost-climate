@@ -10,29 +10,33 @@ parts:
     - file: data/imerg
     - file: data/modis
     - file: data/terraclimate
+  
   - caption: CLIMATE-INDICES
     chapters:
+    - file: indices/rainanom  
     - file: indices/cdd
     - file: indices/cwd
     - file: indices/dry
     - file: indices/wet
     - file: indices/spi
     - file: indices/spei
+    - file: indices/lstanom
+    - file: indices/tci
+  
   - caption: HOW-TO
     chapters:
-    - file: howto/prerequisite
+    - file: howto/before-you-start 
       sections: 
       - file: howto/prerequisite/software-requirement
       - file: howto/prerequisite/python-env
-    - file: howto/topic
+    - file: howto/topic/topic
       sections: 
-      - file: howto/topic/precipitation-index
+      - file: howto/topic/precipitation-index/index
         sections: 
         - file: howto/topic/precipitation-index/background
-        - file: howto/topic/precipitation-index/input-preparation
+        - file: howto/topic/precipitation-index/input-data-and-specification
           sections: 
           - file: howto/topic/precipitation-index/working-directory
-          - file: howto/topic/precipitation-index/input-data-and-specification
           - file: howto/topic/precipitation-index/monthly-imerg-netcdf
           - file: howto/topic/precipitation-index/monthly-chirps-geotiff
           - file: howto/topic/precipitation-index/monthly-chirps-netcdf
@@ -42,6 +46,7 @@ parts:
         - file: howto/topic/precipitation-index/vizualisation
         - file: howto/topic/precipitation-index/output-conversion
         - file: howto/topic/precipitation-index/example-output
+  
   - caption: CASE
     chapters:
     - file: case/p176471-stp

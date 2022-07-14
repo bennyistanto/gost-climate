@@ -16,10 +16,10 @@ For better result, SPI and SPEI required minimum 30-years of data.
 
 We provide 4 different approach to prepare precipitation data ready to use as SPI input. For learning matters, you may follow all the approach. Or you can choose which one is suit for you depend on the data source and format:
 
-* [Monthly IMERG in netCDF](../monthly-imerg-netcdf/)
-* [Monthly CHIRPS in GeoTIFF](../monthly-chirps-geotiff/)
-* [Monthly CHIRPS in netCDF](../monthly-chirps-netcdf/)
-* [Monthly TerraClimate in netCDF](../monthly-terraclimate-netcdf/)
+* [Monthly IMERG in netCDF](./monthly-imerg-netcdf/)
+* [Monthly CHIRPS in GeoTIFF](./monthly-chirps-geotiff/)
+* [Monthly CHIRPS in netCDF](./monthly-chirps-netcdf/)
+* [Monthly TerraClimate in netCDF](./monthly-terraclimate-netcdf/)
 
 If you are prefer to use your own dataset also fine, you can still follow this guideline and adjust some steps and code related to filename, unit, format and structure.
 

@@ -2,7 +2,7 @@
 
 The objective is to evaluate the monthly deviation of temperature over the country based on MOD11 data. This is achieved through analysis of Anomalies, (i.e. a comparison against a reference). 
 
-### How it works
+**How it works**
 
 The anomaly is calculated based on difference of the average.
 
@@ -10,12 +10,12 @@ The anomaly is calculated based on difference of the average.
 
 where:
 
-- `LST` is the current value of LST<br>
-- `mean_LST` is the long-term average value of LST.
+* `LST` is the current value of LST<br>
+* `mean_LST` is the long-term average value of LST.
 
 LST and LST long-term average derived from MODIS data
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -27,7 +27,7 @@ LST and LST long-term average derived from MODIS data
 | Format  | GeoTIFF  |
 | Unit  | Degrees Celcius (°C)  |
 
-### Symbology
+**Symbology**
 
 The threshold and the symbology for the `8-days` land surface temperature difference anomaly in degree celcius (°C) can follow below colorcodes and image.
 
@@ -43,6 +43,6 @@ The threshold and the symbology for the `8-days` land surface temperature differ
 | +5 to +10  | `#4393c3` ![#4393c3](https://via.placeholder.com/15/4393c3/000000?text=+)  | rgb(67, 147, 195)  |
 | +10 and above  | `#2166ac` ![#2166ac](https://via.placeholder.com/15/2166ac/000000?text=+)  | rgb(33, 102, 172)  |
 
-### Data access
+**Data access**
 
 Global LST and anomaly data available at DEC S3: 

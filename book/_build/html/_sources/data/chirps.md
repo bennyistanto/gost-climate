@@ -5,7 +5,7 @@ Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) from Cli
 To support the activity, GOST utilise CHIRPS's monthly rainfall data.
 
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -18,7 +18,7 @@ To support the activity, GOST utilise CHIRPS's monthly rainfall data.
 | Unit  | Total mm for given time step, mm/pentad, mm/month, etc.  |
 | Reference  | https://wiki.chc.ucsb.edu/CHIRPS_FAQ  |
 
-### Symbology
+**Symbology**
 
 The threshold and the symbology for the `monthly` rainfall in milimeters can follow below colorcodes and image.
 
@@ -42,7 +42,7 @@ The threshold and the symbology for the `monthly` rainfall in milimeters can fol
 ![chirps](../img/data-chirps.png)
 
 
-### Data access
+**Data access**
 
 Official download link from CHIRPS available from: [https://data.chc.ucsb.edu/products/CHIRPS-2.0/](https://data.chc.ucsb.edu/products/CHIRPS-2.0/)
 

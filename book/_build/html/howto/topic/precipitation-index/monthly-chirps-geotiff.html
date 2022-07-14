@@ -56,6 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Monthly CHIRPS in netCDF format" href="monthly-chirps-netcdf.html" />
+    <link rel="prev" title="Monthly IMERG in netCDF format" href="monthly-imerg-netcdf.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -162,6 +164,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/rainanom.html">
+   Rainfall anomaly
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../../indices/cdd.html">
    Consecutive Dry Days
   </a>
@@ -190,6 +197,136 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../../indices/spei.html">
    Standardized Precipitation-Evapotranspiration Index (SPEI)
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/lstanom.html">
+   Land Surface Temperature anomaly
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/tci.html">
+   Temperature Condition Index
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  HOW-TO
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../before-you-start.html">
+   Before you start
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prerequisite/software-requirement.html">
+     Software Requirement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prerequisite/python-env.html">
+     Configure the python environment
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../topic.html">
+   Topic
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     Precipitation Index
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="background.html">
+       Precipitation Index
+      </a>
+     </li>
+     <li class="toctree-l3 current active has-children">
+      <a class="reference internal" href="input-data-and-specification.html">
+       Input Data and Specification
+      </a>
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul class="current">
+       <li class="toctree-l4">
+        <a class="reference internal" href="working-directory.html">
+         Working Directory
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="monthly-imerg-netcdf.html">
+         Monthly IMERG in netCDF format
+        </a>
+       </li>
+       <li class="toctree-l4 current active">
+        <a class="current reference internal" href="#">
+         Monthly CHIRPS in GeoTIFF format
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="monthly-chirps-netcdf.html">
+         Monthly CHIRPS in netCDF format
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="monthly-terraclimate-netcdf.html">
+         Monthly TerraClimate in netCDF format
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="index-calculation.html">
+       Index calculation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="update-index.html">
+       Updating the index
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vizualisation.html">
+       Visualize the result using Panoply
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="output-conversion.html">
+       Convert the result to GeoTIFF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="example-output.html">
+       Example output
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -487,7 +624,7 @@ title="Print to PDF"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gunzip *.gz
 </pre></div>
 </div>
-<p><img alt="CHIRPS gunzip" src="img/pi-chirps-tif-cgunzip.png" /></p>
+<p><img alt="CHIRPS gunzip" src="../../../_images/pi-chirps-tif-gunzip.png" /></p>
 </section>
 <section id="extract-data-based-on-area-of-interest">
 <h2>Extract data based on area of interest<a class="headerlink" href="#extract-data-based-on-area-of-interest" title="Permalink to this headline">#</a></h2>
@@ -685,7 +822,7 @@ Line 108-110: date character location in a filename&lt;/br&gt;
 </div>
 <p><img alt="CHIRPS ncfinal" src="../../../_images/pi-chirps-tif-ncfinal.png" /></p>
 <p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder</p>
-<p><img alt="CHIRPS inputnc" src="img/chirps-inputnc.png" /></p>
+<p><img alt="CHIRPS inputnc" src="../../../_images/pi-chirps-tif-inputnc.png" /></p>
 </li>
 <li><p>You also can get this data: <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> via this link <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc">https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc</a></p></li>
 </ul>
@@ -719,6 +856,20 @@ Line 108-110: date character location in a filename&lt;/br&gt;
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="monthly-imerg-netcdf.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Monthly IMERG in netCDF format</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="monthly-chirps-netcdf.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Monthly CHIRPS in netCDF format</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

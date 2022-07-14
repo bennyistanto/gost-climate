@@ -2,7 +2,7 @@
 
 The number of dry days (DD) is the largest number of days with daily precipitation amount less than 1 mm (or depending on the rain days criteria of the country), within a certain time. Usually the process counts the number of days within a year to measure the dry condition.
 
-### How it works
+**How it works**
 
 Calculate the number of rain days based on the threshold in a year.
 
@@ -14,7 +14,7 @@ IF todayRAIN > 1 THEN DD == 0
 
 DD derived from IMERG data
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -26,7 +26,7 @@ DD derived from IMERG data
 | Format  | GeoTIFF  |
 | Unit  | Number of day  |
 
-### Symbology
+**Symbology**
 
 The threshold and the symbology for the DD can follow below color codes and image.
 
@@ -38,6 +38,6 @@ The threshold and the symbology for the DD can follow below color codes and imag
 | 151 - 200  | `#d95f0e` ![#d95f0e](https://via.placeholder.com/15/d95f0e/000000?text=+)  | rgb(217,95,14)  |
 | >201  | `#993404` ![#993404](https://via.placeholder.com/15/993404/000000?text=+)  | rgb(153,52,4)  |
 
-### Data access
+**Data access**
 
 Global DD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/drydays-imerg`

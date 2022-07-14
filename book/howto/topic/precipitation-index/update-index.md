@@ -17,7 +17,7 @@ So far, updating the SPI process is easy if we used CHIRPS in GeoTIFF format. Be
 
 Updating SPI up to SPI-72, we should have data at least 6 years back (2015) from the latest (Jun 2022). In order to avoid computation for the whole periods (1981-2022), we will process data data only for year 2015 to 2022.
 
-After that, we continue the process following [Monthly CHIRPS in GeoTIFF](../monthly-chirps-geotiff) to do conversion process to netCDF format from bunch of GeoTIFF file in a folder with time dimension enabled.
+After that, we continue the process following [Monthly CHIRPS in GeoTIFF](./monthly-chirps-geotiff) to do conversion process to netCDF format from bunch of GeoTIFF file in a folder with time dimension enabled.
 
 Then the next step demonstrates how distribution fitting parameters can be saved as NetCDF. This fittings NetCDF can then be used as pre-computed variables in subsequent SPI computations. Initial command computes both distribution fitting values and SPI for various month scales.
 

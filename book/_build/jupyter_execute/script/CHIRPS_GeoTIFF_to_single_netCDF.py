@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # -------------------------------------------------------------------------------------------------------------
-# ## CHIRPS GeoTIFF to single netCDF
+# **CHIRPS GeoTIFF to single netCDF**
 # 
 # Convert CHIRPS GeoTIFF in a folder to single NetCDF file with time dimension enabled that is CF-Compliant
 # http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html
