@@ -67,121 +67,121 @@ All the data and derivative product are located at DEC S3 bucket: `s3://wbgdecin
 
 ``````{admonition} Folder structure
 :class: dropdown
-├── data                            # Data folder
-│   ├── README.txt
-│   ├── chelsa
-│   │   ├── original
-│   │   │   ├── nc-precip
-│   │   │   ├── nc-tmax
-│   │   │   ├── nc-tmean
-│   │   │   ├── nc-tmin
-│   │   │   ├── README.txt
-│   │   ├── global
-│   │   ├── lac    
-│   ├── chirps
-│   │   ├── monthly
-│   │   │   ├── geotiff
-│   │   │   ├── nc
-│   │   │   ├── README.txt
-│   ├── imerg
-│   │   ├── geotiff
-│   │   │   ├── rainfall_1days
-│   │   │   ├── rainfall_1days_annual_max
-│   │   │   ├── rainfall_1days_monthly_max
-│   │   │   ├── rainfall_annual
-│   │   │   ├── rainfall_monthly
-│   │   │   ├── rainfall_monthly_statistics
-│   │   │   ├── README.txt
-│   │   ├── nc
-│   │   │   ├── README.txt
-│   ├── modis
-│   │   ├── mod11a1
-│   │   │   ├── annual
-│   │   │   │   ├── hotdays_from_lst_24h_mean
-│   │   │   │   ├── hotdays_from_lst_day_mean
-│   │   │   │   ├── lst_24h_mean
-│   │   │   │   ├── lst_day_mean
-│   │   │   ├── README.txt
-│   ├── terraclimate
-│   │   ├── aet
-│   │   ├── climatologies
-│   │   ├── def
-│   │   ├── layers
-│   │   ├── pdsi
-│   │   ├── pet
-│   │   ├── plus2c
-│   │   ├── plus4c
-│   │   ├── ppt
-│   │   ├── q
-│   │   ├── soil
-│   │   ├── srad
-│   │   ├── summaries
-│   │   ├── swe
-│   │   ├── tas
-│   │   ├── tmax
-│   │   ├── tmin
-│   │   ├── vap
-│   │   ├── vpd
-│   │   ├── ws
-│   │   ├── README.txt
-├── products                            # Producst folder
-│   ├── README.txt
-│   ├── cdd-imerg
-│   │   ├── cdd_1mm
-│   │   ├── cdd_5mm
-│   │   ├── README.txt
-│   ├── cwd-imerg
-│   │   ├── cwd_1mm
-│   │   ├── cwd_5mm
-│   │   ├── README.txt
-│   ├── drydays-imerg
-│   │   ├── drydays_1mm
-│   │   ├── drydays_5mm
-│   │   ├── README.txt
-│   ├── spei-terraclimate
-│   │   ├── geotiff
-│   │   │   ├── spei12
-│   │   │   ├── spei12-derivative-product
-│   │   │   │   ├── consecutive_dry_month 
-│   │   │   │   ├── consecutive_dry_month_max
-│   │   │   │   ├── dry_month
-│   │   │   │   ├── dry_month_total
-│   │   ├── nc
-│   │   ├── README.txt
-│   ├── spi-chirps
-│   │   ├── geotiff
-│   │   │   ├── spi01
-│   │   │   ├── spi02
-│   │   │   ├── spi03
-│   │   │   ├── spi06
-│   │   │   ├── spi09
-│   │   │   ├── spi12
-│   │   │   ├── spi24
-│   │   │   ├── spi36
-│   │   │   ├── spi48
-│   │   │   ├── spi60
-│   │   │   ├── spi72
-│   │   ├── nc
-│   │   ├── README.txt
-│   ├── spi-terraclimate
-│   │   ├── geotiff
-│   │   │   ├── spi01
-│   │   │   ├── spi02
-│   │   │   ├── spi03
-│   │   │   ├── spi06
-│   │   │   ├── spi09
-│   │   │   ├── spi12
-│   │   │   ├── spi24
-│   │   │   ├── spi36
-│   │   │   ├── spi48
-│   │   │   ├── spi60
-│   │   │   ├── spi72
-│   │   ├── nc
-│   │   ├── README.txt
-│   ├── wetdays-imerg
-│   │   ├── wetdays_1mm
-│   │   ├── wetdays_5mm
-│   │   ├── README.txt
+	├── data                            # Data folder
+	│   ├── README.txt
+	│   ├── chelsa
+	│   │   ├── original
+	│   │   │   ├── nc-precip
+	│   │   │   ├── nc-tmax
+	│   │   │   ├── nc-tmean
+	│   │   │   ├── nc-tmin
+	│   │   │   ├── README.txt
+	│   │   ├── global
+	│   │   ├── lac    
+	│   ├── chirps
+	│   │   ├── monthly
+	│   │   │   ├── geotiff
+	│   │   │   ├── nc
+	│   │   │   ├── README.txt
+	│   ├── imerg
+	│   │   ├── geotiff
+	│   │   │   ├── rainfall_1days
+	│   │   │   ├── rainfall_1days_annual_max
+	│   │   │   ├── rainfall_1days_monthly_max
+	│   │   │   ├── rainfall_annual
+	│   │   │   ├── rainfall_monthly
+	│   │   │   ├── rainfall_monthly_statistics
+	│   │   │   ├── README.txt
+	│   │   ├── nc
+	│   │   │   ├── README.txt
+	│   ├── modis
+	│   │   ├── mod11a1
+	│   │   │   ├── annual
+	│   │   │   │   ├── hotdays_from_lst_24h_mean
+	│   │   │   │   ├── hotdays_from_lst_day_mean
+	│   │   │   │   ├── lst_24h_mean
+	│   │   │   │   ├── lst_day_mean
+	│   │   │   ├── README.txt
+	│   ├── terraclimate
+	│   │   ├── aet
+	│   │   ├── climatologies
+	│   │   ├── def
+	│   │   ├── layers
+	│   │   ├── pdsi
+	│   │   ├── pet
+	│   │   ├── plus2c
+	│   │   ├── plus4c
+	│   │   ├── ppt
+	│   │   ├── q
+	│   │   ├── soil
+	│   │   ├── srad
+	│   │   ├── summaries
+	│   │   ├── swe
+	│   │   ├── tas
+	│   │   ├── tmax
+	│   │   ├── tmin
+	│   │   ├── vap
+	│   │   ├── vpd
+	│   │   ├── ws
+	│   │   ├── README.txt
+	├── products                            # Producst folder
+	│   ├── README.txt
+	│   ├── cdd-imerg
+	│   │   ├── cdd_1mm
+	│   │   ├── cdd_5mm
+	│   │   ├── README.txt
+	│   ├── cwd-imerg
+	│   │   ├── cwd_1mm
+	│   │   ├── cwd_5mm
+	│   │   ├── README.txt
+	│   ├── drydays-imerg
+	│   │   ├── drydays_1mm
+	│   │   ├── drydays_5mm
+	│   │   ├── README.txt
+	│   ├── spei-terraclimate
+	│   │   ├── geotiff
+	│   │   │   ├── spei12
+	│   │   │   ├── spei12-derivative-product
+	│   │   │   │   ├── consecutive_dry_month 
+	│   │   │   │   ├── consecutive_dry_month_max
+	│   │   │   │   ├── dry_month
+	│   │   │   │   ├── dry_month_total
+	│   │   ├── nc
+	│   │   ├── README.txt
+	│   ├── spi-chirps
+	│   │   ├── geotiff
+	│   │   │   ├── spi01
+	│   │   │   ├── spi02
+	│   │   │   ├── spi03
+	│   │   │   ├── spi06
+	│   │   │   ├── spi09
+	│   │   │   ├── spi12
+	│   │   │   ├── spi24
+	│   │   │   ├── spi36
+	│   │   │   ├── spi48
+	│   │   │   ├── spi60
+	│   │   │   ├── spi72
+	│   │   ├── nc
+	│   │   ├── README.txt
+	│   ├── spi-terraclimate
+	│   │   ├── geotiff
+	│   │   │   ├── spi01
+	│   │   │   ├── spi02
+	│   │   │   ├── spi03
+	│   │   │   ├── spi06
+	│   │   │   ├── spi09
+	│   │   │   ├── spi12
+	│   │   │   ├── spi24
+	│   │   │   ├── spi36
+	│   │   │   ├── spi48
+	│   │   │   ├── spi60
+	│   │   │   ├── spi72
+	│   │   ├── nc
+	│   │   ├── README.txt
+	│   ├── wetdays-imerg
+	│   │   ├── wetdays_1mm
+	│   │   ├── wetdays_5mm
+	│   │   ├── README.txt
 ``````
 
 **Development Data Hub**
