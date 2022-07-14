@@ -1,6 +1,6 @@
 # CHELSA
 
-[CHELSA](https://chelsa-climate.org) (Climatologies at high resolution for the earth’s land surface areas) is a very high resolution (`30 arcsec`, `~1km`) global downscaled climate data set currently hosted by the Swiss Federal Institute for Forest, Snow and Landscape Research WSL. It is built to provide free access to high resolution climate data for research and application, and is constantly updated and refined.
+[CHELSA](https://chelsa-climate.org) (Climatologies at high resolution for the earth’s land surface areas) is a very high resolution (`30 arcsec`, `~1km`) global downscaled climate data set currently hosted by the Swiss Federal Institute for Forest, Snow and Landscape Research WSL. It is built to provide free access to high resolution climate data for research and application, and is constantly updated and refined.  
 
 
 **About the data**
@@ -18,7 +18,7 @@
 
 **List datasets**
 
-CHELSA provides `daily timeseries`, `monthly timeseries`,  `Bioclimate/Köppen-Geiger`, `Future` and `Paleo Climate` data. To support current project, GOST utilise daily timeseries temperature data from CHELSA-W5E5.
+CHELSA provides `daily timeseries`, `monthly timeseries`,  `Bioclimate/Köppen-Geiger`, `Future` and `Paleo Climate` data. To support current project, GOST utilise daily timeseries temperature data from CHELSA-W5E5.  
 
 **CHELSA-W5E5 v1.0**
 
@@ -39,6 +39,6 @@ CHELSA provides `daily timeseries`, `monthly timeseries`,  `Bioclimate/Köppen-G
 
 **Data access**
 
-Individual monthly download link: [https://data.isimip.org/10.48364/ISIMIP.836809](https://data.isimip.org/10.48364/ISIMIP.836809)
+Individual monthly download link: [https://data.isimip.org/10.48364/ISIMIP.836809](https://data.isimip.org/10.48364/ISIMIP.836809).  
 
-Daily min and max temperature also available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/chelsa`
+Daily min and max temperature also available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/chelsa`.  

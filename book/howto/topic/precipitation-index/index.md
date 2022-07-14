@@ -1,6 +1,6 @@
 # Precipitation Index
 
-These sections cover on how to calculate Standardize Precipitation Index (SPI) and Standardized Precipitation-Evapotranspiration Index (SPEI) using different data source and format. See the list of sections to the left for information about each step.
+These sections cover on how to calculate Standardize Precipitation Index (SPI) and Standardized Precipitation-Evapotranspiration Index (SPEI) using different data source and format. See the list of sections to the left for information about each step.  
 
 * [](./background)
 * [](./input-data-and-specification)

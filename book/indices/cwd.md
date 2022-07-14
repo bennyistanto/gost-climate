@@ -1,19 +1,19 @@
 # Consecutive Wet Days
 
-The number of consecutive wet days (CWD) is similar to the above CDD, the largest number of consecutive days with daily precipitation amount more than 1 mm (or depend on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the wet level.
+The number of consecutive wet days (CWD) is similar to the above CDD, the largest number of consecutive days with daily precipitation amount more than 1 mm (or depend on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the wet level.  
 
 **How it works**
 
-Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a dry day or the most recent consecutive string of days that meet the threshold criteria is summed.
+Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a dry day or the most recent consecutive string of days that meet the threshold criteria is summed.  
 
-Option for rain day's threshold: 1, 2.5, 5, 10 or 20 milimeters of rainfall per day
+Option for rain day's threshold: 1, 2.5, 5, 10 or 20 milimeters of rainfall per day.  
 
 ```
 IF previousCWD == null THEN previousCWD == 0
 ELSEIF todayRAIN < 1 AND previousCWD == 0 THEN previousCWD + 1
 ```
 
-CWD derived from IMERG data
+CWD derived from IMERG data.  
 
 **About the data**
 
@@ -29,7 +29,7 @@ CWD derived from IMERG data
 
 **Symbology**
 
-The threshold and the symbology for the CWD can follow below color codes and image.
+The threshold and the symbology for the CWD can follow below color codes and image.  
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
@@ -43,4 +43,4 @@ The threshold and the symbology for the CWD can follow below color codes and ima
 
 **Data access**
 
-Global CWD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/cwd-imerg`
+Global CWD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/cwd-imerg`.  

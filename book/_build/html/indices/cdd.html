@@ -551,12 +551,12 @@ title="Print to PDF"
 <p>The number of consecutive dry days (CDD) is the largest number of consecutive days with daily precipitation amount less than 1 mm (or depending on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the drought level.</p>
 <p><strong>How it works</strong></p>
 <p>Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a rain day or the most recent consecutive string of days that meet the threshold criteria is summed.</p>
-<p>Option for rain day’s threshold: 1, 2.5, 5, 10 or 20 milimeters of rainfall per day</p>
+<p>Option for rain day’s threshold: 1, 2.5, 5, 10 or 20 milimeters of rainfall per day.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="n">previousCDD</span> <span class="o">==</span> <span class="n">null</span> <span class="n">THEN</span> <span class="n">previousCDD</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="n">ELSEIF</span> <span class="n">todayRAIN</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="n">AND</span> <span class="n">previousCDD</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">THEN</span> <span class="n">previousCDD</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>CDD derived from IMERG data</p>
+<p>CDD derived from IMERG data.</p>
 <p><strong>About the data</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -637,7 +637,7 @@ title="Print to PDF"
 </tbody>
 </table>
 <p><strong>Data access</strong></p>
-<p>Global CDD data available at DEC S3: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate/products/cdd-imerg</span></code></p>
+<p>Global CDD data available at DEC S3: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate/products/cdd-imerg</span></code>.</p>
 </section>
 
     <script type="text/x-thebe-config">

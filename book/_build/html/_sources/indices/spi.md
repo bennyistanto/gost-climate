@@ -1,20 +1,20 @@
 # Standardized Precipitation Index
 
-The Standardized Precipitation Index ([SPI](https://library.wmo.int/doc_num.php?explnum_id=7768)) is a normalized index representing the probability of occurrence of an observed rainfall amount when compared with the rainfall climatology over a long-term period. This long-term record is fitted to a probability distribution, which is then transformed into a normal distribution so that the mean SPI for the location and desired period is zero.
+The Standardized Precipitation Index ([SPI](https://library.wmo.int/doc_num.php?explnum_id=7768)) is a normalized index representing the probability of occurrence of an observed rainfall amount when compared with the rainfall climatology over a long-term period. This long-term record is fitted to a probability distribution, which is then transformed into a normal distribution so that the mean SPI for the location and desired period is zero.  
 
-Negative SPI values represent rainfall deficit and less than median precipitation (Dry), starts when the SPI value is equal or below -1.0. Whereas positive SPI values indicate rainfall surplus and greater than median precipitation (Wet), starts when the SPI value is equal or above 1.0, and ends when the value becomes negative.
+Negative SPI values represent rainfall deficit and less than median precipitation (Dry), starts when the SPI value is equal or below -1.0. Whereas positive SPI values indicate rainfall surplus and greater than median precipitation (Wet), starts when the SPI value is equal or above 1.0, and ends when the value becomes negative.  
 
 **How it works**
 
-* Precipitation is normalized using a probability distribution function so that values of SPI are actually seen as standard deviations from the median.
-* A normalized distribution allows for estimation of both dry and wet periods.
-* Accumulated values can be used to analyse drought severity (magnitude).
-* At least 30 years of continuous monthly precipitation data are needed but longer-term records would be preferable.
-* SPI timescale intervals shorter than 1 month and longer than 24 months may be unreliable.
-* It is spatially invariant in its interpretation.
-* Its probability-based nature (probability of observed precipitation transformed into an index) makes it well suited to risk management and triggers for decision-making.
+* Precipitation is normalized using a probability distribution function so that values of SPI are actually seen as standard deviations from the median.<br>
+* A normalized distribution allows for estimation of both dry and wet periods.<br>
+* Accumulated values can be used to analyse drought severity (magnitude).<br>
+* At least 30 years of continuous monthly precipitation data are needed but longer-term records would be preferable.<br>
+* SPI timescale intervals shorter than 1 month and longer than 24 months may be unreliable.<br>
+* It is spatially invariant in its interpretation.<br>
+* Its probability-based nature (probability of observed precipitation transformed into an index) makes it well suited to risk management and triggers for decision-making.<br>
 
-SPI derived from CHIRPS and TerraClimate data
+SPI derived from CHIRPS and TerraClimate data.  
 
 **About the data**
 
@@ -30,7 +30,7 @@ SPI derived from CHIRPS and TerraClimate data
 
 **Symbology**
 
-The threshold and the symbology for the SPI can follow below color codes and image.
+The threshold and the symbology for the SPI can follow below color codes and image.  
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
@@ -50,5 +50,5 @@ The threshold and the symbology for the SPI can follow below color codes and ima
 
 Global SPI data available at DEC S3:
 
-1. CHIRPS: `s3://wbgdecinternal-ntl/climate/products/spi-chirps`
-2. TerraClimate: `s3://wbgdecinternal-ntl/climate/products/spi-terraclimate`
+1. CHIRPS: `s3://wbgdecinternal-ntl/climate/products/spi-chirps`.  
+2. TerraClimate: `s3://wbgdecinternal-ntl/climate/products/spi-terraclimate`.  

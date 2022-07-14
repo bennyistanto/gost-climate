@@ -619,59 +619,60 @@ title="Print to PDF"
 <section id="download-monthly-imerg-data-from-ges-disc">
 <h2>Download monthly IMERG data from GES DISC<a class="headerlink" href="#download-monthly-imerg-data-from-ges-disc" title="Permalink to this headline">#</a></h2>
 <ul>
-<li><p>Using a web browser, go to NASA Goddard Earth Sciences (GES) Data and Information Services Center (DISC): <a class="reference external" href="https://disc.gsfc.nasa.gov/">https://disc.gsfc.nasa.gov/</a></p></li>
-<li><p>Type “IMERG” in the search bar and click on the search</p></li>
-<li><p>Select IMERG Version 6 Level 3 data at “monthly” temporal resolution and click on the “Subset/Get Data” icon</p>
+<li><p>Using a web browser, go to NASA Goddard Earth Sciences (GES) Data and Information Services Center (DISC): <a class="reference external" href="https://disc.gsfc.nasa.gov/">https://disc.gsfc.nasa.gov/</a>.</p></li>
+<li><p>Type “IMERG” in the search bar and click on the search.</p></li>
+<li><p>Select IMERG Version 6 Level 3 data at “monthly” temporal resolution and click on the “Subset/Get Data” icon.</p>
 <p><img alt="IMERG monthly" src="../../../_images/pi-imerg-data.png" /></p>
 </li>
-<li><p>Current latest data is  up to October 2021, but for this guideline we will download for period June 2000 - December 2020</p></li>
-<li><p>Choose option Get File Subsets using the GES DISC Subsetter</p></li>
-<li><p>Under Refine Region, enter <code class="docutils literal notranslate"><span class="pre">105.05,</span> <span class="pre">-8.8,</span> <span class="pre">116.25,</span> <span class="pre">-5.05</span></code> This spatial subset is for Java island, Indonesia</p></li>
-<li><p>Under Variables select only <code class="docutils literal notranslate"><span class="pre">precipitation</span></code></p></li>
-<li><p>Leave the default parameters under Grid</p></li>
-<li><p>Under File Format select “netCDF”</p></li>
-<li><p>Click Get Data</p>
+<li><p>Current latest data is  up to October 2021, but for this guideline we will download for period June 2000 - December 2020.</p></li>
+<li><p>Choose option Get File Subsets using the GES DISC Subsetter.</p></li>
+<li><p>Under Refine Region, enter <code class="docutils literal notranslate"><span class="pre">105.05,</span> <span class="pre">-8.8,</span> <span class="pre">116.25,</span> <span class="pre">-5.05</span></code> This spatial subset is for Java island, Indonesia.</p></li>
+<li><p>Under Variables select only <code class="docutils literal notranslate"><span class="pre">precipitation</span></code>.</p></li>
+<li><p>Leave the default parameters under Grid.</p></li>
+<li><p>Under File Format select “netCDF”.</p></li>
+<li><p>Click Get Data.</p>
 <p><img alt="Download options" src="../../../_images/pi-imerg-download-options.png" /></p>
 </li>
-<li><p>Data links windows will popup and you may click “<strong>Download links list</strong>”</p>
+<li><p>Data links windows will popup and you may click “<strong>Download links list</strong>”.</p>
 <p><img alt="Data Links" src="../../../_images/pi-imerg-data-links.png" /></p>
 </li>
-<li><p>You will get a txt file with similar filename like this one <code class="docutils literal notranslate"><span class="pre">subset_GPM_3IMERGM_06_20210707_044656.txt</span></code></p></li>
-<li><p>Move this file into your working directory (in this case we have folder <code class="docutils literal notranslate"><span class="pre">/downloads/imerg/imerg_originalfiles</span></code> to save the txt file)</p></li>
-<li><p>Navigate your terminal to folder <code class="docutils literal notranslate"><span class="pre">/downloads/imerg/imerg_originalfiles</span></code> and type this code to download the data:</p></li>
-</ul>
+<li><p>You will get a txt file with similar filename like this one <code class="docutils literal notranslate"><span class="pre">subset_GPM_3IMERGM_06_20210707_044656.txt</span></code>.</p></li>
+<li><p>Move this file into your working directory (in this case we have folder <code class="docutils literal notranslate"><span class="pre">/downloads/imerg/imerg_originalfiles</span></code> to save the txt file).</p></li>
+<li><p>Navigate your terminal to folder <code class="docutils literal notranslate"><span class="pre">/downloads/imerg/imerg_originalfiles</span></code> and type this code to download the data:.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -c -i subset_GPM_3IMERGM_06_20210707_044656.txt<span class="sb">`</span>
 </pre></div>
 </div>
 <p><img alt="Wget" src="../../../_images/pi-imerg-wget.png" /></p>
-<p>If you are lazy to follow the process of downloading data, for convenience these data are made available on via this link: <a class="reference external" href="https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip">https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip</a></p>
-<p>Once downloaded, unzip <code class="docutils literal notranslate"><span class="pre">imerg_originalfiles.zip</span></code></p>
+</li>
+</ul>
+<p>If you are lazy to follow the process of downloading data, for convenience these data are made available on via this link on <a class="reference external" href="https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip">Github</a>.</p>
+<p>Once downloaded, unzip <code class="docutils literal notranslate"><span class="pre">imerg_originalfiles.zip</span></code>.</p>
 </section>
 <section id="rename-all-the-data-into-friendly-filename">
 <h2>Rename all the data into friendly filename<a class="headerlink" href="#rename-all-the-data-into-friendly-filename" title="Permalink to this headline">#</a></h2>
 <ul>
-<li><p>If you check the data in folder <code class="docutils literal notranslate"><span class="pre">IMERG_originalfiles</span></code>, you will find the data with filename something like <code class="docutils literal notranslate"><span class="pre">HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&amp;FORMAT=bmM0Lw&amp;BBOX=-8.8,105.05,-5.05,116.25&amp;LABEL=3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code></p>
+<li><p>If you check the data in folder <code class="docutils literal notranslate"><span class="pre">IMERG_originalfiles</span></code>, you will find the data with filename something like <code class="docutils literal notranslate"><span class="pre">HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&amp;FORMAT=bmM0Lw&amp;BBOX=-8.8,105.05,-5.05,116.25&amp;LABEL=3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code>.</p>
 <p><img alt="Original Filenames" src="../../../_images/pi-imerg-orig-filenames.png" /></p>
 </li>
-<li><p>We need to rename it all the file into friendly filename like this <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code></p></li>
+<li><p>We need to rename it all the file into friendly filename like this <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code>.</p></li>
 <li><p>If you follow the download process, you may create a duplicate for contents in <code class="docutils literal notranslate"><span class="pre">imerg_originalfiles</span></code> to <code class="docutils literal notranslate"><span class="pre">IMERG_mmhr</span></code> (just in case something happen to your downloaded files). But if you are not follow the download process but downloaded <code class="docutils literal notranslate"><span class="pre">imerg_originalfiles.zip</span></code> folder, you are good.</p></li>
-<li><p>We will use <a class="reference external" href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a> and remove the first <code class="docutils literal notranslate"><span class="pre">178</span></code> characters in the filename (I will remove text <code class="docutils literal notranslate"><span class="pre">HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&amp;FORMAT=bmM0Lw&amp;BBOX=-8.8,105.05,-5.05,116.25&amp;LABEL=</span></code> and leaving <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code>).
-Using <code class="docutils literal notranslate"><span class="pre">rename</span></code> command, make sure you are navigate to <code class="docutils literal notranslate"><span class="pre">imerg_mmhr</span></code> directory in your terminal, type below code:</p></li>
-</ul>
+<li><p>We will use <a class="reference external" href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a> and remove the first <code class="docutils literal notranslate"><span class="pre">178</span></code> characters in the filename (I will remove text <code class="docutils literal notranslate"><span class="pre">HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&amp;FORMAT=bmM0Lw&amp;BBOX=-8.8,105.05,-5.05,116.25&amp;LABEL=</span></code> and leaving <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code>).<br />
+Using <code class="docutils literal notranslate"><span class="pre">rename</span></code> command, make sure you are navigate to <code class="docutils literal notranslate"><span class="pre">imerg_mmhr</span></code> directory in your terminal, type below code:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rename <span class="s1">&#39;s/.{178}//g&#39;</span> *.nc4
 </pre></div>
 </div>
 <p><img alt="Rename" src="../../../_images/pi-imerg-rename.png" /></p>
-<p>If you found <code class="docutils literal notranslate"><span class="pre">rename</span></code> command not found, install it using Homebrew by typing <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">rename</span></code></p>
+<p>If you found <code class="docutils literal notranslate"><span class="pre">rename</span></code> command not found, install it using Homebrew by typing <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">rename</span></code>.</p>
 <p>And below is the result!</p>
 <p><img alt="Renamed Filenames" src="../../../_images/pi-imerg-rename-filenames.png" /></p>
+</li>
+</ul>
 </section>
 <section id="convert-unit-from-mm-hr-to-mm-month">
 <h2>Convert unit from mm/hr to mm/month<a class="headerlink" href="#convert-unit-from-mm-hr-to-mm-month" title="Permalink to this headline">#</a></h2>
 <p>Make sure you are inside <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment and <code class="docutils literal notranslate"><span class="pre">imerg_mmhr</span></code> folder, we will use NCO to pre-process the data.</p>
-<ul class="simple">
-<li><p>Let’s read header contents of a netCDF file in <code class="docutils literal notranslate"><span class="pre">IMERG_mmhr</span></code> folder. we will use this data <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code> as example. Type and execute below code:</p></li>
-</ul>
+<ul>
+<li><p>Let’s read header contents of a netCDF file in <code class="docutils literal notranslate"><span class="pre">IMERG_mmhr</span></code> folder. we will use this data <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code> as example. Type and execute below code:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h 3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4
 </pre></div>
 </div>
@@ -684,7 +685,7 @@ Using <code class="docutils literal notranslate"><span class="pre">rename</span>
 <li><p>Rainfall value in Month: <code class="docutils literal notranslate"><span class="pre">FEB</span></code> in a leap year which has 29 days will multiply with <code class="docutils literal notranslate"><span class="pre">696</span></code> to get <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p></li>
 <li><p>Rainfall value in Month: <code class="docutils literal notranslate"><span class="pre">FEB</span></code> in a normal year which has 28 days will multiply with <code class="docutils literal notranslate"><span class="pre">672</span></code> to get <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p></li>
 </ul>
-<p>To do the calculation, we will use below script to help generate line of codes for converting value of each data from <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code> to <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p>
+<p>To do the calculation, we will use below script to help generate line of codes for converting value of each data from <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code> to <code class="docutils literal notranslate"><span class="pre">mm/month</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nb">read</span> -r _file<span class="p">;</span> <span class="k">do</span>
     <span class="nv">file</span><span class="o">=</span><span class="k">$(</span>basename -- <span class="s2">&quot;</span><span class="nv">$_file</span><span class="s2">&quot;</span><span class="k">)</span>
     <span class="nv">yearmonth</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/.*\.3IMERG\.([0-9]{6})[0-9]{2}-.*/\1/&#39;</span><span class="k">)</span>
@@ -706,11 +707,11 @@ Using <code class="docutils literal notranslate"><span class="pre">rename</span>
 </div>
 <p><img alt="IMERG Script" src="../../../_images/pi-imerg-scriptsh.png" /></p>
 <p>All file inside <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> will have rainfall which show the value in <code class="docutils literal notranslate"><span class="pre">mm/month</span></code>. Let’s check file <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code> in folder <code class="docutils literal notranslate"><span class="pre">imerg_mmhr</span></code> and <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> using Panoply, see the difference in range of value.</p>
-<ul>
-<li><p>Monthly rainfall in <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code></p>
+</li>
+<li><p>Monthly rainfall in <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code>.</p>
 <p><img alt="mmhr" src="../../../_images/pi-imerg-mmhr.png" /></p>
 </li>
-<li><p>Monthly rainfall in <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p>
+<li><p>Monthly rainfall in <code class="docutils literal notranslate"><span class="pre">mm/month</span></code>.</p>
 <p><img alt="mmhr" src="../../../_images/pi-imerg-mmmonth.png" /></p>
 </li>
 </ul>
@@ -718,17 +719,17 @@ Using <code class="docutils literal notranslate"><span class="pre">rename</span>
 </section>
 <section id="create-single-netcdf-file">
 <h2>Create single netCDF file<a class="headerlink" href="#create-single-netcdf-file" title="Permalink to this headline">#</a></h2>
-<p>Navigate to <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> folder in Terminal. Loop all files in the folder <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> to make <code class="docutils literal notranslate"><span class="pre">time</span></code> the record dimension/variable used for concatenating files using <code class="docutils literal notranslate"><span class="pre">ncks</span></code> command</p>
+<p>Navigate to <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> folder in Terminal. Loop all files in the folder <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> to make <code class="docutils literal notranslate"><span class="pre">time</span></code> the record dimension/variable used for concatenating files using <code class="docutils literal notranslate"><span class="pre">ncks</span></code> command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> fl <span class="k">in</span> *.nc4<span class="p">;</span> <span class="k">do</span> ncks -O --mk_rec_dmn <span class="nb">time</span> <span class="nv">$fl</span> <span class="nv">$fl</span><span class="p">;</span> <span class="k">done</span>
 </pre></div>
 </div>
 <p><img alt="Add Time" src="../../../_images/pi-imerg-addtime.png" /></p>
-<p>Concatenates all <code class="docutils literal notranslate"><span class="pre">nc4</span></code> files in <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> folder into one <code class="docutils literal notranslate"><span class="pre">nc4</span></code> file named <code class="docutils literal notranslate"><span class="pre">imerg_concat.nc4</span></code> using <code class="docutils literal notranslate"><span class="pre">ncrcat</span></code> command</p>
+<p>Concatenates all <code class="docutils literal notranslate"><span class="pre">nc4</span></code> files in <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> folder into one <code class="docutils literal notranslate"><span class="pre">nc4</span></code> file named <code class="docutils literal notranslate"><span class="pre">imerg_concat.nc4</span></code> using <code class="docutils literal notranslate"><span class="pre">ncrcat</span></code> command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncrcat -h *.nc4 imerg_concat.nc4
 </pre></div>
 </div>
 <p><img alt="Concatenates" src="../../../_images/pi-imerg-concatenates.png" /></p>
-<p>Check the header</p>
+<p>Check the header.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h imerg_concat.nc4
 </pre></div>
 </div>
@@ -738,12 +739,12 @@ Using <code class="docutils literal notranslate"><span class="pre">rename</span>
 <li><p><code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code>,<code class="docutils literal notranslate"><span class="pre">time</span></code> or</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code></p></li>
 </ul>
-<p>Let’s re-order the variables into <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code> using <code class="docutils literal notranslate"><span class="pre">ncpdq</span></code> command, to be able running the SPI code in Python</p>
+<p>Let’s re-order the variables into <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code> using <code class="docutils literal notranslate"><span class="pre">ncpdq</span></code> command, to be able running the SPI code in Python.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncpdq -a time,lat,lon imerg_concat.nc4 imerg_concat_ncpdq0.nc4
 </pre></div>
 </div>
 <p><img alt="IMERG ncpdq1" src="../../../_images/pi-imerg-ncpdq1.png" /></p>
-<p>Check again the header for the result <code class="docutils literal notranslate"><span class="pre">imerg_concat_ncpdq0.nc4</span></code></p>
+<p>Check again the header for the result <code class="docutils literal notranslate"><span class="pre">imerg_concat_ncpdq0.nc4</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h imerg_concat_ncpdq0.nc4
 </pre></div>
 </div>
@@ -772,14 +773,14 @@ Using <code class="docutils literal notranslate"><span class="pre">rename</span>
 </pre></div>
 </div>
 <p><img alt="IMERG ncatted2" src="../../../_images/pi-imerg-ncatted2.png" /></p>
-<p>And the units already in <code class="docutils literal notranslate"><span class="pre">mm</span></code></p>
-<p>Once this has completed, the dataset can be used as input to this package for computing SPI. From above picture, some of the precipitation attribute are still wrong: <code class="docutils literal notranslate"><span class="pre">DimensionNames</span></code> and <code class="docutils literal notranslate"><span class="pre">Units</span></code>. we can leave it as is, SPI code will only read <code class="docutils literal notranslate"><span class="pre">units</span></code> and variables <code class="docutils literal notranslate"><span class="pre">precipitation(time,lat,lon)</span></code></p>
-<p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">IMERG_concat_ncpdq1.nc4</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">Input_nc</span></code> and rename into <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_2000_2020.nc</span></code></p>
+<p>And the units already in <code class="docutils literal notranslate"><span class="pre">mm</span></code>.</p>
+<p>Once this has completed, the dataset can be used as input to this package for computing SPI. From above picture, some of the precipitation attribute are still wrong: <code class="docutils literal notranslate"><span class="pre">DimensionNames</span></code> and <code class="docutils literal notranslate"><span class="pre">Units</span></code>. we can leave it as is, SPI code will only read <code class="docutils literal notranslate"><span class="pre">units</span></code> and variables <code class="docutils literal notranslate"><span class="pre">precipitation(time,lat,lon)</span></code>.</p>
+<p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">IMERG_concat_ncpdq1.nc4</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">Input_nc</span></code> and rename into <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_2000_2020.nc</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv imerg_concat_ncpdq1.nc4 ../../../input_nc/java_cli_imerg_1months_2000_2020.nc
 </pre></div>
 </div>
 <p><img alt="IMERG ncfinal" src="../../../_images/pi-imerg-ncfinal.png" /></p>
-<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_2000_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder</p>
+<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_2000_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder.</p>
 <p><img alt="IMERG inputnc" src="../../../_images/pi-imerg-inputnc.png" /></p>
 </section>
 </section>

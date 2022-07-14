@@ -16,39 +16,39 @@ For this tutorial, we are working on these folder `/precipitation-index/exercise
 		1. `ppt`
 		2. `pet`
 
-	Place to put downloaded IMERG,CHIRPS and TerraClimate data
+	Place to put downloaded IMERG,CHIRPS and TerraClimate data.  
 
 2. `fitting`
 
-	Place to put fitting parameters output from the calculation
+	Place to put fitting parameters output from the calculation.  
 
 3. `input_nc`
 	1. `imerg`
 	2. `chirps`
 	3. `terraclimate`
 
-	Place to put netCDF data that will use as an input 
+	Place to put netCDF data that will use as an input.  
 
 4. `input_tif`
 
-	Place to put GeoTIFF file that will use to convert to single netCDF with time dimension enabled
+	Place to put GeoTIFF file that will use to convert to single netCDF with time dimension enabled.  
 
 5. `output_nc`
 	1. `spi`
 	2. `spei`
 
-	Output folder for SPI calculation
+	Output folder for SPI calculation.  
 
 6. `output_temp`
 
-	Temporary for nc files from CDO arrange dimension process
+	Temporary for nc files from CDO arrange dimension process.  
 
 7. `output_tif`
 
-	Final output of SPI, generate by CDO and GDAL
+	Final output of SPI, generate by CDO and GDAL.  
 
 8. `subset`
 
-	Place to put shapefile for clipping area of interest
+	Place to put shapefile for clipping area of interest.  
 
-Feel free to use your own preferences for this setting/folder arrangements.
+Feel free to use your own preferences for this setting/folder arrangements.  

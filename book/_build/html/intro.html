@@ -634,32 +634,35 @@ title="Print to PDF"
 <p>A climate index is here defined as a calculated value that can be used to describe the state and the changes in the climate system. Climate indices allow a statistical study of variations of the dependent climatological aspects, such as analysis and comparison of time series, means, extremes and trends.</p>
 <p>Below is the list of indices that currently available:</p>
 <ul class="simple">
+<li><p><a class="reference internal" href="indices/rainanom.html"><span class="doc std std-doc">Rainfall anomaly</span></a></p></li>
 <li><p><a class="reference internal" href="indices/cdd.html"><span class="doc std std-doc">Consecutive Dry Days</span></a></p></li>
 <li><p><a class="reference internal" href="indices/cwd.html"><span class="doc std std-doc">Consecutive Wet Days</span></a></p></li>
 <li><p><a class="reference internal" href="indices/dry.html"><span class="doc std std-doc">Dry Days</span></a></p></li>
 <li><p><a class="reference internal" href="indices/wet.html"><span class="doc std std-doc">Wet Days</span></a></p></li>
 <li><p><a class="reference internal" href="indices/spi.html"><span class="doc std std-doc">Standardized Precipitation Index (SPI)</span></a></p></li>
 <li><p><a class="reference internal" href="indices/spei.html"><span class="doc std std-doc">Standardized Precipitation-Evapotranspiration Index (SPEI)</span></a></p></li>
+<li><p><a class="reference internal" href="indices/lstanom.html"><span class="doc std std-doc">Land Surface Temperature anomaly</span></a></p></li>
+<li><p><a class="reference internal" href="indices/tci.html"><span class="doc std std-doc">Temperature Condition Index</span></a></p></li>
 </ul>
 <p><strong>How-to guides</strong></p>
 <p>You will find step-by-step guideline to calculate climate indices, and can try different (data source and format) approach in How-to? section.</p>
 <p><strong>Case</strong></p>
 <p>Example of use cases from the WBG project.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="case/p176471-stp.html"><span class="doc std std-doc">R18 SUPPORT SOCIAL PROTECTION COVID-19 RESPONSE IN SAO TOME AND PRINCIPE (P176471)</span></a></p></li>
-<li><p><a class="reference internal" href="case/p177249-sdflagship.html"><span class="doc std std-doc">SUSTAINABLE DEVELOPMENT PRACTICE GROUP FLAGSHIP REPORT ON MAKING CITIES GREEN, RESILIENT AND INCLUSIVE (P177249)</span></a></p></li>
-<li><p><a class="reference internal" href="case/p177566-ssd.html"><span class="doc std std-doc">FRAGILITY AND WATER SECURITY IN SUDAN AND SOUTH SUDAN (P177566)</span></a></p></li>
+<li><p><a class="reference internal" href="case/p176471-stp.html"><span class="doc std std-doc">R18 SUPPORT SOCIAL PROTECTION COVID-19 RESPONSE IN SAO TOME AND PRINCIPE (P176471)</span></a>.</p></li>
+<li><p><a class="reference internal" href="case/p177249-sdflagship.html"><span class="doc std std-doc">SUSTAINABLE DEVELOPMENT PRACTICE GROUP FLAGSHIP REPORT ON MAKING CITIES GREEN, RESILIENT AND INCLUSIVE (P177249)</span></a>.</p></li>
+<li><p><a class="reference internal" href="case/p177566-ssd.html"><span class="doc std std-doc">FRAGILITY AND WATER SECURITY IN SUDAN AND SOUTH SUDAN (P177566)</span></a>.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="where-to-find">
 <h2>Where to find?<a class="headerlink" href="#where-to-find" title="Permalink to this headline">#</a></h2>
-<p>You can access the data via <a class="reference external" href="https://aws.amazon.com/s3/">AWS S3</a> and soon at Development Data Hub (<a class="reference external" href="https://datacatalog.worldbank.org/home">DDH</a>)</p>
+<p>You can access the data via <a class="reference external" href="https://aws.amazon.com/s3/">AWS S3</a> and soon at Development Data Hub (<a class="reference external" href="https://datacatalog.worldbank.org/home">DDH</a>).</p>
 <p><strong>AWS S3</strong></p>
-<p>All the data and derivative product are located at DEC S3 bucket: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate</span></code> with below structure</p>
+<p>All the data and derivative product are located at DEC S3 bucket: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate</span></code> with below structure.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Folder structure</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>├── data                            # Data folder
+<p>├── data                            # Data folder
 │   ├── README.txt
 │   ├── chelsa
 │   │   ├── original
@@ -669,7 +672,7 @@ title="Print to PDF"
 │   │   │   ├── nc-tmin
 │   │   │   ├── README.txt
 │   │   ├── global
-│   │   ├── lac    
+│   │   ├── lac<br />
 │   ├── chirps
 │   │   ├── monthly
 │   │   │   ├── geotiff
@@ -734,7 +737,7 @@ title="Print to PDF"
 │   │   ├── geotiff
 │   │   │   ├── spei12
 │   │   │   ├── spei12-derivative-product
-│   │   │   │   ├── consecutive_dry_month 
+│   │   │   │   ├── consecutive_dry_month
 │   │   │   │   ├── consecutive_dry_month_max
 │   │   │   │   ├── dry_month
 │   │   │   │   ├── dry_month_total
@@ -773,9 +776,7 @@ title="Print to PDF"
 │   ├── wetdays-imerg
 │   │   ├── wetdays_1mm
 │   │   ├── wetdays_5mm
-│   │   ├── README.txt
-</pre></div>
-</div>
+│   │   ├── README.txt</p>
 </div>
 <p><strong>Development Data Hub</strong></p>
 <p>Currently we are still working on it, hope the data available at DDH soon. Stay tune!</p>

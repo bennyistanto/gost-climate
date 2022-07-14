@@ -1,19 +1,19 @@
 # Consecutive Dry Days
 
-The number of consecutive dry days (CDD) is the largest number of consecutive days with daily precipitation amount less than 1 mm (or depending on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the drought level.
+The number of consecutive dry days (CDD) is the largest number of consecutive days with daily precipitation amount less than 1 mm (or depending on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the drought level.  
 
 **How it works**
 
-Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a rain day or the most recent consecutive string of days that meet the threshold criteria is summed.
+Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a rain day or the most recent consecutive string of days that meet the threshold criteria is summed.  
 
-Option for rain day's threshold: 1, 2.5, 5, 10 or 20 milimeters of rainfall per day
+Option for rain day's threshold: 1, 2.5, 5, 10 or 20 milimeters of rainfall per day.  
 
 ```
 IF previousCDD == null THEN previousCDD == 0
 ELSEIF todayRAIN > 1 AND previousCDD == 0 THEN previousCDD + 1
 ```
 
-CDD derived from IMERG data
+CDD derived from IMERG data.  
 
 **About the data**
 
@@ -29,7 +29,7 @@ CDD derived from IMERG data
 
 **Symbology**
 
-The threshold and the symbology for the CDD can follow below color codes and image.
+The threshold and the symbology for the CDD can follow below color codes and image.  
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
@@ -43,4 +43,4 @@ The threshold and the symbology for the CDD can follow below color codes and ima
 
 **Data access**
 
-Global CDD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/cdd-imerg`
+Global CDD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/cdd-imerg`.  

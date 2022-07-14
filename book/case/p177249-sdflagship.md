@@ -1,17 +1,17 @@
 # Climate Change, Urban and Sustainability
 
-Project: [SUSTAINABLE DEVELOPMENT PRACTICE GROUP FLAGSHIP REPORT ON MAKING CITIES GREEN, RESILIENT AND INCLUSIVE (P177249)](http://operationsportal.worldbank.org/secure/P177249/home)
+Project: [SUSTAINABLE DEVELOPMENT PRACTICE GROUP FLAGSHIP REPORT ON MAKING CITIES GREEN, RESILIENT AND INCLUSIVE (P177249)](http://operationsportal.worldbank.org/secure/P177249/home).  
 
-The activity will consist of the preparation of a Global Flagship report, the preliminary working title of which is Surviving to Thriving: Making Cities Green, Resilient, and Inclusive. In addition to synthesizing insights from existing literature, preparation of the report will be informed by background research aimed at filling key empirical knowledge gaps that will help to inform the report’s discussion of institutional reforms and policies for promoting green, resilient, and inclusive urban development.
+The activity will consist of the preparation of a Global Flagship report, the preliminary working title of which is Surviving to Thriving: Making Cities Green, Resilient, and Inclusive. In addition to synthesizing insights from existing literature, preparation of the report will be informed by background research aimed at filling key empirical knowledge gaps that will help to inform the report’s discussion of institutional reforms and policies for promoting green, resilient, and inclusive urban development.  
 
 The team are utilizing temperature and precipitation based index: SPEI, SPI, CDD, CWD, Number of annual hotdays and Annual mean temperature to support the analysis which organized into four inter-related workstreams:
 
 * Who is affected? 
-* Stressor that make urban development less green
-* Stressors that make urban development less resilient
-* Stressors that make urban development less inclusive
+* Stressor that make urban development less green.  
+* Stressors that make urban development less resilient.  
+* Stressors that make urban development less inclusive.  
 
-Some example are below
+Some example are below:
 
 **Who is affected?**
 
@@ -47,27 +47,27 @@ The analysis utilise [CHELSA](../data/chelsa) to generate heat hazard informatio
 * HTI Cap Haitien
 * BIH Sarajevo
 
-![case-P177249-01](../img/case-P177249-01.png)
+![case-P177249-whosaffected](../img/case-P177249-whosaffected.png)
   
 
 **Stressors that make urban development less resilient**
 
-Urban resilience and weather shocks: a global nighttime lights analysis
+Urban resilience and weather shocks: a global nighttime lights analysis.  
 
-The study try to estimates short-term effects of different types of weather shocks on city economic activitiy using monthly [TerraClimate](../data/terraclimate) data combined with high-resolution nighttime light monthly composites.
+The study try to estimates short-term effects of different types of weather shocks on city economic activitiy using monthly [TerraClimate](../data/terraclimate) data combined with high-resolution nighttime light monthly composites.  
 
-Some of the results, extreme weather shocks are challenging for all, whereas resilience to extreme dry shocks are widely across city characteristics.
+Some of the results, extreme weather shocks are challenging for all, whereas resilience to extreme dry shocks are widely across city characteristics.  
 
-![case-P177249-02](../img/case-P177249-02.png)
+![case-P177249-lessresilient](../img/case-P177249-lessresilient.png)
   
 
 
 **Stressors that make urban development less inclusive**
 
-Is climate change slowing the urban escalator out of Poverty? Evidence from Indonesia and Latin America Countries (LAC)
+Is climate change slowing the urban escalator out of Poverty? Evidence from Indonesia and Latin America Countries (LAC).  
 
-Climatic variables that can help to measure dry and wet condition (SPEI) has been prepared at sub-district (admin3) level for Indonesia and LAC.
+Climatic variables that can help to measure dry and wet condition (SPEI) has been prepared at sub-district (admin3) level for Indonesia and LAC.  
 
-Example result from Indoneisa : climatic shocks on urbanescalator
+Example result from Indonesia: climatic shocks on urbanescalator.  
 
-![case-P177249-03](../img/case-P177249-03.png)
+![case-P177249-lessinclusive](../img/case-P177249-lessinclusive.png)

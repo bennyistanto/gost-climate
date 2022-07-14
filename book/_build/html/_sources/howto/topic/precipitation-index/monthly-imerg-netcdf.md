@@ -1,147 +1,147 @@
 # Monthly IMERG in netCDF format
 
-This section will explain on how to download IMERG monthly data in netCDF format and prepare it as input for SPI calculation.
+This section will explain on how to download IMERG monthly data in netCDF format and prepare it as input for SPI calculation.  
 
 ## Download monthly IMERG data from GES DISC
 
-* Using a web browser, go to NASA Goddard Earth Sciences (GES) Data and Information Services Center (DISC): [https://disc.gsfc.nasa.gov/](https://disc.gsfc.nasa.gov/)
+* Using a web browser, go to NASA Goddard Earth Sciences (GES) Data and Information Services Center (DISC): [https://disc.gsfc.nasa.gov/](https://disc.gsfc.nasa.gov/).  
 
-* Type “IMERG” in the search bar and click on the search
+* Type “IMERG” in the search bar and click on the search.  
 
-* Select IMERG Version 6 Level 3 data at “monthly” temporal resolution and click on the “Subset/Get Data” icon
+* Select IMERG Version 6 Level 3 data at “monthly” temporal resolution and click on the “Subset/Get Data” icon.  
 
 	![IMERG monthly](../../../img/pi-imerg-data.png)
 
-* Current latest data is  up to October 2021, but for this guideline we will download for period June 2000 - December 2020
+* Current latest data is  up to October 2021, but for this guideline we will download for period June 2000 - December 2020.  
 
-* Choose option Get File Subsets using the GES DISC Subsetter
+* Choose option Get File Subsets using the GES DISC Subsetter.  
 
-* Under Refine Region, enter `105.05, -8.8, 116.25, -5.05` This spatial subset is for Java island, Indonesia
+* Under Refine Region, enter `105.05, -8.8, 116.25, -5.05` This spatial subset is for Java island, Indonesia.  
 
-* Under Variables select only `precipitation`
+* Under Variables select only `precipitation`.  
 
-* Leave the default parameters under Grid
+* Leave the default parameters under Grid.  
 
-* Under File Format select "netCDF"
+* Under File Format select "netCDF".  
 
-* Click Get Data
+* Click Get Data.  
 
 	![Download options](../../../img/pi-imerg-download-options.png)
 
-* Data links windows will popup and you may click "**Download links list**"
+* Data links windows will popup and you may click "**Download links list**".  
 
 	![Data Links](../../../img/pi-imerg-data-links.png)
 
-* You will get a txt file with similar filename like this one `subset_GPM_3IMERGM_06_20210707_044656.txt`
+* You will get a txt file with similar filename like this one `subset_GPM_3IMERGM_06_20210707_044656.txt`.  
 
-* Move this file into your working directory (in this case we have folder `/downloads/imerg/imerg_originalfiles` to save the txt file)
+* Move this file into your working directory (in this case we have folder `/downloads/imerg/imerg_originalfiles` to save the txt file).  
 
-* Navigate your terminal to folder `/downloads/imerg/imerg_originalfiles` and type this code to download the data:
+* Navigate your terminal to folder `/downloads/imerg/imerg_originalfiles` and type this code to download the data:.  
 
-``` bash
-wget -c -i subset_GPM_3IMERGM_06_20210707_044656.txt`
-```
+	``` bash
+	wget -c -i subset_GPM_3IMERGM_06_20210707_044656.txt`
+	```
 
-![Wget](../../../img/pi-imerg-wget.png)
+	![Wget](../../../img/pi-imerg-wget.png)
 
-If you are lazy to follow the process of downloading data, for convenience these data are made available on via this link: [https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip](https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip)
+If you are lazy to follow the process of downloading data, for convenience these data are made available on via this link on [Github](https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip).  
 
-Once downloaded, unzip `imerg_originalfiles.zip`
+Once downloaded, unzip `imerg_originalfiles.zip`.  
 
 
 ## Rename all the data into friendly filename
 
-* If you check the data in folder `IMERG_originalfiles`, you will find the data with filename something like `HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&FORMAT=bmM0Lw&BBOX=-8.8,105.05,-5.05,116.25&LABEL=3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4`
+* If you check the data in folder `IMERG_originalfiles`, you will find the data with filename something like `HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&FORMAT=bmM0Lw&BBOX=-8.8,105.05,-5.05,116.25&LABEL=3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4`.  
 
 	![Original Filenames](../../../img/pi-imerg-orig-filenames.png)
 
-* We need to rename it all the file into friendly filename like this `3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4`
+* We need to rename it all the file into friendly filename like this `3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4`.  
 
-* If you follow the download process, you may create a duplicate for contents in `imerg_originalfiles` to `IMERG_mmhr` (just in case something happen to your downloaded files). But if you are not follow the download process but downloaded `imerg_originalfiles.zip` folder, you are good.
+* If you follow the download process, you may create a duplicate for contents in `imerg_originalfiles` to `IMERG_mmhr` (just in case something happen to your downloaded files). But if you are not follow the download process but downloaded `imerg_originalfiles.zip` folder, you are good.  
 
-* We will use [regular expression](https://en.wikipedia.org/wiki/Regular_expression) and remove the first `178` characters in the filename (I will remove text `HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&FORMAT=bmM0Lw&BBOX=-8.8,105.05,-5.05,116.25&LABEL=` and leaving `3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4`). 
+* We will use [regular expression](https://en.wikipedia.org/wiki/Regular_expression) and remove the first `178` characters in the filename (I will remove text `HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&FORMAT=bmM0Lw&BBOX=-8.8,105.05,-5.05,116.25&LABEL=` and leaving `3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4`).  
 Using `rename` command, make sure you are navigate to `imerg_mmhr` directory in your terminal, type below code: 
 
-``` bash
-rename 's/.{178}//g' *.nc4
-```
+	``` bash
+	rename 's/.{178}//g' *.nc4
+	```
 
-![Rename](../../../img/pi-imerg-rename.png)
+	![Rename](../../../img/pi-imerg-rename.png)
 
-If you found `rename` command not found, install it using Homebrew by typing `brew install rename`
+	If you found `rename` command not found, install it using Homebrew by typing `brew install rename`.  
 
-And below is the result!
+	And below is the result!
 
-![Renamed Filenames](../../../img/pi-imerg-rename-filenames.png)
+	![Renamed Filenames](../../../img/pi-imerg-rename-filenames.png)
 
 
 
 ## Convert unit from mm/hr to mm/month
 
-Make sure you are inside `gis` environment and `imerg_mmhr` folder, we will use NCO to pre-process the data. 
+Make sure you are inside `gis` environment and `imerg_mmhr` folder, we will use NCO to pre-process the data.  
 
 * Let's read header contents of a netCDF file in `IMERG_mmhr` folder. we will use this data `3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4` as example. Type and execute below code:
 
-``` bash
-ncdump -h 3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4
-```
+	``` bash
+	ncdump -h 3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4
+	```
 
-You will get information (dimension, variables and global attribute) about the data.
+	You will get information (dimension, variables and global attribute) about the data.  
 
-![IMERG HH](../../../img/pi-imerg-ncdump-imerghh.png)
+	![IMERG HH](../../../img/pi-imerg-ncdump-imerghh.png)
 
-As you can see above picture, the original downloaded files unit from GPM IMERG is in `mm/hr`, while to calculate monthly SPI/SPEI, the data must be in `mm/month`. We need to do a conversion process using `ncap2` (arithmatic operator for netCDF files) command by multiplying number of day in month with `24hour`. Example:
+	As you can see above picture, the original downloaded files unit from GPM IMERG is in `mm/hr`, while to calculate monthly SPI/SPEI, the data must be in `mm/month`. We need to do a conversion process using `ncap2` (arithmatic operator for netCDF files) command by multiplying number of day in month with `24hour`. Example:
 
-* Rainfall value in Month: `JAN`, `MAR`, `MAY`, `JUL`, `AUG`, `OCT`, `DEC` which has `31` days will multiply with `744` to get `mm/month`
-* Rainfall value in Month: `APR`, `JUN`, `SEP`, `NOV` which has `30` days will multiply with `720` to get `mm/month`
-* Rainfall value in Month: `FEB` in a leap year which has 29 days will multiply with `696` to get `mm/month`
-* Rainfall value in Month: `FEB` in a normal year which has 28 days will multiply with `672` to get `mm/month`
+	* Rainfall value in Month: `JAN`, `MAR`, `MAY`, `JUL`, `AUG`, `OCT`, `DEC` which has `31` days will multiply with `744` to get `mm/month`
+	* Rainfall value in Month: `APR`, `JUN`, `SEP`, `NOV` which has `30` days will multiply with `720` to get `mm/month`
+	* Rainfall value in Month: `FEB` in a leap year which has 29 days will multiply with `696` to get `mm/month`
+	* Rainfall value in Month: `FEB` in a normal year which has 28 days will multiply with `672` to get `mm/month`
 
-To do the calculation, we will use below script to help generate line of codes for converting value of each data from `mm/hr` to `mm/month`
+	To do the calculation, we will use below script to help generate line of codes for converting value of each data from `mm/hr` to `mm/month`.  
 
-``` bash
-while read -r _file; do
-    file=$(basename -- "$_file")
-    yearmonth=$(echo "$file" | sed -E 's/.*\.3IMERG\.([0-9]{6})[0-9]{2}-.*/\1/')
-    mult=$(python - "$yearmonth" <<EOF
-import sys, calendar
-ym = sys.argv[1]
-print(calendar.monthrange(int(ym[:4]), int(ym[4:]))[1] * 24)
-EOF
-);
-    echo ncap2 -s 'precipitation='"$mult"'*precipitation' "$file" ../imerg_mmmonth/"$file";
-done < <(find . -maxdepth 1 -type f -name "*.nc4") > script.sh
-```
+	``` bash
+	while read -r _file; do
+	    file=$(basename -- "$_file")
+	    yearmonth=$(echo "$file" | sed -E 's/.*\.3IMERG\.([0-9]{6})[0-9]{2}-.*/\1/')
+	    mult=$(python - "$yearmonth" <<EOF
+	import sys, calendar
+	ym = sys.argv[1]
+	print(calendar.monthrange(int(ym[:4]), int(ym[4:]))[1] * 24)
+	EOF
+	);
+	    echo ncap2 -s 'precipitation='"$mult"'*precipitation' "$file" ../imerg_mmmonth/"$file";
+	done < <(find . -maxdepth 1 -type f -name "*.nc4") > script.sh
+	```
 
-Paste above code in your Terminal and Enter. You will get a file named `script.sh` as the result.
+	Paste above code in your Terminal and Enter. You will get a file named `script.sh` as the result.  
 
-![IMERG Gen Script](../../../img/pi-imerg-generatescript.png)
+	![IMERG Gen Script](../../../img/pi-imerg-generatescript.png)
 
-Then execute below
+	Then execute below
 
-``` bash
-sh script.sh
-```
+	``` bash
+	sh script.sh
+	```
 
-![IMERG Script](../../../img/pi-imerg-scriptsh.png)
+	![IMERG Script](../../../img/pi-imerg-scriptsh.png)
 
-All file inside `imerg_mmmonth` will have rainfall which show the value in `mm/month`. Let's check file `3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4` in folder `imerg_mmhr` and `imerg_mmmonth` using Panoply, see the difference in range of value.
+	All file inside `imerg_mmmonth` will have rainfall which show the value in `mm/month`. Let's check file `3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4` in folder `imerg_mmhr` and `imerg_mmmonth` using Panoply, see the difference in range of value.  
 
-* Monthly rainfall in `mm/hr`
+* Monthly rainfall in `mm/hr`.  
 
 	![mmhr](../../../img/pi-imerg-mmhr.png)
 
-* Monthly rainfall in `mm/month`
+* Monthly rainfall in `mm/month`.  
 
 	![mmhr](../../../img/pi-imerg-mmmonth.png)
 
-I am aware the unit text still in `mm/hr`, we will explain how to edit it in the next topic.
+I am aware the unit text still in `mm/hr`, we will explain how to edit it in the next topic.  
 
 
 
 ## Create single netCDF file
 
-Navigate to `imerg_mmmonth` folder in Terminal. Loop all files in the folder `imerg_mmmonth` to make `time` the record dimension/variable used for concatenating files using `ncks` command
+Navigate to `imerg_mmmonth` folder in Terminal. Loop all files in the folder `imerg_mmmonth` to make `time` the record dimension/variable used for concatenating files using `ncks` command.  
 
 ``` bash
 for fl in *.nc4; do ncks -O --mk_rec_dmn time $fl $fl; done
@@ -149,7 +149,7 @@ for fl in *.nc4; do ncks -O --mk_rec_dmn time $fl $fl; done
 
 ![Add Time](../../../img/pi-imerg-addtime.png)
 
-Concatenates all `nc4` files in `imerg_mmmonth` folder into one `nc4` file named `imerg_concat.nc4` using `ncrcat` command
+Concatenates all `nc4` files in `imerg_mmmonth` folder into one `nc4` file named `imerg_concat.nc4` using `ncrcat` command.  
 
 ``` bash
 ncrcat -h *.nc4 imerg_concat.nc4
@@ -157,7 +157,7 @@ ncrcat -h *.nc4 imerg_concat.nc4
 
 ![Concatenates](../../../img/pi-imerg-concatenates.png)
 
-Check the header
+Check the header.  
 
 ``` bash
 ncdump -h imerg_concat.nc4
@@ -170,7 +170,7 @@ And the variables for precipitation is `time`,`lon`,`lat` but SPI calculation re
 * `lat`,`lon`,`time` or
 * `time`,`lat`,`lon`
 
-Let's re-order the variables into `time`,`lat`,`lon` using `ncpdq` command, to be able running the SPI code in Python
+Let's re-order the variables into `time`,`lat`,`lon` using `ncpdq` command, to be able running the SPI code in Python.  
 
 ``` bash
 ncpdq -a time,lat,lon imerg_concat.nc4 imerg_concat_ncpdq0.nc4
@@ -178,7 +178,7 @@ ncpdq -a time,lat,lon imerg_concat.nc4 imerg_concat_ncpdq0.nc4
 
 ![IMERG ncpdq1](../../../img/pi-imerg-ncpdq1.png)
 
-Check again the header for the result `imerg_concat_ncpdq0.nc4`
+Check again the header for the result `imerg_concat_ncpdq0.nc4`.   
 
 ``` bash
 ncdump -h imerg_concat_ncpdq0.nc4
@@ -186,12 +186,12 @@ ncdump -h imerg_concat_ncpdq0.nc4
 
 ![IMERG ncpdq2](../../../img/pi-imerg-ncpdq2.png)
 
-And the variables for precipitation is `time`,`lat`,`lon`, it means the result is correct. But the unit still in `mm/hr`.
+And the variables for precipitation is `time`,`lat`,`lon`, it means the result is correct. But the unit still in `mm/hr`.  
 
 ``````{admonition} Notes on re-ordering process
 :class: warning
     
-After re-ordering the variables, sometimes user experience `lat` or `lon` dimension becomes `UNLIMITED` which is wrong. The `time` dimension should be the `UNLIMITED` dimension.
+After re-ordering the variables, sometimes user experience `lat` or `lon` dimension becomes `UNLIMITED` which is wrong. The `time` dimension should be the `UNLIMITED` dimension.  
 
 Fortunately you can do this to fix the `lat` or `lon` dimension who becomes `UNLIMITED` using `ncks` command below:
     
@@ -205,10 +205,10 @@ And to make `UNLIMITED` the `time` dimension again using `ncks` command below:
 ncks --mk_rec_dmn time IMERG_concat_ncpdq0.nc4 -o outunlim.nc4 ; mv outunlim.nc4 IMERG_concat_ncpdq0.nc4
 ```
     
-If you don't come accross the problem, `lat` or `lon` dimension becomes `UNLIMITED`, then skip above process and go directly to step below.
+If you don't come accross the problem, `lat` or `lon` dimension becomes `UNLIMITED`, then skip above process and go directly to step below.  
 ``````
 
-SPI code does not recognized unit `mm/hr` or `mm/month`, we need to edit into `mm`. To edit the unit attribute names, we will use `ncatted` command, follow below code.
+SPI code does not recognized unit `mm/hr` or `mm/month`, we need to edit into `mm`. To edit the unit attribute names, we will use `ncatted` command, follow below code.  
 
 ``` bash
 ncatted -a units,precipitation,modify,c,'mm' IMERG_concat_ncpdq0.nc4 IMERG_concat_ncpdq1.nc4
@@ -216,7 +216,7 @@ ncatted -a units,precipitation,modify,c,'mm' IMERG_concat_ncpdq0.nc4 IMERG_conca
 
 ![IMERG ncatted1](../../../img/pi-imerg-ncatted1.png)
 
-Check again the header for `imerg_concat_ncpdq1.nc4`, to make sure everything is correct.
+Check again the header for `imerg_concat_ncpdq1.nc4`, to make sure everything is correct.  
 
 ``` bash
 ncdump -h imerg_concat_ncpdq1.nc4
@@ -224,11 +224,11 @@ ncdump -h imerg_concat_ncpdq1.nc4
 
 ![IMERG ncatted2](../../../img/pi-imerg-ncatted2.png)
 
-And the units already in `mm`
+And the units already in `mm`.  
 
-Once this has completed, the dataset can be used as input to this package for computing SPI. From above picture, some of the precipitation attribute are still wrong: `DimensionNames` and `Units`. we can leave it as is, SPI code will only read `units` and variables `precipitation(time,lat,lon)`
+Once this has completed, the dataset can be used as input to this package for computing SPI. From above picture, some of the precipitation attribute are still wrong: `DimensionNames` and `Units`. we can leave it as is, SPI code will only read `units` and variables `precipitation(time,lat,lon)`.  
 
-As the input data preparation is completed, move the file `IMERG_concat_ncpdq1.nc4` to main folder `Input_nc` and rename into `java_cli_imerg_1months_2000_2020.nc`
+As the input data preparation is completed, move the file `IMERG_concat_ncpdq1.nc4` to main folder `Input_nc` and rename into `java_cli_imerg_1months_2000_2020.nc`.  
 
 ``` bash
 mv imerg_concat_ncpdq1.nc4 ../../../input_nc/java_cli_imerg_1months_2000_2020.nc
@@ -236,6 +236,6 @@ mv imerg_concat_ncpdq1.nc4 ../../../input_nc/java_cli_imerg_1months_2000_2020.nc
 
 ![IMERG ncfinal](../../../img/pi-imerg-ncfinal.png)
 
-Make sure the file `java_cli_imerg_1months_2000_2020.nc` is available at `input_nc` folder
+Make sure the file `java_cli_imerg_1months_2000_2020.nc` is available at `input_nc` folder.  
 
 ![IMERG inputnc](../../../img/pi-imerg-inputnc.png)

@@ -1,14 +1,14 @@
 # Configure the python environment
 
-Some of code for the guidelines below are written in Python 3. It is recommended to use either the **Miniconda3** (minimal Anaconda) or **Anaconda3** distribution. The below instructions will be Anaconda specific (although relevant to any Python virtual environment), and assume the use of a bash shell.
+Some of code for the guidelines below are written in Python 3. It is recommended to use either the **Miniconda3** (minimal Anaconda) or **Anaconda3** distribution. The below instructions will be Anaconda specific (although relevant to any Python virtual environment), and assume the use of a bash shell.  
 
-A new Anaconda [environment](https://conda.io/docs/using/envs.html) can be created using the [conda](https://conda.io/docs/) environment management system that comes packaged with Anaconda. 
+A new Anaconda [environment](https://conda.io/docs/using/envs.html) can be created using the [conda](https://conda.io/docs/) environment management system that comes packaged with Anaconda.   
 
 -----
 
-In the following examples (related to the guideline on calculating SPI or SPEI), we will use an environment named `climate_indices` (any environment name can be used instead of `climate_indices`) which will be created and populated with all required dependencies through the use of the provided setup.py file.
+In the following examples (related to the guideline on calculating SPI or SPEI), we will use an environment named `climate_indices` (any environment name can be used instead of `climate_indices`) which will be created and populated with all required dependencies through the use of the provided setup.py file.  
 
-This step must **only be done the first time**. Once the environment has been created there is no need to do it again.
+This step must **only be done the first time**. Once the environment has been created there is no need to do it again.  
 
 
 ## Create new python environment
@@ -19,7 +19,7 @@ This step must **only be done the first time**. Once the environment has been cr
 	conda create -n climate_indices python=3.7
 	```
 
-	Proceed with `y`
+	Proceed with `y`.  
 
 * The environment created can now be ‘activated’:
 
@@ -36,7 +36,7 @@ This step must **only be done the first time**. Once the environment has been cr
 	pip install climate-indices
 	```
 
-* Install netCDF Operator ([NCO](http://nco.sourceforge.net/)), Climate Data Operator ([CDO](https://code.mpimet.mpg.de/projects/cdo)) from Max-Planck-Institut für Meteorologie and Geospatial Data Abstraction Library ([GDAL/OGR](https://gdal.org)) using `conda` and proceed with `y`.
+* Install netCDF Operator ([NCO](http://nco.sourceforge.net/)), Climate Data Operator ([CDO](https://code.mpimet.mpg.de/projects/cdo)) from Max-Planck-Institut für Meteorologie and Geospatial Data Abstraction Library ([GDAL/OGR](https://gdal.org)) using `conda` and proceed with `y`.  
 
 	```bash
 	conda install -c conda-forge nco cdo gdal
@@ -44,7 +44,7 @@ This step must **only be done the first time**. Once the environment has been cr
 
 -----
 
-For other analysis, we can create more general environemnt, As example, we will use an environment named `gis` (any environment name can be used instead of `gis`) which will be created and populated with all required dependencies through the use of the provided setup.py file.
+For other analysis, we can create more general environemnt, As example, we will use an environment named `gis` (any environment name can be used instead of `gis`) which will be created and populated with all required dependencies through the use of the provided setup.py file.  
 
 
 ## Create other python environment
@@ -55,7 +55,7 @@ For other analysis, we can create more general environemnt, As example, we will 
 	conda create -n gis
 	```
 
-	Proceed with `y`
+	Proceed with `y`.  
 
 * The environment created can now be ‘activated’:
 

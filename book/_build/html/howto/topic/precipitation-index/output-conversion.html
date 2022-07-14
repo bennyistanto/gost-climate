@@ -550,11 +550,9 @@ title="Print to PDF"
 <h1>Convert the result to GeoTIFF<a class="headerlink" href="#convert-the-result-to-geotiff" title="Permalink to this headline">#</a></h1>
 <div class="warning admonition">
 <p class="admonition-title">Warning</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Below guideline using CHIRPS data as example. If you are using IMERG or other data, adjust the script (input and outpuy filename, bounding-box).
-</pre></div>
+<p>Below guideline using CHIRPS data as example. If you are using IMERG or other data, adjust the script (input and outpuy filename, bounding-box).</p>
 </div>
-</div>
-<p>We need CDO to do a conversion of the result into GeoTIFF format, and CDO required the variable should be in <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, while the output from SPI: <code class="docutils literal notranslate"><span class="pre">java_xxxxx_spi_xxxxx_x_month.nc</span></code> in <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>, you can check this via <code class="docutils literal notranslate"><span class="pre">ncdump</span> <span class="pre">-h</span> <span class="pre">java_CHIRPS_spi_gamma_3_month.nc</span></code></p>
+<p>We need CDO to do a conversion of the result into GeoTIFF format, and CDO required the variable should be in <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, while the output from SPI: <code class="docutils literal notranslate"><span class="pre">java_xxxxx_spi_xxxxx_x_month.nc</span></code> in <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>, you can check this via <code class="docutils literal notranslate"><span class="pre">ncdump</span> <span class="pre">-h</span> <span class="pre">java_CHIRPS_spi_gamma_3_month.nc</span></code>.</p>
 <ul class="simple">
 <li><p>Deactivate an active environment <code class="docutils literal notranslate"><span class="pre">climate_indices</span></code> then activate environment <code class="docutils literal notranslate"><span class="pre">gis</span></code> to start working on output conversion using CDO and GDAL.</p></li>
 </ul>
@@ -562,14 +560,14 @@ title="Print to PDF"
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">output_nc</span></code></p></li>
-<li><p>Let’s re-order the variables into <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code> using <code class="docutils literal notranslate"><span class="pre">ncpdq</span></code> command from NCO and save the result to folder <code class="docutils literal notranslate"><span class="pre">output_temp</span></code></p></li>
+<li><p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">output_nc</span></code>.</p></li>
+<li><p>Let’s re-order the variables into <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code> using <code class="docutils literal notranslate"><span class="pre">ncpdq</span></code> command from NCO and save the result to folder <code class="docutils literal notranslate"><span class="pre">output_temp</span></code>.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncpdq -a time,lat,lon java_CHIRPS_spi_gamma_3_month.nc ../output_temp/java_CHIRPS_spi_gamma_3_month_rev.nc
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">output_temp</span></code></p></li>
+<li><p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">output_temp</span></code>.</p></li>
 <li><p>Check result and metadata to make sure everything is correct.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h java_CHIRPS_spi_gamma_3_month_rev.nc
@@ -577,7 +575,7 @@ title="Print to PDF"
 </div>
 <ul class="simple">
 <li><p>Then convert all SPI value into GeoTIFF with time dimension information as the filename using CDO and GDAL.</p></li>
-<li><p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">output_temp</span></code>, execute below script and save the result to folder <code class="docutils literal notranslate"><span class="pre">output_tif</span></code></p></li>
+<li><p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">output_temp</span></code>, execute below script and save the result to folder <code class="docutils literal notranslate"><span class="pre">output_tif</span></code>.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> t <span class="k">in</span> <span class="sb">`</span>cdo showdate java_CHIRPS_spi_gamma_3_month_rev.nc<span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
     cdo seldate,<span class="nv">$t</span> java_CHIRPS_spi_gamma_3_month_rev.nc dummy.nc     
@@ -587,9 +585,7 @@ title="Print to PDF"
 </div>
 <div class="notes admonition">
 <p class="admonition-title">Notes</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If you are using IMERG or other data, or different area of interest, please make sure check the bounding box of the data `-a_ullr &lt;ulx&gt; &lt;uly&gt; &lt;lrx&gt; &lt;lry&gt;`. This `-a_ullr` assigns georeferenced bounds to the output file, ignoring what have been derived from the source file.
-</pre></div>
-</div>
+<p>If you are using IMERG or other data, or different area of interest, please make sure check the bounding box of the data <code class="docutils literal notranslate"><span class="pre">-a_ullr</span> <span class="pre">&lt;ulx&gt;</span> <span class="pre">&lt;uly&gt;</span> <span class="pre">&lt;lrx&gt;</span> <span class="pre">&lt;lry&gt;</span></code>. This <code class="docutils literal notranslate"><span class="pre">-a_ullr</span></code> assigns georeferenced bounds to the output file, ignoring what have been derived from the source file.</p>
 </div>
 <hr class="docutils" />
 <p>Congrats, now you are able to calculate SPI based on monthly rainfall in netCDF or GeoTIFF format.</p>

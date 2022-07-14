@@ -1,8 +1,8 @@
 # CHIRPS
 
-Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) from Climate Hazard Center (CHC), Department of Geography, University of California Santa Barbara - [https://www.chc.ucsb.edu/data/chirps](https://www.chc.ucsb.edu/data/chirps) is a 35+ year quasi-global rainfall data set. Spanning 50°S-50°N (and all longitudes) and ranging from 1981 to near-present, CHIRPS incorporates CHC's in-house climatology, CHPclim, 0.05° resolution satellite imagery, and in-situ station data to create gridded rainfall time series for trend analysis and seasonal drought monitoring. 
+Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) from Climate Hazard Center (CHC), Department of Geography, University of California Santa Barbara - [https://www.chc.ucsb.edu/data/chirps](https://www.chc.ucsb.edu/data/chirps) is a 35+ year quasi-global rainfall data set. Spanning 50°S-50°N (and all longitudes) and ranging from 1981 to near-present, CHIRPS incorporates CHC's in-house climatology, CHPclim, 0.05° resolution satellite imagery, and in-situ station data to create gridded rainfall time series for trend analysis and seasonal drought monitoring.  
 
-To support the activity, GOST utilise CHIRPS's monthly rainfall data.
+To support the activity, GOST utilise CHIRPS's monthly rainfall data.  
 
 
 **About the data**
@@ -20,7 +20,7 @@ To support the activity, GOST utilise CHIRPS's monthly rainfall data.
 
 **Symbology**
 
-The threshold and the symbology for the `monthly` rainfall in milimeters can follow below colorcodes and image.
+The threshold and the symbology for the `monthly` rainfall in milimeters can follow below colorcodes and image.  
 
 | Class  | Hex  | RGB  |
 |---|---|---|
@@ -44,6 +44,6 @@ The threshold and the symbology for the `monthly` rainfall in milimeters can fol
 
 **Data access**
 
-Official download link from CHIRPS available from: [https://data.chc.ucsb.edu/products/CHIRPS-2.0/](https://data.chc.ucsb.edu/products/CHIRPS-2.0/)
+Official download link from CHIRPS available from: [https://data.chc.ucsb.edu/products/CHIRPS-2.0/](https://data.chc.ucsb.edu/products/CHIRPS-2.0/).  
 
-CHIRPS monthly data also available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/chirps`
+CHIRPS monthly data also available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/chirps`.  
