@@ -2,7 +2,7 @@
 
 The number of wet days (DD) is the largest number of days with daily precipitation amount more than 1 mm (or depending on the rain days criteria of the country), within a certain time. Usually the process counts the number of days within a year to measure the wet condition.
 
-### How it works
+**How it works**
 
 Calculate the number of rain days based on the threshold in a year.
 
@@ -14,7 +14,7 @@ IF todayRAIN > 1 THEN WD == 1
 
 WD derived from IMERG data
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -26,7 +26,7 @@ WD derived from IMERG data
 | Format  | GeoTIFF  |
 | Unit  | Number of day  |
 
-### Symbology
+**Symbology**
 
 The threshold and the symbology for the WD can follow below color codes and image.
 
@@ -38,6 +38,6 @@ The threshold and the symbology for the WD can follow below color codes and imag
 | 151 - 200  | `#31a354` ![#31a354](https://via.placeholder.com/15/31a354/000000?text=+)  | rgb(49,163,84)  |
 | >201  | `#006837` ![#006837](https://via.placeholder.com/15/006837/000000?text=+)  | rgb(0,104,55)  |
 
-### Data access
+**Data access**
 
 Global WD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/wetdays-imerg`

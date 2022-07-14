@@ -14,6 +14,7 @@ The team are utilizing temperature and precipitation based index: SPEI, SPI, CDD
 Some example are below
 
 **Who is affected?**
+
 Which segments of city population are most exposed to climate-related stresses?
 
 The analysis utilise [CHELSA](../data/chelsa) to generate heat hazard information number of annual hot days (a day with temperature above 35 degC), combined with FATHOM flood hazard to assess whether informal resident parcels (slums) coincide with hazard-prone areas in various cities: 
@@ -47,9 +48,10 @@ The analysis utilise [CHELSA](../data/chelsa) to generate heat hazard informatio
 * BIH Sarajevo
 
 ![case-P177249-01](../img/case-P177249-01.png)
-
+  
 
 **Stressors that make urban development less resilient**
+
 Urban resilience and weather shocks: a global nighttime lights analysis
 
 The study try to estimates short-term effects of different types of weather shocks on city economic activitiy using monthly [TerraClimate](../data/terraclimate) data combined with high-resolution nighttime light monthly composites.
@@ -57,10 +59,11 @@ The study try to estimates short-term effects of different types of weather shoc
 Some of the results, extreme weather shocks are challenging for all, whereas resilience to extreme dry shocks are widely across city characteristics.
 
 ![case-P177249-02](../img/case-P177249-02.png)
-
+  
 
 
 **Stressors that make urban development less inclusive**
+
 Is climate change slowing the urban escalator out of Poverty? Evidence from Indonesia and Latin America Countries (LAC)
 
 Climatic variables that can help to measure dry and wet condition (SPEI) has been prepared at sub-district (admin3) level for Indonesia and LAC.

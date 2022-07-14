@@ -51,7 +51,7 @@ You will get information (dimension, variables and global attribute) about the d
 
 ## Edit variable and attribute
 
-As explain in [Input specification](../input-preparation), we can say from above picture there are few variable and attribute that need editing. Let's do it one-by-one.
+As explain in [Input Data and Specification](./input-data-and-specification), we can say from above picture there are few variable and attribute that need editing. Let's do it one-by-one.
 
 * Navigate to `downloads/chirps/netcdf/clipped` folder in the working directory.
 

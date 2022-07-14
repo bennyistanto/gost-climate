@@ -163,6 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="indices/rainanom.html">
+   Rainfall anomaly
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="indices/cdd.html">
    Consecutive Dry Days
   </a>
@@ -191,6 +196,136 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="indices/spei.html">
    Standardized Precipitation-Evapotranspiration Index (SPEI)
   </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/lstanom.html">
+   Land Surface Temperature anomaly
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="indices/tci.html">
+   Temperature Condition Index
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  HOW-TO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="howto/before-you-start.html">
+   Before you start
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howto/prerequisite/software-requirement.html">
+     Software Requirement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howto/prerequisite/python-env.html">
+     Configure the python environment
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="howto/topic/topic.html">
+   Topic
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="howto/topic/precipitation-index/index.html">
+     Precipitation Index
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="howto/topic/precipitation-index/background.html">
+       Precipitation Index
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="howto/topic/precipitation-index/input-data-and-specification.html">
+       Input Data and Specification
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="howto/topic/precipitation-index/working-directory.html">
+         Working Directory
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="howto/topic/precipitation-index/monthly-imerg-netcdf.html">
+         Monthly IMERG in netCDF format
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="howto/topic/precipitation-index/monthly-chirps-geotiff.html">
+         Monthly CHIRPS in GeoTIFF format
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="howto/topic/precipitation-index/monthly-chirps-netcdf.html">
+         Monthly CHIRPS in netCDF format
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="howto/topic/precipitation-index/monthly-terraclimate-netcdf.html">
+         Monthly TerraClimate in netCDF format
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="howto/topic/precipitation-index/index-calculation.html">
+       Index calculation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="howto/topic/precipitation-index/update-index.html">
+       Updating the index
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="howto/topic/precipitation-index/vizualisation.html">
+       Visualize the result using Panoply
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="howto/topic/precipitation-index/output-conversion.html">
+       Convert the result to GeoTIFF
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="howto/topic/precipitation-index/example-output.html">
+       Example output
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -412,45 +547,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#contents">
    Contents
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#climate-indices">
-     Climate Indices
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-to-guides">
-     How-to guides
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#case">
-     Case
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#where-to-find">
    Where to find?
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aws-s3">
-     AWS S3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#development-data-hub">
-     Development Data Hub
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#disclaimer">
@@ -485,45 +586,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#contents">
    Contents
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#climate-indices">
-     Climate Indices
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-to-guides">
-     How-to guides
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#case">
-     Case
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#where-to-find">
    Where to find?
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aws-s3">
-     AWS S3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#development-data-hub">
-     Development Data Hub
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#disclaimer">
@@ -553,8 +620,7 @@ title="Print to PDF"
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
 <p>This section describes in detail list of data provider, derived products, step-by-step to do the analysis and some example of use case of the data, to meet the user requirements of the GOST team of the World Bank at country, regional and global level.</p>
 <p>Currently, GOST Climate contains:</p>
-<section id="data">
-<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h3>
+<p><strong>Data</strong></p>
 <p>The climate are varies by location and by time of year. Daily and monthly rainfall, daily and monthly temperature and potential evapotranspiration are a few of the many datasets from various data providers.</p>
 <p>Below is the list of climate data that currently available:</p>
 <ul class="simple">
@@ -564,9 +630,7 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="data/modis.html"><span class="doc std std-doc">MODIS</span></a></p></li>
 <li><p><a class="reference internal" href="data/terraclimate.html"><span class="doc std std-doc">TerraClimate</span></a></p></li>
 </ul>
-</section>
-<section id="climate-indices">
-<h3>Climate Indices<a class="headerlink" href="#climate-indices" title="Permalink to this headline">#</a></h3>
+<p><strong>Climate Indices</strong></p>
 <p>A climate index is here defined as a calculated value that can be used to describe the state and the changes in the climate system. Climate indices allow a statistical study of variations of the dependent climatological aspects, such as analysis and comparison of time series, means, extremes and trends.</p>
 <p>Below is the list of indices that currently available:</p>
 <ul class="simple">
@@ -577,13 +641,9 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="indices/spi.html"><span class="doc std std-doc">Standardized Precipitation Index (SPI)</span></a></p></li>
 <li><p><a class="reference internal" href="indices/spei.html"><span class="doc std std-doc">Standardized Precipitation-Evapotranspiration Index (SPEI)</span></a></p></li>
 </ul>
-</section>
-<section id="how-to-guides">
-<h3>How-to guides<a class="headerlink" href="#how-to-guides" title="Permalink to this headline">#</a></h3>
+<p><strong>How-to guides</strong></p>
 <p>You will find step-by-step guideline to calculate climate indices, and can try different (data source and format) approach in How-to? section.</p>
-</section>
-<section id="case">
-<h3>Case<a class="headerlink" href="#case" title="Permalink to this headline">#</a></h3>
+<p><strong>Case</strong></p>
 <p>Example of use cases from the WBG project.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="case/p176471-stp.html"><span class="doc std std-doc">R18 SUPPORT SOCIAL PROTECTION COVID-19 RESPONSE IN SAO TOME AND PRINCIPE (P176471)</span></a></p></li>
@@ -591,13 +651,11 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="case/p177566-ssd.html"><span class="doc std std-doc">FRAGILITY AND WATER SECURITY IN SUDAN AND SOUTH SUDAN (P177566)</span></a></p></li>
 </ul>
 </section>
-</section>
 <hr class="docutils" />
 <section id="where-to-find">
 <h2>Where to find?<a class="headerlink" href="#where-to-find" title="Permalink to this headline">#</a></h2>
 <p>You can access the data via <a class="reference external" href="https://aws.amazon.com/s3/">AWS S3</a> and soon at Development Data Hub (<a class="reference external" href="https://datacatalog.worldbank.org/home">DDH</a>)</p>
-<section id="aws-s3">
-<h3>AWS S3<a class="headerlink" href="#aws-s3" title="Permalink to this headline">#</a></h3>
+<p><strong>AWS S3</strong></p>
 <p>All the data and derivative product are located at DEC S3 bucket: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate</span></code> with below structure</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Folder structure</p>
@@ -719,11 +777,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-</section>
-<section id="development-data-hub">
-<h3>Development Data Hub<a class="headerlink" href="#development-data-hub" title="Permalink to this headline">#</a></h3>
+<p><strong>Development Data Hub</strong></p>
 <p>Currently we are still working on it, hope the data available at DDH soon. Stay tune!</p>
-</section>
 </section>
 <hr class="docutils" />
 <section id="disclaimer">

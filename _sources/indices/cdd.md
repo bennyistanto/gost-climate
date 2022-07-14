@@ -2,7 +2,7 @@
 
 The number of consecutive dry days (CDD) is the largest number of consecutive days with daily precipitation amount less than 1 mm (or depending on the rain days criteria of the country), within a certain time. Usually the process counts the number of days in the past 90 days to measure the drought level.
 
-### How it works
+**How it works**
 
 Calculate the number of rain days based on the threshold and calculate the count of the most recent days since a rain day or the most recent consecutive string of days that meet the threshold criteria is summed.
 
@@ -15,7 +15,7 @@ ELSEIF todayRAIN > 1 AND previousCDD == 0 THEN previousCDD + 1
 
 CDD derived from IMERG data
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -27,7 +27,7 @@ CDD derived from IMERG data
 | Format  | GeoTIFF  |
 | Unit  | Number of day  |
 
-### Symbology
+**Symbology**
 
 The threshold and the symbology for the CDD can follow below color codes and image.
 
@@ -41,6 +41,6 @@ The threshold and the symbology for the CDD can follow below color codes and ima
 | Very Long  | 31 - 60  | `#de2c26` ![#de2c26](https://via.placeholder.com/15/de2c26/000000?text=+)  | rgb(222, 44, 38)  |
 | Extreme Drought  | +60  | `#a60f14` ![#a60f14](https://via.placeholder.com/15/a60f14/000000?text=+)  | rgb(166, 15, 20)  |
 
-### Data access
+**Data access**
 
 Global CDD data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/cdd-imerg`

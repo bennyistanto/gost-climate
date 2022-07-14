@@ -8,7 +8,7 @@ IMERG is adjusted to GPCP monthly climatology zonally to achieve a bias profile 
 2. “Late” – 14 hour (crop forecasting)
 3. “Final” – 3 months (research)
 
-### List datasets
+**List datasets**
 
 Historical
 
@@ -27,7 +27,7 @@ Near-real time
 | 30-minutes | Early Run | 1 Jun 2000 - now | mm/hour | [https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHE.06/](https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHE.06/) |
 | 30-minutes | Late Run | 1 Jun 2000 - now | mm/hour | [https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHL.06/](https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHL.06/) |
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -43,6 +43,6 @@ Near-real time
 ![imerg](../img/data-imerg.png)
 
 
-### Data access
+**Data access**
 
 IMERG daily data available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/imerg`

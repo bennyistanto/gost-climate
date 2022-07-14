@@ -4,18 +4,19 @@ The Standardized Precipitation Index ([SPI](https://library.wmo.int/doc_num.php?
 
 Negative SPI values represent rainfall deficit and less than median precipitation (Dry), starts when the SPI value is equal or below -1.0. Whereas positive SPI values indicate rainfall surplus and greater than median precipitation (Wet), starts when the SPI value is equal or above 1.0, and ends when the value becomes negative.
 
-## How it works
-- Precipitation is normalized using a probability distribution function so that values of SPI are actually seen as standard deviations from the median.
-- A normalized distribution allows for estimation of both dry and wet periods.
-- Accumulated values can be used to analyse drought severity (magnitude).
-- At least 30 years of continuous monthly precipitation data are needed but longer-term records would be preferable.
-- SPI timescale intervals shorter than 1 month and longer than 24 months may be unreliable.
-- It is spatially invariant in its interpretation.
-- Its probability-based nature (probability of observed precipitation transformed into an index) makes it well suited to risk management and triggers for decision-making.
+**How it works**
+
+* Precipitation is normalized using a probability distribution function so that values of SPI are actually seen as standard deviations from the median.
+* A normalized distribution allows for estimation of both dry and wet periods.
+* Accumulated values can be used to analyse drought severity (magnitude).
+* At least 30 years of continuous monthly precipitation data are needed but longer-term records would be preferable.
+* SPI timescale intervals shorter than 1 month and longer than 24 months may be unreliable.
+* It is spatially invariant in its interpretation.
+* Its probability-based nature (probability of observed precipitation transformed into an index) makes it well suited to risk management and triggers for decision-making.
 
 SPI derived from CHIRPS and TerraClimate data
 
-### About the data
+**About the data**
 
 | Characteristic  | Description  |
 |---|---|
@@ -27,7 +28,7 @@ SPI derived from CHIRPS and TerraClimate data
 | Format  | GeoTIFF  |
 | Unit  | unitless  |
 
-### Symbology
+**Symbology**
 
 The threshold and the symbology for the SPI can follow below color codes and image.
 
@@ -45,7 +46,7 @@ The threshold and the symbology for the SPI can follow below color codes and ima
 | Extremely Moist  | +1.50 to +2.00  | `#2a23eb` ![#2a23eb](https://via.placeholder.com/15/2a23eb/000000?text=+)  | rgb(42, 35, 235)  |
 | Exceptionally Moist  | +2.00 and above  | `#a21fec` ![#a21fec](https://via.placeholder.com/15/a21fec/000000?text=+)  | rgb(162, 31, 236)  |
 
-## Data access
+**Data access**
 
 Global SPI data available at DEC S3:
 

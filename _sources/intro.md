@@ -10,8 +10,7 @@ This section describes in detail list of data provider, derived products, step-b
 
 Currently, GOST Climate contains:
 
-
-### Data
+**Data**
 
 The climate are varies by location and by time of year. Daily and monthly rainfall, daily and monthly temperature and potential evapotranspiration are a few of the many datasets from various data providers.
 
@@ -24,7 +23,7 @@ Below is the list of climate data that currently available:
 * [TerraClimate](./data/terraclimate)
 
 
-### Climate Indices
+**Climate Indices**
 
 A climate index is here defined as a calculated value that can be used to describe the state and the changes in the climate system. Climate indices allow a statistical study of variations of the dependent climatological aspects, such as analysis and comparison of time series, means, extremes and trends.
 
@@ -38,12 +37,12 @@ Below is the list of indices that currently available:
 * [Standardized Precipitation-Evapotranspiration Index (SPEI)](./indices/spei)
 
 
-### How-to guides
+**How-to guides**
 
 You will find step-by-step guideline to calculate climate indices, and can try different (data source and format) approach in How-to? section.
 
 
-### Case
+**Case**
 
 Example of use cases from the WBG project.
 
@@ -59,7 +58,7 @@ Example of use cases from the WBG project.
 You can access the data via [AWS S3](https://aws.amazon.com/s3/) and soon at Development Data Hub ([DDH](https://datacatalog.worldbank.org/home))
 
 
-### AWS S3
+**AWS S3**
 
 All the data and derivative product are located at DEC S3 bucket: `s3://wbgdecinternal-ntl/climate` with below structure
 
@@ -182,9 +181,7 @@ All the data and derivative product are located at DEC S3 bucket: `s3://wbgdecin
     │   │   ├── README.txt
 ``````
 
-
-
-### Development Data Hub
+**Development Data Hub**
 
 Currently we are still working on it, hope the data available at DDH soon. Stay tune!
 
