@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Monthly IMERG in netCDF format &#8212; GOST Climate</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/wb_logo_large.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    GOST Climate
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/modis.html">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CLIMATE-INDICES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/dry.html">
+   Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/wet.html">
+   Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spi.html">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p176471-stp.html">
+   Drought in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Fhowto/topic/precipitation-index/monthly-imerg-netcdf.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/edit/main/book/howto/topic/precipitation-index/monthly-imerg-netcdf.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/howto/topic/precipitation-index/monthly-imerg-netcdf.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-monthly-imerg-data-from-ges-disc">
+   Download monthly IMERG data from GES DISC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rename-all-the-data-into-friendly-filename">
+   Rename all the data into friendly filename
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-unit-from-mm-hr-to-mm-month">
+   Convert unit from mm/hr to mm/month
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-single-netcdf-file">
+   Create single netCDF file
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Monthly IMERG in netCDF format</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-monthly-imerg-data-from-ges-disc">
+   Download monthly IMERG data from GES DISC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rename-all-the-data-into-friendly-filename">
+   Rename all the data into friendly filename
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-unit-from-mm-hr-to-mm-month">
+   Convert unit from mm/hr to mm/month
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-single-netcdf-file">
+   Create single netCDF file
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="monthly-imerg-in-netcdf-format">
+<h1>Monthly IMERG in netCDF format<a class="headerlink" href="#monthly-imerg-in-netcdf-format" title="Permalink to this headline">#</a></h1>
+<p>This section will explain on how to download IMERG monthly data in netCDF format and prepare it as input for SPI calculation.</p>
+<section id="download-monthly-imerg-data-from-ges-disc">
+<h2>Download monthly IMERG data from GES DISC<a class="headerlink" href="#download-monthly-imerg-data-from-ges-disc" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>Using a web browser, go to NASA Goddard Earth Sciences (GES) Data and Information Services Center (DISC): <a class="reference external" href="https://disc.gsfc.nasa.gov/">https://disc.gsfc.nasa.gov/</a></p></li>
+<li><p>Type “IMERG” in the search bar and click on the search</p></li>
+<li><p>Select IMERG Version 6 Level 3 data at “monthly” temporal resolution and click on the “Subset/Get Data” icon</p>
+<p><img alt="IMERG monthly" src="../../../_images/pi-imerg-data.png" /></p>
+</li>
+<li><p>Current latest data is  up to October 2021, but for this guideline we will download for period June 2000 - December 2020</p></li>
+<li><p>Choose option Get File Subsets using the GES DISC Subsetter</p></li>
+<li><p>Under Refine Region, enter <code class="docutils literal notranslate"><span class="pre">105.05,</span> <span class="pre">-8.8,</span> <span class="pre">116.25,</span> <span class="pre">-5.05</span></code> This spatial subset is for Java island, Indonesia</p></li>
+<li><p>Under Variables select only <code class="docutils literal notranslate"><span class="pre">precipitation</span></code></p></li>
+<li><p>Leave the default parameters under Grid</p></li>
+<li><p>Under File Format select “netCDF”</p></li>
+<li><p>Click Get Data</p>
+<p><img alt="Download options" src="../../../_images/pi-imerg-download-options.png" /></p>
+</li>
+<li><p>Data links windows will popup and you may click “<strong>Download links list</strong>”</p>
+<p><img alt="Data Links" src="../../../_images/pi-imerg-data-links.png" /></p>
+</li>
+<li><p>You will get a txt file with similar filename like this one <code class="docutils literal notranslate"><span class="pre">subset_GPM_3IMERGM_06_20210707_044656.txt</span></code></p></li>
+<li><p>Move this file into your working directory (in this case we have folder <code class="docutils literal notranslate"><span class="pre">/downloads/imerg/imerg_originalfiles</span></code> to save the txt file)</p></li>
+<li><p>Navigate your terminal to folder <code class="docutils literal notranslate"><span class="pre">/downloads/imerg/imerg_originalfiles</span></code> and type this code to download the data:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -c -i subset_GPM_3IMERGM_06_20210707_044656.txt<span class="sb">`</span>
+</pre></div>
+</div>
+<p><img alt="Wget" src="../../../_images/pi-imerg-wget.png" /></p>
+<p>If you are lazy to follow the process of downloading data, for convenience these data are made available on via this link: <a class="reference external" href="https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip">https://github.com/bennyistanto/gost-climate/blob/main/books/howto/topic/precipitation-index/exercise/downloads/imerg/imerg_originalfiles.zip</a></p>
+<p>Once downloaded, unzip <code class="docutils literal notranslate"><span class="pre">imerg_originalfiles.zip</span></code></p>
+</section>
+<section id="rename-all-the-data-into-friendly-filename">
+<h2>Rename all the data into friendly filename<a class="headerlink" href="#rename-all-the-data-into-friendly-filename" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>If you check the data in folder <code class="docutils literal notranslate"><span class="pre">IMERG_originalfiles</span></code>, you will find the data with filename something like <code class="docutils literal notranslate"><span class="pre">HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&amp;FORMAT=bmM0Lw&amp;BBOX=-8.8,105.05,-5.05,116.25&amp;LABEL=3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code></p>
+<p><img alt="Original Filenames" src="../../../_images/pi-imerg-orig-filenames.png" /></p>
+</li>
+<li><p>We need to rename it all the file into friendly filename like this <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code></p></li>
+<li><p>If you follow the download process, you may create a duplicate for contents in <code class="docutils literal notranslate"><span class="pre">imerg_originalfiles</span></code> to <code class="docutils literal notranslate"><span class="pre">IMERG_mmhr</span></code> (just in case something happen to your downloaded files). But if you are not follow the download process but downloaded <code class="docutils literal notranslate"><span class="pre">imerg_originalfiles.zip</span></code> folder, you are good.</p></li>
+<li><p>We will use <a class="reference external" href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a> and remove the first <code class="docutils literal notranslate"><span class="pre">178</span></code> characters in the filename (I will remove text <code class="docutils literal notranslate"><span class="pre">HTTP_services.cgi?FILENAME=%2Fdata%2FGPM_L3%2FGPM_3IMERGM.06%2F2000%2F3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5&amp;FORMAT=bmM0Lw&amp;BBOX=-8.8,105.05,-5.05,116.25&amp;LABEL=</span></code> and leaving <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code>).
+Using <code class="docutils literal notranslate"><span class="pre">rename</span></code> command, make sure you are navigate to <code class="docutils literal notranslate"><span class="pre">imerg_mmhr</span></code> directory in your terminal, type below code:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rename <span class="s1">&#39;s/.{178}//g&#39;</span> *.nc4
+</pre></div>
+</div>
+<p><img alt="Rename" src="../../../_images/pi-imerg-rename.png" /></p>
+<p>If you found <code class="docutils literal notranslate"><span class="pre">rename</span></code> command not found, install it using Homebrew by typing <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">rename</span></code></p>
+<p>And below is the result!</p>
+<p><img alt="Renamed Filenames" src="../../../_images/pi-imerg-rename-filenames.png" /></p>
+</section>
+<section id="convert-unit-from-mm-hr-to-mm-month">
+<h2>Convert unit from mm/hr to mm/month<a class="headerlink" href="#convert-unit-from-mm-hr-to-mm-month" title="Permalink to this headline">#</a></h2>
+<p>Make sure you are inside <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment and <code class="docutils literal notranslate"><span class="pre">imerg_mmhr</span></code> folder, we will use NCO to pre-process the data.</p>
+<ul class="simple">
+<li><p>Let’s read header contents of a netCDF file in <code class="docutils literal notranslate"><span class="pre">IMERG_mmhr</span></code> folder. we will use this data <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code> as example. Type and execute below code:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h 3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4
+</pre></div>
+</div>
+<p>You will get information (dimension, variables and global attribute) about the data.</p>
+<p><img alt="IMERG HH" src="../../../_images/pi-imerg-ncdump-imerghh.png" /></p>
+<p>As you can see above picture, the original downloaded files unit from GPM IMERG is in <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code>, while to calculate monthly SPI/SPEI, the data must be in <code class="docutils literal notranslate"><span class="pre">mm/month</span></code>. We need to do a conversion process using <code class="docutils literal notranslate"><span class="pre">ncap2</span></code> (arithmatic operator for netCDF files) command by multiplying number of day in month with <code class="docutils literal notranslate"><span class="pre">24hour</span></code>. Example:</p>
+<ul class="simple">
+<li><p>Rainfall value in Month: <code class="docutils literal notranslate"><span class="pre">JAN</span></code>, <code class="docutils literal notranslate"><span class="pre">MAR</span></code>, <code class="docutils literal notranslate"><span class="pre">MAY</span></code>, <code class="docutils literal notranslate"><span class="pre">JUL</span></code>, <code class="docutils literal notranslate"><span class="pre">AUG</span></code>, <code class="docutils literal notranslate"><span class="pre">OCT</span></code>, <code class="docutils literal notranslate"><span class="pre">DEC</span></code> which has <code class="docutils literal notranslate"><span class="pre">31</span></code> days will multiply with <code class="docutils literal notranslate"><span class="pre">744</span></code> to get <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p></li>
+<li><p>Rainfall value in Month: <code class="docutils literal notranslate"><span class="pre">APR</span></code>, <code class="docutils literal notranslate"><span class="pre">JUN</span></code>, <code class="docutils literal notranslate"><span class="pre">SEP</span></code>, <code class="docutils literal notranslate"><span class="pre">NOV</span></code> which has <code class="docutils literal notranslate"><span class="pre">30</span></code> days will multiply with <code class="docutils literal notranslate"><span class="pre">720</span></code> to get <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p></li>
+<li><p>Rainfall value in Month: <code class="docutils literal notranslate"><span class="pre">FEB</span></code> in a leap year which has 29 days will multiply with <code class="docutils literal notranslate"><span class="pre">696</span></code> to get <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p></li>
+<li><p>Rainfall value in Month: <code class="docutils literal notranslate"><span class="pre">FEB</span></code> in a normal year which has 28 days will multiply with <code class="docutils literal notranslate"><span class="pre">672</span></code> to get <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p></li>
+</ul>
+<p>To do the calculation, we will use below script to help generate line of codes for converting value of each data from <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code> to <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nb">read</span> -r _file<span class="p">;</span> <span class="k">do</span>
+    <span class="nv">file</span><span class="o">=</span><span class="k">$(</span>basename -- <span class="s2">&quot;</span><span class="nv">$_file</span><span class="s2">&quot;</span><span class="k">)</span>
+    <span class="nv">yearmonth</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="p">|</span> sed -E <span class="s1">&#39;s/.*\.3IMERG\.([0-9]{6})[0-9]{2}-.*/\1/&#39;</span><span class="k">)</span>
+    <span class="nv">mult</span><span class="o">=</span><span class="k">$(</span>python - <span class="s2">&quot;</span><span class="nv">$yearmonth</span><span class="s2">&quot;</span> <span class="s">&lt;&lt;EOF</span>
+<span class="s">import sys, calendar</span>
+<span class="s">ym = sys.argv[1]</span>
+<span class="s">print(calendar.monthrange(int(ym[:4]), int(ym[4:]))[1] * 24)</span>
+<span class="s">EOF</span>
+<span class="k">)</span><span class="p">;</span>
+    <span class="nb">echo</span> ncap2 -s <span class="s1">&#39;precipitation=&#39;</span><span class="s2">&quot;</span><span class="nv">$mult</span><span class="s2">&quot;</span><span class="s1">&#39;*precipitation&#39;</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> ../imerg_mmmonth/<span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">done</span> &lt; &lt;<span class="o">(</span>find . -maxdepth <span class="m">1</span> -type f -name <span class="s2">&quot;*.nc4&quot;</span><span class="o">)</span> &gt; script.sh
+</pre></div>
+</div>
+<p>Paste above code in your Terminal and Enter. You will get a file named <code class="docutils literal notranslate"><span class="pre">script.sh</span></code> as the result.</p>
+<p><img alt="IMERG Gen Script" src="../../../_images/pi-imerg-generatescript.png" /></p>
+<p>Then execute below</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh script.sh
+</pre></div>
+</div>
+<p><img alt="IMERG Script" src="../../../_images/pi-imerg-scriptsh.png" /></p>
+<p>All file inside <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> will have rainfall which show the value in <code class="docutils literal notranslate"><span class="pre">mm/month</span></code>. Let’s check file <code class="docutils literal notranslate"><span class="pre">3B-MO.MS.MRG.3IMERG.20000601-S000000-E235959.06.V06B.HDF5.nc4</span></code> in folder <code class="docutils literal notranslate"><span class="pre">imerg_mmhr</span></code> and <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> using Panoply, see the difference in range of value.</p>
+<ul>
+<li><p>Monthly rainfall in <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code></p>
+<p><img alt="mmhr" src="../../../_images/pi-imerg-mmhr.png" /></p>
+</li>
+<li><p>Monthly rainfall in <code class="docutils literal notranslate"><span class="pre">mm/month</span></code></p>
+<p><img alt="mmhr" src="../../../_images/pi-imerg-mmmonth.png" /></p>
+</li>
+</ul>
+<p>I am aware the unit text still in <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code>, we will explain how to edit it in the next topic.</p>
+</section>
+<section id="create-single-netcdf-file">
+<h2>Create single netCDF file<a class="headerlink" href="#create-single-netcdf-file" title="Permalink to this headline">#</a></h2>
+<p>Navigate to <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> folder in Terminal. Loop all files in the folder <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> to make <code class="docutils literal notranslate"><span class="pre">time</span></code> the record dimension/variable used for concatenating files using <code class="docutils literal notranslate"><span class="pre">ncks</span></code> command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> fl <span class="k">in</span> *.nc4<span class="p">;</span> <span class="k">do</span> ncks -O --mk_rec_dmn <span class="nb">time</span> <span class="nv">$fl</span> <span class="nv">$fl</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<p><img alt="Add Time" src="../../../_images/pi-imerg-addtime.png" /></p>
+<p>Concatenates all <code class="docutils literal notranslate"><span class="pre">nc4</span></code> files in <code class="docutils literal notranslate"><span class="pre">imerg_mmmonth</span></code> folder into one <code class="docutils literal notranslate"><span class="pre">nc4</span></code> file named <code class="docutils literal notranslate"><span class="pre">imerg_concat.nc4</span></code> using <code class="docutils literal notranslate"><span class="pre">ncrcat</span></code> command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncrcat -h *.nc4 imerg_concat.nc4
+</pre></div>
+</div>
+<p><img alt="Concatenates" src="../../../_images/pi-imerg-concatenates.png" /></p>
+<p>Check the header</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h imerg_concat.nc4
+</pre></div>
+</div>
+<p><img alt="ncdump Concatenates" src="../../../_images/pi-imerg-ncdumpccts.png" /></p>
+<p>And the variables for precipitation is <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code> but SPI calculation required:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code>,<code class="docutils literal notranslate"><span class="pre">time</span></code> or</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code></p></li>
+</ul>
+<p>Let’s re-order the variables into <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code> using <code class="docutils literal notranslate"><span class="pre">ncpdq</span></code> command, to be able running the SPI code in Python</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncpdq -a time,lat,lon imerg_concat.nc4 imerg_concat_ncpdq0.nc4
+</pre></div>
+</div>
+<p><img alt="IMERG ncpdq1" src="../../../_images/pi-imerg-ncpdq1.png" /></p>
+<p>Check again the header for the result <code class="docutils literal notranslate"><span class="pre">imerg_concat_ncpdq0.nc4</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h imerg_concat_ncpdq0.nc4
+</pre></div>
+</div>
+<p><img alt="IMERG ncpdq2" src="../../../_images/pi-imerg-ncpdq2.png" /></p>
+<p>And the variables for precipitation is <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code>, it means the result is correct. But the unit still in <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Notes on re-ordering process</p>
+<p>After re-ordering the variables, sometimes user experience <code class="docutils literal notranslate"><span class="pre">lat</span></code> or <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimension becomes <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> which is wrong. The <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension should be the <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> dimension.</p>
+<p>Fortunately you can do this to fix the <code class="docutils literal notranslate"><span class="pre">lat</span></code> or <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimension who becomes <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> using <code class="docutils literal notranslate"><span class="pre">ncks</span></code> command below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncks --fix_rec_dmn lat IMERG_concat_ncpdq0.nc4 -o outfixed.nc4 <span class="p">;</span> mv outfixed.nc4 IMERG_concat_ncpdq0.nc4
+</pre></div>
+</div>
+<p>And to make <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension again using <code class="docutils literal notranslate"><span class="pre">ncks</span></code> command below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncks --mk_rec_dmn <span class="nb">time</span> IMERG_concat_ncpdq0.nc4 -o outunlim.nc4 <span class="p">;</span> mv outunlim.nc4 IMERG_concat_ncpdq0.nc4
+</pre></div>
+</div>
+<p>If you don’t come accross the problem, <code class="docutils literal notranslate"><span class="pre">lat</span></code> or <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimension becomes <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code>, then skip above process and go directly to step below.</p>
+</div>
+<p>SPI code does not recognized unit <code class="docutils literal notranslate"><span class="pre">mm/hr</span></code> or <code class="docutils literal notranslate"><span class="pre">mm/month</span></code>, we need to edit into <code class="docutils literal notranslate"><span class="pre">mm</span></code>. To edit the unit attribute names, we will use <code class="docutils literal notranslate"><span class="pre">ncatted</span></code> command, follow below code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncatted -a units,precipitation,modify,c,<span class="s1">&#39;mm&#39;</span> IMERG_concat_ncpdq0.nc4 IMERG_concat_ncpdq1.nc4
+</pre></div>
+</div>
+<p><img alt="IMERG ncatted1" src="../../../_images/pi-imerg-ncatted1.png" /></p>
+<p>Check again the header for <code class="docutils literal notranslate"><span class="pre">imerg_concat_ncpdq1.nc4</span></code>, to make sure everything is correct.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h imerg_concat_ncpdq1.nc4
+</pre></div>
+</div>
+<p><img alt="IMERG ncatted2" src="../../../_images/pi-imerg-ncatted2.png" /></p>
+<p>And the units already in <code class="docutils literal notranslate"><span class="pre">mm</span></code></p>
+<p>Once this has completed, the dataset can be used as input to this package for computing SPI. From above picture, some of the precipitation attribute are still wrong: <code class="docutils literal notranslate"><span class="pre">DimensionNames</span></code> and <code class="docutils literal notranslate"><span class="pre">Units</span></code>. we can leave it as is, SPI code will only read <code class="docutils literal notranslate"><span class="pre">units</span></code> and variables <code class="docutils literal notranslate"><span class="pre">precipitation(time,lat,lon)</span></code></p>
+<p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">IMERG_concat_ncpdq1.nc4</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">Input_nc</span></code> and rename into <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_2000_2020.nc</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv imerg_concat_ncpdq1.nc4 ../../../input_nc/java_cli_imerg_1months_2000_2020.nc
+</pre></div>
+</div>
+<p><img alt="IMERG ncfinal" src="../../../_images/pi-imerg-ncfinal.png" /></p>
+<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_2000_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder</p>
+<p><img alt="IMERG inputnc" src="../../../_images/pi-imerg-inputnc.png" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "bennyistanto/gost-climate",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./howto/topic/precipitation-index"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Benny Istanto<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

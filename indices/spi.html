@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Standardized Precipitation Index &#8212; GOST Climate</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Standardized Precipitation-Evapotranspiration Index (SPEI)" href="spei.html" />
+    <link rel="prev" title="Wet Days" href="wet.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/wb_logo_large.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    GOST Climate
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/modis.html">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CLIMATE-INDICES
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dry.html">
+   Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wet.html">
+   Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case/p176471-stp.html">
+   Drought in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Findices/spi.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/edit/main/book/indices/spi.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/indices/spi.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-it-works">
+   How it works
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#about-the-data">
+     About the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#symbology">
+     Symbology
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data access
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Standardized Precipitation Index</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-it-works">
+   How it works
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#about-the-data">
+     About the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#symbology">
+     Symbology
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access">
+   Data access
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="standardized-precipitation-index">
+<h1>Standardized Precipitation Index<a class="headerlink" href="#standardized-precipitation-index" title="Permalink to this headline">#</a></h1>
+<p>The Standardized Precipitation Index (<a class="reference external" href="https://library.wmo.int/doc_num.php?explnum_id=7768">SPI</a>) is a normalized index representing the probability of occurrence of an observed rainfall amount when compared with the rainfall climatology over a long-term period. This long-term record is fitted to a probability distribution, which is then transformed into a normal distribution so that the mean SPI for the location and desired period is zero.</p>
+<p>Negative SPI values represent rainfall deficit and less than median precipitation (Dry), starts when the SPI value is equal or below -1.0. Whereas positive SPI values indicate rainfall surplus and greater than median precipitation (Wet), starts when the SPI value is equal or above 1.0, and ends when the value becomes negative.</p>
+<section id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Precipitation is normalized using a probability distribution function so that values of SPI are actually seen as standard deviations from the median.</p></li>
+<li><p>A normalized distribution allows for estimation of both dry and wet periods.</p></li>
+<li><p>Accumulated values can be used to analyse drought severity (magnitude).</p></li>
+<li><p>At least 30 years of continuous monthly precipitation data are needed but longer-term records would be preferable.</p></li>
+<li><p>SPI timescale intervals shorter than 1 month and longer than 24 months may be unreliable.</p></li>
+<li><p>It is spatially invariant in its interpretation.</p></li>
+<li><p>Its probability-based nature (probability of observed precipitation transformed into an index) makes it well suited to risk management and triggers for decision-making.</p></li>
+</ul>
+<p>SPI derived from CHIRPS and TerraClimate data</p>
+<section id="about-the-data">
+<h3>About the data<a class="headerlink" href="#about-the-data" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Characteristic</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Function</p></td>
+<td><p>Display SPI-1, 2, 3, 6, 9, 12, 18, 24, 36, 48, 60 and 72-months</p></td>
+</tr>
+<tr class="row-odd"><td><p>Variable</p></td>
+<td><p>SPI</p></td>
+</tr>
+<tr class="row-even"><td><p>Geographic coverage</p></td>
+<td><p>Global 50N-50S, 180W-180E (CHIRPS) and Global 90N-90S, 180W-180E (TerraClimate)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spatial resolution</p></td>
+<td><p>0.05 degree ~ 5.6 km at equator (CHIRPS) and 4-km at equator (TerraClimate)</p></td>
+</tr>
+<tr class="row-even"><td><p>Temporal resolution</p></td>
+<td><p>monthly.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Format</p></td>
+<td><p>GeoTIFF</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit</p></td>
+<td><p>unitless</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="symbology">
+<h3>Symbology<a class="headerlink" href="#symbology" title="Permalink to this headline">#</a></h3>
+<p>The threshold and the symbology for the SPI can follow below color codes and image.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Class</p></th>
+<th class="head"><p>Threshold</p></th>
+<th class="head"><p>Hex</p></th>
+<th class="head"><p>RGB</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exceptionally Dry</p></td>
+<td><p>-2.00 and below</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#760005</span></code> <img alt="#760005" src="https://via.placeholder.com/15/760005/000000?text=+" /></p></td>
+<td><p>rgb(118, 0, 5)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Extremely Dry</p></td>
+<td><p>-2.00 to -1.50</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#ec0013</span></code> <img alt="#ec0013" src="https://via.placeholder.com/15/ec0013/000000?text=+" /></p></td>
+<td><p>rgb(236, 0, 19)</p></td>
+</tr>
+<tr class="row-even"><td><p>Severely Dry</p></td>
+<td><p>-1.50 to -1.20</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#ffa938</span></code> <img alt="#ffa938" src="https://via.placeholder.com/15/ffa938/000000?text=+" /></p></td>
+<td><p>rgb(255, 169, 56)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Moderately Dry</p></td>
+<td><p>-1.20 to -0.70</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#fdd28a</span></code> <img alt="#fdd28a" src="https://via.placeholder.com/15/fdd28a/000000?text=+" /></p></td>
+<td><p>rgb(253, 210, 138)</p></td>
+</tr>
+<tr class="row-even"><td><p>Abnormally Dry</p></td>
+<td><p>-0.70 to -0.50</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#fefe53</span></code> <img alt="#fefe53" src="https://via.placeholder.com/15/fefe53/000000?text=+" /></p></td>
+<td><p>rgb(254, 254, 83)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Near Normal</p></td>
+<td><p>-0.50 to +0.50</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#ffffff</span></code> <img alt="#ffffff" src="https://via.placeholder.com/15/ffffff/000000?text=+" /></p></td>
+<td><p>rgb(255, 255, 255)</p></td>
+</tr>
+<tr class="row-even"><td><p>Abnormally Moist</p></td>
+<td><p>+0.50 to +0.70</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#a2fd6e</span></code> <img alt="#a2fd6e" src="https://via.placeholder.com/15/a2fd6e/000000?text=+" /></p></td>
+<td><p>rgb(162, 253, 110)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Moderately Moist</p></td>
+<td><p>+0.70 to +1.20</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#00b44a</span></code> <img alt="#00b44a" src="https://via.placeholder.com/15/00b44a/000000?text=+" /></p></td>
+<td><p>rgb(0, 180, 74)</p></td>
+</tr>
+<tr class="row-even"><td><p>Very Moist</p></td>
+<td><p>+1.20 to +1.50</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#008180</span></code> <img alt="#008180" src="https://via.placeholder.com/15/008180/000000?text=+" /></p></td>
+<td><p>rgb(0, 129, 128)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Extremely Moist</p></td>
+<td><p>+1.50 to +2.00</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#2a23eb</span></code> <img alt="#2a23eb" src="https://via.placeholder.com/15/2a23eb/000000?text=+" /></p></td>
+<td><p>rgb(42, 35, 235)</p></td>
+</tr>
+<tr class="row-even"><td><p>Exceptionally Moist</p></td>
+<td><p>+2.00 and above</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">#a21fec</span></code> <img alt="#a21fec" src="https://via.placeholder.com/15/a21fec/000000?text=+" /></p></td>
+<td><p>rgb(162, 31, 236)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="data-access">
+<h2>Data access<a class="headerlink" href="#data-access" title="Permalink to this headline">#</a></h2>
+<p>Global SPI data available at DEC S3:</p>
+<ol class="simple">
+<li><p>CHIRPS: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate/products/spi-chirps</span></code></p></li>
+<li><p>TerraClimate: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate/products/spi-terraclimate</span></code></p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "bennyistanto/gost-climate",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./indices"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="wet.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Wet Days</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="spei.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Standardized Precipitation-Evapotranspiration Index (SPEI)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Benny Istanto<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

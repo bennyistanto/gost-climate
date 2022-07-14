@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Monthly CHIRPS in GeoTIFF format &#8212; GOST Climate</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/wb_logo_large.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    GOST Climate
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/modis.html">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CLIMATE-INDICES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/dry.html">
+   Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/wet.html">
+   Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spi.html">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p176471-stp.html">
+   Drought in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Fhowto/topic/precipitation-index/monthly-chirps-geotiff.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/edit/main/book/howto/topic/precipitation-index/monthly-chirps-geotiff.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/howto/topic/precipitation-index/monthly-chirps-geotiff.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-chirps-data">
+   Download CHIRPS data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-data-based-on-area-of-interest">
+   Extract data based on area of interest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-geotiffs-to-single-netcdf">
+   Convert GeoTIFFs to single netCDF
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Monthly CHIRPS in GeoTIFF format</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-chirps-data">
+   Download CHIRPS data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-data-based-on-area-of-interest">
+   Extract data based on area of interest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-geotiffs-to-single-netcdf">
+   Convert GeoTIFFs to single netCDF
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="monthly-chirps-in-geotiff-format">
+<h1>Monthly CHIRPS in GeoTIFF format<a class="headerlink" href="#monthly-chirps-in-geotiff-format" title="Permalink to this headline">#</a></h1>
+<p>This section will explain on how to download CHIRPS <a class="reference external" href="https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/">monthly data in GeoTIFF</a> format and prepare it as input for SPI calculation.</p>
+<ul class="simple">
+<li><p>Make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment</p></li>
+</ul>
+<section id="download-chirps-data">
+<h2>Download CHIRPS data<a class="headerlink" href="#download-chirps-data" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">downloads/chirps/geotiff</span></code> folder in the working directory. Download using <code class="docutils literal notranslate"><span class="pre">wget</span></code> all CHIRPS monthly data in GeoTIFF format from January 1981 to May 2022 (this is lot of data ±7GB zipped files, and become 27GB after extraction, please make sure you have bandwidth and unlimited data package). If you doesn’t have <code class="docutils literal notranslate"><span class="pre">wget</span></code>, you can download the data via FTP client with address <code class="docutils literal notranslate"><span class="pre">ftp.chc.ucsb.edu/pub/org/chc/products/CHIRPS-2.0</span></code>.</p></li>
+<li><p>Paste and Enter below script in your Terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">URL</span><span class="o">=</span><span class="s1">&#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/&#39;</span><span class="p">;</span> curl <span class="s2">&quot;</span><span class="nv">$URL</span><span class="s2">&quot;</span> <span class="p">|</span> grep -E <span class="s1">&#39;a href=&#39;</span> <span class="p">|</span> perl -pe <span class="s1">&#39;s|.*href=&quot;(.*?)&quot;.*|\1|&#39;</span> <span class="p">|</span> <span class="o">{</span> <span class="k">while</span> <span class="nb">read</span> -r f<span class="p">;</span> <span class="k">do</span> wget <span class="s2">&quot;</span><span class="nv">$URL</span><span class="s2">&quot;</span>/<span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">done</span> <span class="o">}</span>
+</pre></div>
+</div>
+<p><img alt="CHIRPS downloadtif" src="../../../_images/pi-chirps-tif-downloads.png" /></p>
+</li>
+<li><p>Gunzip all the downloaded files</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gunzip *.gz
+</pre></div>
+</div>
+<p><img alt="CHIRPS gunzip" src="img/pi-chirps-tif-cgunzip.png" /></p>
+</section>
+<section id="extract-data-based-on-area-of-interest">
+<h2>Extract data based on area of interest<a class="headerlink" href="#extract-data-based-on-area-of-interest" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>Download the Java boundary shapefile <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/subset/java_bnd_chirps_subset.zip">https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/subset/java_bnd_chirps_subset.zip</a>. And save it in <code class="docutils literal notranslate"><span class="pre">subset</span></code> directory then unzip it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use your own boundary in shapefile and use it to clip the rainfall raster data based on your preferred area of interest.</p>
+</div>
+</li>
+<li><p>Still in your <code class="docutils literal notranslate"><span class="pre">geotiff</span></code> directory, Clip your area of interest using Java boundary and save it to <code class="docutils literal notranslate"><span class="pre">input_tif</span></code> directory. I will use <code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code> command from GDAL to clip all GeoTIFF files in a folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>find *.tif<span class="sb">`</span><span class="p">;</span> <span class="k">do</span> gdalwarp --config GDALWARP_IGNORE_BAD_CUTLINE YES -srcnodata NoData -dstnodata -9999 -cutline ../../../subset/java_bnd_chirps_subset.shp -crop_to_cutline <span class="nv">$i</span> ../../../input_tif/java_<span class="nv">$i</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<p><img alt="CHIRPS clip subset" src="../../../_images/pi-chirps-tif-clipsubset.png" /></p>
+<p>If you have limited data connection or lazy to download ±7GB and process ±27GB data, you can get pre-processed clipped data for Java covering Jan 1981 to Dec 2020, with file size ±6.8MB. Link: <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_tif">https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_tif</a></p>
+</li>
+</ul>
+</section>
+<section id="convert-geotiffs-to-single-netcdf">
+<h2>Convert GeoTIFFs to single netCDF<a class="headerlink" href="#convert-geotiffs-to-single-netcdf" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>Download python script/notebook that we use to convert GeoTIFF in a folder to single netCDF, save it to <code class="docutils literal notranslate"><span class="pre">script</span></code> folder.</p>
+<ul class="simple">
+<li><p>Jupyter <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/script/CHIRPS_GeoTIFF_to_single_netCDF.ipynb">notebook</a></p></li>
+<li><p>Python <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/script/chirps_tif2nc.py">script</a></p></li>
+</ul>
+<p>Below is the script</p>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">-------------------------------------------------------------------------------------------------------------</span>
+<span class="sd">Convert CHIRPS GeoTIFF in a folder to single NetCDF file with time dimension enabled that is CF-Compliant</span>
+<span class="sd">http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html</span>
+<span class="sd"> </span>
+<span class="sd">Based on Rich Signell&#39;s answer on StackExchange: https://gis.stackexchange.com/a/70487</span>
+<span class="sd">This script was tested using CHIRPS dekad data. Adjustment is needed if using other timesteps data for CHIRPS</span>
+<span class="sd">NCO (http://nco.sourceforge.net) must be installed before using this script</span>
+<span class="sd"> </span>
+<span class="sd">Modified by</span>
+<span class="sd">Benny Istanto, GOST/DECAT, bistanto@worldbank.org</span>
+<span class="sd">-------------------------------------------------------------------------------------------------------------</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span>
+<span class="kn">import</span> <span class="nn">netCDF4</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">gdal</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s1">&#39;/path/to/directory/java_chirps-v2.0.1981.01.tif&#39;</span><span class="p">)</span> <span class="c1"># Data location</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">()</span>
+<span class="n">nlat</span><span class="p">,</span><span class="n">nlon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">GetGeoTransform</span><span class="p">()</span> <span class="c1">#bbox, interval</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nlon</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nlat</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">basedate</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Create NetCDF file</span>
+<span class="n">nco</span> <span class="o">=</span> <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s1">&#39;java_cli_chirps_1months_1981_2020.nc&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">clobber</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Output name</span>
+
+<span class="c1"># Create dimensions, variables and attributes:</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span><span class="n">nlon</span><span class="p">)</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span><span class="n">nlat</span><span class="p">)</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">timeo</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;f4&#39;</span><span class="p">,(</span><span class="s1">&#39;time&#39;</span><span class="p">))</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;days since 1980-1-1 00:00:00&#39;</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">calendar</span> <span class="o">=</span> <span class="s1">&#39;gregorian&#39;</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;T&#39;</span>
+
+<span class="n">lono</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span><span class="s1">&#39;f4&#39;</span><span class="p">,(</span><span class="s1">&#39;lon&#39;</span><span class="p">))</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_east&#39;</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
+
+<span class="n">lato</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span><span class="s1">&#39;f4&#39;</span><span class="p">,(</span><span class="s1">&#39;lat&#39;</span><span class="p">))</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_north&#39;</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+
+<span class="c1"># Create container variable for CRS: lon/lat WGS84 datum</span>
+<span class="n">crso</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;crs&#39;</span><span class="p">,</span><span class="s1">&#39;i4&#39;</span><span class="p">)</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;Lon/Lat Coords in WGS84&#39;</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">grid_mapping_name</span><span class="o">=</span><span class="s1">&#39;latitude_longitude&#39;</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">longitude_of_prime_meridian</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">semi_major_axis</span> <span class="o">=</span> <span class="mf">6378137.0</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">inverse_flattening</span> <span class="o">=</span> <span class="mf">298.257223563</span>
+
+<span class="c1"># Create float variable for precipitation data, with chunking</span>
+<span class="n">pcpo</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;precip&#39;</span><span class="p">,</span> <span class="s1">&#39;f4&#39;</span><span class="p">,</span>  <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">),</span><span class="n">zlib</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">fill_value</span><span class="o">=-</span><span class="mf">9999.</span><span class="p">)</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;mm&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;convective precipitation rate&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;Climate Hazards group InfraRed Precipitation with Stations&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">time_step</span> <span class="o">=</span> <span class="s1">&#39;month&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">missing_value</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9999.</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lat_min</span> <span class="o">=</span> <span class="o">-</span><span class="mf">8.8</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lat_max</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.05</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lon_min</span> <span class="o">=</span> <span class="mf">105.05</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lon_max</span> <span class="o">=</span> <span class="mf">116.25</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">grid_mapping</span> <span class="o">=</span> <span class="s1">&#39;crs&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">set_auto_maskandscale</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Additional attributes</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">Conventions</span><span class="o">=</span><span class="s1">&#39;CF-1.6&#39;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;CHIRPS v2.0&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">history</span> <span class="o">=</span> <span class="s2">&quot;created by Climate Hazards Group. University of California at Santa Barbara&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;Version 2.0&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="s2">&quot;time variable denotes the first day of the given month.&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">website</span> <span class="o">=</span> <span class="s2">&quot;https://www.chc.ucsb.edu/data/chirps&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">date_created</span> <span class="o">=</span> <span class="s2">&quot;2022-06-01&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">creator_name</span> <span class="o">=</span> <span class="s2">&quot;Benny Istanto&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">creator_email</span> <span class="o">=</span> <span class="s2">&quot;bistanto@worldbank.org&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">institution</span> <span class="o">=</span> <span class="s2">&quot;The World Bank&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="s2">&quot;The data is developed to support regular updating procedure for SPI analysis. This activities will support The World Bank to assess extreme dry and wet periods as part of The World Bank&#39;s Climate Analytics&quot;</span>
+
+<span class="c1"># Write lon,lat</span>
+<span class="n">lono</span><span class="p">[:]</span><span class="o">=</span><span class="n">lon</span>
+<span class="n">lato</span><span class="p">[:]</span><span class="o">=</span><span class="n">lat</span>
+
+<span class="n">pat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;java_chirps-v2.0.[0-9]</span><span class="si">{4}</span><span class="s1">\.[0-9]</span><span class="si">{2}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">itime</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="c1"># Step through data, writing time and data to NetCDF</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;/path/to/directory/&#39;</span><span class="p">):</span>
+    <span class="n">dirs</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span><span class="n">f</span><span class="p">):</span>
+            <span class="c1"># read the time values by parsing the filename</span>
+            <span class="n">year</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">21</span><span class="p">])</span>
+            <span class="n">mon</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">24</span><span class="p">])</span>
+            <span class="n">date</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="n">mon</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+            <span class="n">dtime</span><span class="o">=</span><span class="p">(</span><span class="n">date</span><span class="o">-</span><span class="n">basedate</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mf">86400.</span>
+            <span class="n">timeo</span><span class="p">[</span><span class="n">itime</span><span class="p">]</span><span class="o">=</span><span class="n">dtime</span>
+           <span class="c1"># precipitation</span>
+            <span class="n">pcp_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">pcp_path</span><span class="p">)</span>
+            <span class="n">pcp</span><span class="o">=</span><span class="n">gdal</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">pcp_path</span><span class="p">)</span>
+            <span class="n">a</span><span class="o">=</span><span class="n">pcp</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">()</span>  <span class="c1">#data</span>
+            <span class="n">pcpo</span><span class="p">[</span><span class="n">itime</span><span class="p">,:,:]</span><span class="o">=</span><span class="n">a</span>
+            <span class="n">itime</span><span class="o">=</span><span class="n">itime</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="n">nco</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You MUST adjust the folder location (replace <code class="docutils literal notranslate"><span class="pre">/path/to/directory/</span></code> with yours, example: <code class="docutils literal notranslate"><span class="pre">/Users/benny/Documents/GitHub/gost-climate/book/howto/topic/precipitation-index/exercise/input_tif/java_cli_chirps-v2.0.1981.01.1.tif</span></code>) in line 22 and 102.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If you are using other data source (I assume all the data in WGS84), you need to adjust few code in `chirps_tif2nc.py`:
+
+Line 22: folder location&lt;/br&gt;
+Line 31: start of the date&lt;/br&gt;
+Line 34: output name&lt;/br&gt;
+Line 42: date attribute&lt;/br&gt;
+Line 74-77: bounding box&lt;/br&gt;
+Line 98: output filename structure&lt;/br&gt;
+Line 102: folder location&lt;/br&gt;
+Line 108-110: date character location in a filename&lt;/br&gt;
+</pre></div>
+</div>
+</div>
+<ul>
+<li><p>After everything is set, then you can execute the translation process (choose one or you can try both for learning)</p>
+<ul class="simple">
+<li><p>Using Python in Terminal, navigate to your <code class="docutils literal notranslate"><span class="pre">script</span></code> directory, type</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python tiff2nc.py
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ![CHIRPS python](../../../img/pi-chirps-tif-python.png)
+  
+ Wait for a few moments, you will get the output `java_cli_chirps_1months_1981_2020.nc`. You will find this file inside `input_tif` folder. Move it to `input_nc` folder.
+</pre></div>
+</div>
+<ul>
+<li><p>Using Jupyter, make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment. Access this <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file inside <code class="docutils literal notranslate"><span class="pre">script</span></code> folder by navigate your Terminal to <code class="docutils literal notranslate"><span class="pre">script</span></code> then type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<p><img alt="CHIRPS Terminal Jupyter" src="../../../_images/pi-chirps-tif-terminal-jupyter.png" /></p>
+<p>Navigate to your notebook directory (where you put <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file), run Cell by Cell until completed. Wait for a few moments, you will get the output <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code>.</p>
+<p><img alt="CHIRPS Jupyter Notebook" src="../../../_images/pi-chirps-tif-jupyter-notebook.png" /></p>
+</li>
+</ul>
+</li>
+<li><p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">input_nc</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv java_cli_chirps_1months_1981_2020.nc ../howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc
+</pre></div>
+</div>
+<p><img alt="CHIRPS ncfinal" src="../../../_images/pi-chirps-tif-ncfinal.png" /></p>
+<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder</p>
+<p><img alt="CHIRPS inputnc" src="img/chirps-inputnc.png" /></p>
+</li>
+<li><p>You also can get this data: <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> via this link <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc">https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "bennyistanto/gost-climate",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./howto/topic/precipitation-index"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Benny Istanto<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

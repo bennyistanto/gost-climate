@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Precipitation Index &#8212; GOST Climate</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GRNV20PEN1"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-GRNV20PEN1');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/wb_logo_large.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GOST Climate</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    GOST Climate
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DATA
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chelsa.html">
+   CHELSA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/chirps.html">
+   CHIRPS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/imerg.html">
+   IMERG
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/modis.html">
+   MODIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../data/terraclimate.html">
+   TerraClimate
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CLIMATE-INDICES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cdd.html">
+   Consecutive Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/cwd.html">
+   Consecutive Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/dry.html">
+   Dry Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/wet.html">
+   Wet Days
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spi.html">
+   Standardized Precipitation Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indices/spei.html">
+   Standardized Precipitation-Evapotranspiration Index (SPEI)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CASE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p176471-stp.html">
+   Drought in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177249-sdflagship.html">
+   Climate Change, Urban and Sustainability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../case/p177566-ssd.html">
+   Monitoring dry and wet season in South Sudan
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/issues/new?title=Issue%20on%20page%20%2Fhowto/topic/precipitation-index/background.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/bennyistanto/gost-climate/edit/main/book/howto/topic/precipitation-index/background.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/howto/topic/precipitation-index/background.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculation">
+   Calculation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretation">
+   Interpretation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strengths-and-limitations">
+   Strengths and Limitations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#journal">
+     Journal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Precipitation Index</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculation">
+   Calculation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretation">
+   Interpretation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strengths-and-limitations">
+   Strengths and Limitations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#journal">
+     Journal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#website">
+     Website
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="precipitation-index">
+<h1>Precipitation Index<a class="headerlink" href="#precipitation-index" title="Permalink to this headline">#</a></h1>
+<p>The Standardized Precipitation Index (<a class="reference external" href="https://library.wmo.int/doc_num.php?explnum_id=7768">SPI</a>) is a drought index first developed by T. B. McKee, N.J. Doesken, and J. Kleist and in 1993 (<a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#McKee1993">McKee et al. 1993</a>). The SPI is used for estimating wet or dry condition based on <code class="docutils literal notranslate"><span class="pre">precipitation</span></code> variable. This wet or dry condition can be monitored by the SPI on a variety of time scales from subseasonal to interannual scales.</p>
+<p>The SPI is expressed as standard deviations that the observed precipitation would deviate from the long-term mean, for a normal distribution and fitted probability distribution for the actual precipitation record. Since precipitation is not normally distributed, a transformation is first applied, followed by fitting to a normal distribution.</p>
+<p>The Standardized Precipitation-Evapotranspiration Index (<a class="reference external" href="https://spei.csic.es">SPEI</a>) is an extension of the widely used SPI. The SPEI is designed to take into account both <code class="docutils literal notranslate"><span class="pre">precipitation</span></code> and <code class="docutils literal notranslate"><span class="pre">potential</span> <span class="pre">evapotranspiration</span></code> (PET) in determining drought. Thus, unlike the SPI, the SPEI captures the main impact of increased temperatures on water demand. The SPEI can measure drought severity according to its intensity and duration, and can identify the onset and end of drought episodes. The SPEI allows comparison of drought severity through time and space, since it can be calculated over a wide range of climates, as can the SPI.</p>
+<p>The idea behind the SPEI is to compare the highest possible evapotranspiration (what we call the evaporative demand by the atmosphere) with the current water availability. Thus, precipitation (accumulated over a period of time) in the SPEI stands for the water availability, while ETo stands for the atmospheric water demand.</p>
+<section id="calculation">
+<h2>Calculation<a class="headerlink" href="#calculation" title="Permalink to this headline">#</a></h2>
+<p>The SPI calculation is based on the long-term precipitation record for a particular location and long-term period (longer than 30 years is desirable). The calculation method is comprised of a transformation of one frequency distribution (e.g., gamma) to another frequency distribution (normal, or Gaussian). The first step to calculate SPI is to adequately choose a particular probability distribution (e.g., gamma distribution, incomplete beta distribution (McKee et al. (<a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#McKee1993">1993</a>, <a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#McKee1995">1995</a>)), and Pearson III distribution (Guttman (<a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#Guttman1998">1998</a>, <a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#Guttman1999">1999</a>))) that reliably fits the long-term precipitation time series and conduct fitting to that distribution.</p>
+<p>Gamma distribution has been widely used, as the gamma distribution has been understood as the reliable fit to the precipitation distribution. The fitting can be achieved through the maximum likelihood estimation of the gamma distribution parameters. The percentile value from this probability distribution is then transformed to the corresponding value in the new probability distribution. As a result, the probability that the rainfall is less than or equal to any rainfall amount will be the same as the probability that the new variate is less than or equal to the corresponding value of that rainfall amount. The normal distribution is usually used for this another transformation so that the mean and standard deviation of the SPI for a certain station and long-term period is zero and one, respectively (<a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#Edwards1997">Edwards and McKee 1997</a>).</p>
+<p>The SPEI is really simple to calculate, and is based on the original SPI calculation procedure. The SPI is calculated using monthly precipitation as the input data. The SPEI uses the monthly difference between precipitation and PET. This represents a simple climatic water balance which is calculated at different time scales to obtain the SPEI.</p>
+<p>Positive SPI values indicate wet condition greater than median precipitation, whereas negative values the dry condition less than median precipitation. More detailed description of the steps required to calculate the SPI is provided in <a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#Lloyd2002">Lloyd-Hughes and Saunders (2002)</a>.</p>
+<p>Negative SPEI values represent rainfall deficit and less than median precipitation, and high potential epotranspiration (Dry), starts when the SPEI value is equal or below -1.0. Whereas positive SPEI values indicate rainfall surplus and greater than median precipitation, and low potential epotranspiration (Wet), starts when the SPEI value is equal or above 1.0, and ends when the value becomes negative.</p>
+</section>
+<section id="interpretation">
+<h2>Interpretation<a class="headerlink" href="#interpretation" title="Permalink to this headline">#</a></h2>
+<p>Since the SPI/SPEI values are obtained from the standard normal distribution, the unit of the SPI/SPEI can be “standard deviations”. The following table summarizes the cumulative probabilities for various SPI/SPEI values and possible interpretation of wet (or dry) conditions using the resulting SPI/SPEI values.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>SPI/SPEI</p></th>
+<th class="head"><p>Cumulative Probability</p></th>
+<th class="head"><p>Interpretation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-3.0</p></td>
+<td><p>0.0014</p></td>
+<td><p>Extremely dry</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.5</p></td>
+<td><p>0.0062</p></td>
+<td><p>Extremely dry</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.0</p></td>
+<td><p>0.0228</p></td>
+<td><p>Extremely dry (SPI &lt; -2.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.5</p></td>
+<td><p>0.0668</p></td>
+<td><p>Severly dry (-2.0 &lt; SPI &lt; -1.5)</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.0</p></td>
+<td><p>0.1587</p></td>
+<td><p>Moderately dry (-1.5 &lt; SPI &lt; -1.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.5</p></td>
+<td><p>0.3085</p></td>
+<td><p>Near normal</p></td>
+</tr>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>0.5000</p></td>
+<td><p>Near normal</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.5</p></td>
+<td><p>0.6915</p></td>
+<td><p>Near normal</p></td>
+</tr>
+<tr class="row-even"><td><p>1.0</p></td>
+<td><p>0.8413</p></td>
+<td><p>Moderately wet (1.0 &lt; SPI &lt; 1.5)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.5</p></td>
+<td><p>0.9332</p></td>
+<td><p>Severly wet (1.5 &lt; SPI &lt; 2.0)</p></td>
+</tr>
+<tr class="row-even"><td><p>2.0</p></td>
+<td><p>0.9772</p></td>
+<td><p>Extremely wet (2.0 &lt; SPI)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.5</p></td>
+<td><p>0.9938</p></td>
+<td><p>Extremely wet</p></td>
+</tr>
+<tr class="row-even"><td><p>3.0</p></td>
+<td><p>0.9986</p></td>
+<td><p>Extremely wet</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SPI maps can be interpreted at various time scales. This in turn indicates that the SPI is useful in both short-term and long-term applications. These time scales reflect the impact of drought on the availability of the different water resources. For instance, soil moisture conditions respond to precipitation anomalies on a relatively short scale. Groundwater, streamflow, and reservoir storage reflect the longer-term precipitation anomalies. For these reasons, SPI was originally calculated for 3–, 6–,12–, 24–, and 48–month time scales (<a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html#McKee1993">McKee et al. (1993)</a>). A separate SPI value can be calculated for a selection of time scales, covering the last months (e.g., 3, 6, 12, 24, and 48 months), and ending on the last day of the latest month.</p>
+<p>Source: <a class="reference external" href="https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html">https://gmao.gsfc.nasa.gov/research/subseasonal/atlas/SPI-html/SPI-description.html</a></p>
+<p><img alt="NormalCurve" src="../../../_images/pi-background-normalcurve.png" /></p>
+<p>SPI labels and their relationship to the normal curve. The intensity implied by each label corresponds to the degree of removal from mean conditions (i.e., SPI=0). The percentages printed within the regions bounded by the dashed lines indicate the probability for SPI values to fall within that region only. (Source: <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/standardized-precipitation-index-spi">J. Keyantash</a>)</p>
+</section>
+<section id="strengths-and-limitations">
+<h2>Strengths and Limitations<a class="headerlink" href="#strengths-and-limitations" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Used for estimating meteorological conditions based on precipitation alone.</p></li>
+<li><p>Wet or dry conditions can be monitored on a variety of time scales from sub seasonal to interannual.</p></li>
+<li><p>Can be compared across regions with markedly difference climates.</p></li>
+<li><p>Does not consider the intensity of precipitation and its potential impacts on runoff, streamflow, and water availability.</p></li>
+<li><p>Expressed as the number of standard deviations from the long term mean, for a normally distributed random variable, and fitted probability distribution for the actual precipitation record.</p></li>
+<li><p>SPI values &lt; 1 indicate a condition of drought, the more negative the value the more severe the drought condition. SPI values &gt; +1 indicate wetter conditions compared to a climatology.</p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<p>Expressed as the number of standard deviations from the long-term mean, for a normally distributed random variable, and fitted probability distribution for the actual precipitation record</p>
+<p>SPI values &lt; -1 indicate a condition of drought, the more negative the value the more severe the drought condition. SPI values &gt; +1 indicate wetter conditions compared to a climatology</p>
+<p><a class="reference external" href="https://drought.unl.edu/droughtmonitoring/SPI.aspx">https://drought.unl.edu/droughtmonitoring/SPI.aspx</a></p>
+<ul>
+<li><p>SPI 1-month</p>
+<p>Similar to a map displaying the percent of normal precipitation for a month. Reflects relatively short term conditions. Its application can be related closely with short term soil moisture and crop stress.</p>
+<p><img alt="SPI1" src="../../../_images/pi-background-spi-01.png" /></p>
+</li>
+<li><p>3 month</p>
+<p>Provides a comparison of the precipitation over a specific 3 month period with the precipitation totals from the same 3 month period for all the years included in the historical record. Reflects short and medium term moisture conditions and provides a seasonal estimation of precipitation.</p>
+<p><img alt="SPI3" src="../../../_images/pi-background-spi-02.png" /></p>
+</li>
+<li><p>6 month</p>
+<p>Compares the precipitation for that period with the same 6 month period over the historical record. A 6 month SPI can be very effective in showing the precipitation over distinct seasons and may be associated with anomalous streamflow and reservoir levels.</p>
+<p><img alt="SPI6" src="../../../_images/pi-background-spi-03.png" /></p>
+</li>
+<li><p>9 month</p>
+<p>Provides an indication of precipitation patterns over a medium time scale. SPI values below 1.5 for these time scales are usually a good indication that significant impacts are occurring in agriculture and may be showing up in other sectors as well.</p>
+<p><img alt="SPI9" src="../../../_images/pi-background-spi-04.png" /></p>
+</li>
+<li><p>12 month</p>
+<p>Reflects long term precipitation patterns. Longer SPIs tend toward zero unless a specific trend is taking place. SPIs of these time scales are probably tied to streamflow, reservoir levels, and even groundwater levels at the longer time scales. In some locations of the country, the 12 month SPI is most closely related with the Palmer Index, and the two indices should reflect similar conditions.</p>
+<p><img alt="SPI12" src="../../../_images/pi-background-spi-05.png" /></p>
+</li>
+</ul>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<section id="journal">
+<h3>Journal<a class="headerlink" href="#journal" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Guttman, N. B., 1999: Accepting the Standardized Precipitation Index: A calculation algorithm. J. Amer. Water Resour. Assoc., 35(2), 311-322. <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/standardized-precipitation-index-spi">Link</a></p></li>
+<li><p>Lloyd Hughes, B., and M. A. Saunders, 2002: A drought climatology for Europe. Int. J. Climatol., DOI:10.1002/joc.846 <a class="reference external" href="https://rmets.onlinelibrary.wiley.com/doi/epdf/10.1002/joc.846">Link</a></p></li>
+<li><p>McKee, T.B., N. J. Doesken, and J. Kliest, 1993: The relationship of drought frequency and duration to time scales. In Proceedings of the 8th Conference of Applied Climatology, 17 22 January, Anaheim, CA. American Meterological Society, Boston, MA. 179-18. <a class="reference external" href="https://www.droughtmanagement.info/literature/AMS_Relationship_Drought_Frequency_Duration_Time_Scales_1993.pdf">Link</a></p></li>
+<li><p>Guttman, N. B., 1998: Comparing the Palmer Drought Index and the Standardized Precipitation Index. J. Amer. Water Resources Assoc., 34(1), 113-121.</p></li>
+<li><p>Edwards, D. C., and T. B. McKee, 1997: Characteristics of 20th century drought in the United States at multiple time scales. Climatology Report No. 97-2, Colorado State Univ., Ft. Collins, CO.</p></li>
+<li><p>McKee, T. B., N. J. Doesken, and J. Kleist, 1995: Drought monitoring with multiple time scales. Ninth Conference on Applied Climatology, American Meteorological Society, Jan15-20, 1995, Dallas TX, pp.233-236.</p></li>
+</ul>
+</section>
+<section id="website">
+<h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Keyantash, John &amp; National Center for Atmospheric Research Staff (Eds). “The Climate Data Guide: Standardized Precipitation Index (SPI).” Retrieved from <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/standardized-precipitation-index-spi">https://climatedataguide.ucar.edu/climate-data/standardized-precipitation-index-spi</a></p></li>
+<li><p>National Drought Mitigation Center (NDMC) at the University of Nebraska Lincoln. <a class="reference external" href="https://drought.unl.edu/droughtmonitoring/SPI.aspx">Link</a></p></li>
+<li><p>World Meteorological Organization (WMO), 2012: Standardized Precipitation Index User Guide. <a class="reference external" href="https://library.wmo.int/doc_num.php?explnum_id=7768">Link</a></p></li>
+<li><p>Climate Indices in Python <a class="reference external" href="https://climate-indices.readthedocs.io/en/latest/">https://climate-indices.readthedocs.io/en/latest/</a></p></li>
+<li><p>Climate Engine - <a class="reference external" href="https://app.climateengine.org/climateEngine">https://app.climateengine.org/climateEngine</a></p></li>
+<li><p>NASA ARSET on Application of GPM IMERG Reanalysis for Assessing Extreme Dry and Wet Periods. <a class="reference external" href="https://appliedsciences.nasa.gov/join-mission/training/english/arset-applications-gpm-imerg-reanalysis-assessing-extreme-dry-and-wet">Link</a></p></li>
+<li><p>CHIRPS, Climate Hazard Centre UCSB - <a class="reference external" href="https://chc.ucsb.edu/data/chirps">https://chc.ucsb.edu/data/chirps</a></p></li>
+<li><p>IMERG, Integrated Multi-satellitE Retrievals for GPM - <a class="reference external" href="https://gpm.nasa.gov/data/imerg">https://gpm.nasa.gov/data/imerg</a></p></li>
+<li><p>TerraClimate, Climatology Lab UCMERCED - <a class="reference external" href="https://www.climatologylab.org/terraclimate.html">https://www.climatologylab.org/terraclimate.html</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "bennyistanto/gost-climate",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./howto/topic/precipitation-index"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Benny Istanto<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
