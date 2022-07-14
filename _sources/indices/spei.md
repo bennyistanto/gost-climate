@@ -1,14 +1,14 @@
 # Standardized Precipitation-Evapotranspiration Index (SPEI)
 
-The [SPEI](https://spei.csic.es) is an extension of the widely used SPI. The SPEI is designed to take into account both `precipitation` and `potential evapotranspiration` (PET) in determining drought. Thus, unlike the SPI, the SPEI captures the main impact of increased temperatures on water demand.
+The [SPEI](https://spei.csic.es) is an extension of the widely used SPI. The SPEI is designed to take into account both `precipitation` and `potential evapotranspiration` (PET) in determining drought. Thus, unlike the SPI, the SPEI captures the main impact of increased temperatures on water demand.  
 
-The SPEI can measure drought severity according to its intensity and duration, and can identify the onset and end of drought episodes. The SPEI allows comparison of drought severity through time and space, since it can be calculated over a wide range of climates, as can the SPI. 
+The SPEI can measure drought severity according to its intensity and duration, and can identify the onset and end of drought episodes. The SPEI allows comparison of drought severity through time and space, since it can be calculated over a wide range of climates, as can the SPI.  
 
-The idea behind the SPEI is to compare the highest possible evapotranspiration (what we call the evaporative demand by the atmosphere) with the current water availability. Thus, precipitation (accumulated over a period of time) in the SPEI stands for the water availability, while ETo stands for the atmospheric water demand. 
+The idea behind the SPEI is to compare the highest possible evapotranspiration (what we call the evaporative demand by the atmosphere) with the current water availability. Thus, precipitation (accumulated over a period of time) in the SPEI stands for the water availability, while ETo stands for the atmospheric water demand.  
 
-Negative SPEI values represent rainfall deficit and less than median precipitation, and high potential epotranspiration (Dry), starts when the SPEI value is equal or below -1.0. Whereas positive SPEI values indicate rainfall surplus and greater than median precipitation, and low potential epotranspiration (Wet), starts when the SPEI value is equal or above 1.0, and ends when the value becomes negative.
+Negative SPEI values represent rainfall deficit and less than median precipitation, and high potential epotranspiration (Dry), starts when the SPEI value is equal or below -1.0. Whereas positive SPEI values indicate rainfall surplus and greater than median precipitation, and low potential epotranspiration (Wet), starts when the SPEI value is equal or above 1.0, and ends when the value becomes negative.  
 
-SPEI derived from TerraClimate data
+SPEI derived from TerraClimate data.  
 
 **About the data**
 
@@ -24,7 +24,7 @@ SPEI derived from TerraClimate data
 
 **Symbology**
 
-The threshold and the symbology for the SPEI can follow below color codes and image.
+The threshold and the symbology for the SPEI can follow below color codes and image.  
 
 | Class  | Threshold  | Hex  | RGB  |
 |---|---|---|---|
@@ -42,4 +42,4 @@ The threshold and the symbology for the SPEI can follow below color codes and im
 
 **Data access**
 
-Global SPEI-12 data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/spei-terraclimate`
+Global SPEI-12 data available at DEC S3: `s3://wbgdecinternal-ntl/climate/products/spei-terraclimate`.  

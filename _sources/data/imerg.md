@@ -1,8 +1,8 @@
 # IMERG
 
-The GPM is next-generation of the Tropical Rainfall Measuring Mission (TRMM - https://pmm.nasa.gov/TRMM). Like the TRMM, the GPM mission aims at providing uniformly calibrated precipitation estimates at a quasi-global scale by merging the measurements from its constellation of microwave and IR satellites. All GPM data sets including measurements obtained from each platform (Level 2) are available on the PMM site (https://pmm.nasa.gov/data-access). Among many GPM products, the Multi-satellitE Retrievals for GPM (IMERG) is most interesting to the users since it delivers the ‘best’ precipitation estimates by combining data obtained from all available microwave and infrared (IR) platforms of the GPM satellite constellation. 
+The GPM is next-generation of the Tropical Rainfall Measuring Mission (TRMM - https://pmm.nasa.gov/TRMM). Like the TRMM, the GPM mission aims at providing uniformly calibrated precipitation estimates at a quasi-global scale by merging the measurements from its constellation of microwave and IR satellites. All GPM data sets including measurements obtained from each platform (Level 2) are available on the PMM site (https://pmm.nasa.gov/data-access). Among many GPM products, the Multi-satellitE Retrievals for GPM (IMERG) is most interesting to the users since it delivers the ‘best’ precipitation estimates by combining data obtained from all available microwave and infrared (IR) platforms of the GPM satellite constellation.  
 
-IMERG is adjusted to GPCP monthly climatology zonally to achieve a bias profile that is considered reasonable. Multiple runs for different user requirements for latency and accuracy
+IMERG is adjusted to GPCP monthly climatology zonally to achieve a bias profile that is considered reasonable. Multiple runs for different user requirements for latency and accuracy.  
 
 1. “Early” – 4 hour (example application: flash flooding)
 2. “Late” – 14 hour (crop forecasting)
@@ -45,4 +45,4 @@ Near-real time
 
 **Data access**
 
-IMERG daily data available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/imerg`
+IMERG daily data available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/imerg`.  

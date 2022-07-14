@@ -607,7 +607,7 @@ title="Print to PDF"
 <h1>Monthly CHIRPS in GeoTIFF format<a class="headerlink" href="#monthly-chirps-in-geotiff-format" title="Permalink to this headline">#</a></h1>
 <p>This section will explain on how to download CHIRPS <a class="reference external" href="https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/">monthly data in GeoTIFF</a> format and prepare it as input for SPI calculation.</p>
 <ul class="simple">
-<li><p>Make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment</p></li>
+<li><p>Make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment.</p></li>
 </ul>
 <section id="download-chirps-data">
 <h2>Download CHIRPS data<a class="headerlink" href="#download-chirps-data" title="Permalink to this headline">#</a></h2>
@@ -619,17 +619,18 @@ title="Print to PDF"
 </div>
 <p><img alt="CHIRPS downloadtif" src="../../../_images/pi-chirps-tif-downloads.png" /></p>
 </li>
-<li><p>Gunzip all the downloaded files</p></li>
-</ul>
+<li><p>Gunzip all the downloaded files</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gunzip *.gz
 </pre></div>
 </div>
 <p><img alt="CHIRPS gunzip" src="../../../_images/pi-chirps-tif-gunzip.png" /></p>
+</li>
+</ul>
 </section>
 <section id="extract-data-based-on-area-of-interest">
 <h2>Extract data based on area of interest<a class="headerlink" href="#extract-data-based-on-area-of-interest" title="Permalink to this headline">#</a></h2>
 <ul>
-<li><p>Download the Java boundary shapefile <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/subset/java_bnd_chirps_subset.zip">https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/subset/java_bnd_chirps_subset.zip</a>. And save it in <code class="docutils literal notranslate"><span class="pre">subset</span></code> directory then unzip it.</p>
+<li><p>Download the Java boundary <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/subset/java_bnd_chirps_subset.zip">shapefile</a>. And save it in <code class="docutils literal notranslate"><span class="pre">subset</span></code> directory then unzip it.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can use your own boundary in shapefile and use it to clip the rainfall raster data based on your preferred area of interest.</p>
@@ -653,8 +654,6 @@ title="Print to PDF"
 <li><p>Python <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/script/chirps_tif2nc.py">script</a></p></li>
 </ul>
 <p>Below is the script</p>
-</li>
-</ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">-------------------------------------------------------------------------------------------------------------</span>
@@ -779,52 +778,47 @@ title="Print to PDF"
 <span class="n">nco</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
+</li>
+</ul>
 <p>You MUST adjust the folder location (replace <code class="docutils literal notranslate"><span class="pre">/path/to/directory/</span></code> with yours, example: <code class="docutils literal notranslate"><span class="pre">/Users/benny/Documents/GitHub/gost-climate/book/howto/topic/precipitation-index/exercise/input_tif/java_cli_chirps-v2.0.1981.01.1.tif</span></code>) in line 22 and 102.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If you are using other data source (I assume all the data in WGS84), you need to adjust few code in `chirps_tif2nc.py`:
-
-Line 22: folder location&lt;/br&gt;
-Line 31: start of the date&lt;/br&gt;
-Line 34: output name&lt;/br&gt;
-Line 42: date attribute&lt;/br&gt;
-Line 74-77: bounding box&lt;/br&gt;
-Line 98: output filename structure&lt;/br&gt;
-Line 102: folder location&lt;/br&gt;
-Line 108-110: date character location in a filename&lt;/br&gt;
-</pre></div>
-</div>
+<p>If you are using other data source (I assume all the data in WGS84), you need to adjust few code in <code class="docutils literal notranslate"><span class="pre">chirps_tif2nc.py</span></code>:</p>
+<p>Line 22: folder location</br>
+Line 31: start of the date</br>
+Line 34: output name</br>
+Line 42: date attribute</br>
+Line 74-77: bounding box</br>
+Line 98: output filename structure</br>
+Line 102: folder location</br>
+Line 108-110: date character location in a filename</br></p>
 </div>
 <ul>
-<li><p>After everything is set, then you can execute the translation process (choose one or you can try both for learning)</p>
-<ul class="simple">
-<li><p>Using Python in Terminal, navigate to your <code class="docutils literal notranslate"><span class="pre">script</span></code> directory, type</p></li>
-</ul>
+<li><p>After everything is set, then you can execute the translation process (choose one or you can try both for learning).</p>
+<ul>
+<li><p>Using Python in Terminal, navigate to your <code class="docutils literal notranslate"><span class="pre">script</span></code> directory, type below script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python tiff2nc.py
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ![CHIRPS python](../../../img/pi-chirps-tif-python.png)
-  
- Wait for a few moments, you will get the output `java_cli_chirps_1months_1981_2020.nc`. You will find this file inside `input_tif` folder. Move it to `input_nc` folder.
-</pre></div>
-</div>
-<ul>
-<li><p>Using Jupyter, make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment. Access this <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file inside <code class="docutils literal notranslate"><span class="pre">script</span></code> folder by navigate your Terminal to <code class="docutils literal notranslate"><span class="pre">script</span></code> then type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<p><img alt="CHIRPS python" src="../../../_images/pi-chirps-tif-python.png" /></p>
+<p>Wait for a few moments, you will get the output <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code>. You will find this file inside <code class="docutils literal notranslate"><span class="pre">input_tif</span></code> folder. Move it to <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder.</p>
+</li>
+<li><p>Using Jupyter, make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment. Access this <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file inside <code class="docutils literal notranslate"><span class="pre">script</span></code> folder by navigate your Terminal to <code class="docutils literal notranslate"><span class="pre">script</span></code> then type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>.</p>
 <p><img alt="CHIRPS Terminal Jupyter" src="../../../_images/pi-chirps-tif-terminal-jupyter.png" /></p>
 <p>Navigate to your notebook directory (where you put <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file), run Cell by Cell until completed. Wait for a few moments, you will get the output <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code>.</p>
 <p><img alt="CHIRPS Jupyter Notebook" src="../../../_images/pi-chirps-tif-jupyter-notebook.png" /></p>
 </li>
 </ul>
 </li>
-<li><p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">input_nc</span></code></p>
+<li><p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">input_nc</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv java_cli_chirps_1months_1981_2020.nc ../howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc
 </pre></div>
 </div>
 <p><img alt="CHIRPS ncfinal" src="../../../_images/pi-chirps-tif-ncfinal.png" /></p>
-<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder</p>
+<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder.</p>
 <p><img alt="CHIRPS inputnc" src="../../../_images/pi-chirps-tif-inputnc.png" /></p>
 </li>
-<li><p>You also can get this data: <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> via this link <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc">https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc</a></p></li>
+<li><p>You also can get this data: <code class="docutils literal notranslate"><span class="pre">java_cli_chirps_1months_1981_2020.nc</span></code> via this link on <a class="reference external" href="https://github.com/bennyistanto/gost-climate/tree/main/book/howto/topic/precipitation-index/exercise/input_nc/java_cli_chirps_1months_1981_2020.nc">Github</a>.</p></li>
 </ul>
 </section>
 </section>

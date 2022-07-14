@@ -551,7 +551,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extract-data-based-on-area-of-interest">
-   ## Extract data based on area of interest
+   Extract data based on area of interest
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -585,7 +585,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extract-data-based-on-area-of-interest">
-   ## Extract data based on area of interest
+   Extract data based on area of interest
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -607,32 +607,32 @@ title="Print to PDF"
 <h1>Monthly CHIRPS in netCDF format<a class="headerlink" href="#monthly-chirps-in-netcdf-format" title="Permalink to this headline">#</a></h1>
 <p>This section will explain on how to download CHIRPS <a class="reference external" href="https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/">monthly data in netCDF</a> format and prepare it as input for SPI calculation.</p>
 <ul class="simple">
-<li><p>Make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment</p></li>
+<li><p>Make sure you still inside conda <code class="docutils literal notranslate"><span class="pre">gis</span></code> environment.</p></li>
 </ul>
 <section id="download-chirps-data">
 <h2>Download CHIRPS data<a class="headerlink" href="#download-chirps-data" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">downloads/chirps/netcdf/original</span></code> folder in the working directory. Download using <code class="docutils literal notranslate"><span class="pre">wget</span></code> all CHIRPS dekad data in netCDF format from Jan 1981 to Apr 2021 (this is lot of data ± 6.4GB, please make sure you have bandwidth and unlimited data package). Paste and Enter below script in your Terminal.</p></li>
-</ul>
+<ul>
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">downloads/chirps/netcdf/original</span></code> folder in the working directory. Download using <code class="docutils literal notranslate"><span class="pre">wget</span></code> all CHIRPS dekad data in netCDF format from Jan 1981 to Apr 2021 (this is lot of data ± 6.4GB, please make sure you have bandwidth and unlimited data package). Paste and Enter below script in your Terminal.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -c https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/pi-chirps-nc-v2.0.monthly.nc
 </pre></div>
 </div>
 <p><img alt="CHIRPS downloadnc" src="../../../_images/pi-chirps-nc-downloadnc.png" /></p>
-<ul class="simple">
-<li><p>As an alternative, you can download via ftp client like <a class="reference external" href="https://filezilla-project.org">FileZilla</a>. Below is exampe using ftp client <a class="reference external" href="https://www.panic.com/transmit/">Transmit for Mac</a>.</p></li>
-</ul>
+</li>
+<li><p>As an alternative, you can download via ftp client like <a class="reference external" href="https://filezilla-project.org">FileZilla</a>. Below is exampe using ftp client <a class="reference external" href="https://www.panic.com/transmit/">Transmit for Mac</a>.</p>
 <p><img alt="CHIRPS ftp" src="../../../_images/pi-chirps-nc-ftp.png" /></p>
+</li>
+</ul>
 </section>
 <section id="extract-data-based-on-area-of-interest">
-<h2>## Extract data based on area of interest<a class="headerlink" href="#extract-data-based-on-area-of-interest" title="Permalink to this headline">#</a></h2>
+<h2>Extract data based on area of interest<a class="headerlink" href="#extract-data-based-on-area-of-interest" title="Permalink to this headline">#</a></h2>
 <p>Next step will be extract data using a bounding box based on area of interest.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Below guideline provide example on how to use CDO and NCO to do some data extraction process, you can choose which one is suits you.</p>
 </div>
 <ul>
-<li><p>Crop your area of interest using bounding box.
-Example: Java bounding box with format <code class="docutils literal notranslate"><span class="pre">lon1</span></code>,<code class="docutils literal notranslate"><span class="pre">lon2</span></code>,<code class="docutils literal notranslate"><span class="pre">lat1</span></code>,<code class="docutils literal notranslate"><span class="pre">lat2</span></code> is <code class="docutils literal notranslate"><span class="pre">105.05</span></code>,<code class="docutils literal notranslate"><span class="pre">116.25</span></code>,<code class="docutils literal notranslate"><span class="pre">-8.8</span></code>,<code class="docutils literal notranslate"><span class="pre">-5.05</span></code></p>
+<li><p>Crop your area of interest using bounding box.<br />
+Example: Java bounding box with format <code class="docutils literal notranslate"><span class="pre">lon1</span></code>,<code class="docutils literal notranslate"><span class="pre">lon2</span></code>,<code class="docutils literal notranslate"><span class="pre">lat1</span></code>,<code class="docutils literal notranslate"><span class="pre">lat2</span></code> is <code class="docutils literal notranslate"><span class="pre">105.05</span></code>,<code class="docutils literal notranslate"><span class="pre">116.25</span></code>,<code class="docutils literal notranslate"><span class="pre">-8.8</span></code>,<code class="docutils literal notranslate"><span class="pre">-5.05</span></code>.</p>
 <p>Paste and Enter below code in your Terminal.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -650,11 +650,12 @@ Example: Java bounding box with format <code class="docutils literal notranslate
 </tbody>
 </table>
 </li>
-<li><p>Let’s read header contents of above result. Type and execute below code:</p></li>
-</ul>
+<li><p>Let’s read header contents of above result. Type and execute below code:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h java_chirps-v2.0.monthly.nc
 </pre></div>
 </div>
+</li>
+</ul>
 <p>You will get information (dimension, variables and global attribute) about the data.</p>
 <p><img alt="CHIRPS ncdclip" src="../../../_images/pi-chirps-nc-ncdumpclip.png" /></p>
 </section>
@@ -663,7 +664,7 @@ Example: Java bounding box with format <code class="docutils literal notranslate
 <p>As explain in <a class="reference internal" href="input-data-and-specification.html"><span class="doc std std-doc">Input Data and Specification</span></a>, we can say from above picture there are few variable and attribute that need editing. Let’s do it one-by-one.</p>
 <ul>
 <li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">downloads/chirps/netcdf/clipped</span></code> folder in the working directory.</p></li>
-<li><p>Edit variable name for <code class="docutils literal notranslate"><span class="pre">longitude</span></code> to <code class="docutils literal notranslate"><span class="pre">lon</span></code>, and <code class="docutils literal notranslate"><span class="pre">latitude</span></code> to <code class="docutils literal notranslate"><span class="pre">lat</span></code></p>
+<li><p>Edit variable name for <code class="docutils literal notranslate"><span class="pre">longitude</span></code> to <code class="docutils literal notranslate"><span class="pre">lon</span></code>, and <code class="docutils literal notranslate"><span class="pre">latitude</span></code> to <code class="docutils literal notranslate"><span class="pre">lat</span></code>.</p>
 <p>Paste and Enter below code in your Terminal.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -681,7 +682,7 @@ Example: Java bounding box with format <code class="docutils literal notranslate
 </tbody>
 </table>
 </li>
-<li><p>Edit precipitation unit from <code class="docutils literal notranslate"><span class="pre">mm/month</span></code> to <code class="docutils literal notranslate"><span class="pre">mm</span></code></p>
+<li><p>Edit precipitation unit from <code class="docutils literal notranslate"><span class="pre">mm/month</span></code> to <code class="docutils literal notranslate"><span class="pre">mm</span></code>.</p>
 <p>Paste and Enter below code in your Terminal.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -699,19 +700,20 @@ Example: Java bounding box with format <code class="docutils literal notranslate
 </tbody>
 </table>
 </li>
-<li><p>Let’s read header contents of above result. Type and execute below code:</p></li>
-</ul>
+<li><p>Let’s read header contents of above result. Type and execute below code:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump -h java_chirps-v2.0.monthly_3.nc
 </pre></div>
 </div>
+</li>
+</ul>
 <p>And check the variable name and precipitation unit.</p>
 <p><img alt="CHIRPS editvar" src="../../../_images/pi-chirps-nc-ncdumpvar.png" /></p>
-<p>Once this has completed, the dataset can be used as input to this package for computing SPI. From above picture, some of the precipitation attribute are still wrong: <code class="docutils literal notranslate"><span class="pre">DimensionNames</span></code> and <code class="docutils literal notranslate"><span class="pre">Units</span></code>. We can leave it as is, SPI code will only read <code class="docutils literal notranslate"><span class="pre">units</span></code> and variables <code class="docutils literal notranslate"><span class="pre">precip(time,lat,lon)</span></code></p>
-<p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">java_chirps-v2.0.monthly_3.nc</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> and rename into <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_1981_2020.nc</span></code></p>
+<p>Once this has completed, the dataset can be used as input to this package for computing SPI. From above picture, some of the precipitation attribute are still wrong: <code class="docutils literal notranslate"><span class="pre">DimensionNames</span></code> and <code class="docutils literal notranslate"><span class="pre">Units</span></code>. We can leave it as is, SPI code will only read <code class="docutils literal notranslate"><span class="pre">units</span></code> and variables <code class="docutils literal notranslate"><span class="pre">precip(time,lat,lon)</span></code>.</p>
+<p>As the input data preparation is completed, move the file <code class="docutils literal notranslate"><span class="pre">java_chirps-v2.0.monthly_3.nc</span></code> to main folder <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> and rename into <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_1981_2020.nc</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv java_chirps-v2.0.monthly_3.nc ../../../../input_nc/java_cli_imerg_1months_2000_2020.nc
 </pre></div>
 </div>
-<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_1981_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder</p>
+<p>Make sure the file <code class="docutils literal notranslate"><span class="pre">java_cli_imerg_1months_1981_2020.nc</span></code> is available at <code class="docutils literal notranslate"><span class="pre">input_nc</span></code> folder.</p>
 </section>
 </section>
 
