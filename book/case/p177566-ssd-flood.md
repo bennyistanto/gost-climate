@@ -8,13 +8,14 @@ The team are utilizing SPI based on CHIRPS global precipitation estimates data t
 
 Picture below are some of the example, the worst flooding in 60 years in South Sudan are well captured through the data.  
 
+``````{admonition} Disclaimer
+:class: dropdown
+Country borders or names do not necessarily reflect the World Bank Group's official position. This map is for illustrative purposes and does not imply the expression of any opinion on the part of the World Bank, concerning the legal status of any country or territory or concerning the delimitation of frontiers or boundaries.  
+``````
 1. SPI-12 as of July 2020. A screenshot map from Panoply Data Viewer software.  
 
 	![spi12-maps](../img/case-P177566-panoplymap.png)
 
-	```{admonition} Disclaimer
-	Country borders or names do not necessarily reflect the World Bank Group's official position. This map is for illustrative purposes and does not imply the expression of any opinion on the part of the World Bank, concerning the legal status of any country or territory or concerning the delimitation of frontiers or boundaries.  
-	```
   
 2. SPI-12 average information for the country from 1981 - 2021.  
 
