@@ -50,12 +50,11 @@ parts:
       
       - file: howto/topic/temperature-analysis/index
         sections: 
-        - file: howto/topic/temperature-analysis/background
-        - file: howto/topic/temperature-analysis/chelsa-near-surface-air-temperature
-        - file: howto/topic/temperature-analysis/modis-land-surface-temperature
+        - file: howto/topic/temperature-analysis/heatwave-index
 
   - caption: CASE
     chapters:
     - file: case/p176471-stp-drought
+    - file: case/p177189-pic-pacific-observatory
     - file: case/p177249-sdflagship
     - file: case/p177566-ssd-flood
