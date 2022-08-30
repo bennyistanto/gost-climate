@@ -23,7 +23,7 @@ Country borders or names do not necessarily reflect the World Bank Group's offic
 
 Climate variability directly influences many aspects of food and nutrition security, particularly food availability and access. Variation in rainfall is a common element of many natural disasters – droughts, floods, typhoons and tsunamis – and is influenced by global, regional and/or local factors. 
 
-Global climate factors including El Niño-Southern Oscillation (ENSO); regional factors include the Madden-Julian oscillation, West Pacific Gradient (WPG) and fluctuations in the sea surface temperature (SST) of the Pacific Ocean; and local factors can include elevation, island position, the circulation of land and sea breezes, and land cover.
+Global climate factors including El Niño-Southern Oscillation (ENSO); regional factors include the Madden-Julian Oscillation, West Pacific Gradient (WPG) and fluctuations in the sea surface temperature (SST) of the Pacific Ocean; and local factors can include elevation, island position, the circulation of land and sea breezes, and land cover.
 
 The level of climate risk is measured based on the strength of ENSO signal on rainfall variability using correlation analysis. This approach is applied because production loss of food crops in Southeast Asia and the Pacific is closely associated with the ENSO phenomena. El Nino years is normally associated with drought years, while La-Nina is often related to wet years which can cause flood hazards. The correlation analysis is applied to monthly rainfall anomaly and sea surface temperature anomaly in NINO region.
 
@@ -283,10 +283,10 @@ This can be a basis for the projection of crop yield changes. [Elisabeth Vogel e
 
 ![future-projection](../img/case-P177189-futureprojection.png)
 
-Figure 19. PNG Projections: Annual number of days with heat index > 35oC, Anomaly of precipitation, and Anomaly of Tmax in 2040 – 2059.[1]
+Figure 19. PNG Projections: Annual number of days with heat index > 35oC, Anomaly of precipitation, and Anomaly of Tmax in 2040 – 2059.[^1]
 
 The maps are based on Shared Socioeconomic Pathways [(SSPs)](https://en.wikipedia.org/wiki/Shared_Socioeconomic_Pathways) Scenario 8.5 (worst scenario) for the period 2040 - 2059.
 
 This data allow us to identify relevant adaptation measure or longterm agriculture development plan.
 
-[1] Reference period: 1995 – 2014. Source: https://climateknowledgeportal.worldbank.org/country/papua-new-guinea/climate-data-projections
+[^1] Reference period: 1995 – 2014. Source: https://climateknowledgeportal.worldbank.org/country/papua-new-guinea/climate-data-projections

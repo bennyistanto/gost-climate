@@ -31,7 +31,7 @@ DD derived from IMERG data.
 The threshold and the symbology for the DD can follow below color codes and image.  
 
 | Threshold  | Hex  | RGB  |
-|---|---|---|---|
+|---|---|---|
 | <50  | `#ffffd4` ![#ffffd4](https://via.placeholder.com/15/ffffd4/000000?text=+)  | rgb(255,255,212)  |
 | 51 - 100  | `#fed98e` ![#fed98e](https://via.placeholder.com/15/fed98e/000000?text=+)  | rgb(254,217,142)  |
 | 101 - 150  | `#fe9929` ![#fe9929](https://via.placeholder.com/15/fe9929/000000?text=+)  | rgb(254,153,41)  |
