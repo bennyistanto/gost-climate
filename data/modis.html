@@ -326,6 +326,23 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../howto/topic/temperature-analysis/index.html">
+     Temperature analysis
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../howto/topic/temperature-analysis/heatwave-index.html">
+       Heat wave duration index (HWDI) based on daily temperature data
+      </a>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
 </ul>
@@ -336,8 +353,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../case/p176471-stp.html">
+  <a class="reference internal" href="../case/p176471-stp-drought.html">
    Drought in São Tomé and Príncipe
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../case/p177189-pic-pacific-observatory.html">
+   Climate and Agriculture Monitoring in the Pacific Island Countries
   </a>
  </li>
  <li class="toctree-l1">
@@ -346,7 +368,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../case/p177566-ssd.html">
+  <a class="reference internal" href="../case/p177566-ssd-flood.html">
    Monitoring dry and wet season in South Sudan
   </a>
  </li>
@@ -552,9 +574,12 @@ title="Print to PDF"
 <p>There are so many MODIS products, complete list ara available here <a class="reference external" href="https://modis.gsfc.nasa.gov/data/dataprod/">https://modis.gsfc.nasa.gov/data/dataprod/</a>.</p>
 <ul>
 <li><p><strong>MOD11A1</strong></p>
-<p>The MOD11A1 V6 product provides daily land surface temperature (LST) and emissivity values in a 1200 x 1200 kilometer grid. The temperature value is derived from the MOD11_L2 swath product. Above 30 degrees latitude, some pixels may have multiple observations where the criteria for clear-sky are met. When this occurs, the pixel value is the average of all qualifying observations. Provided along with both the day-time and night-time surface temperature bands and their quality indicator layers are MODIS bands 31 and 32 and six observation layers.</p>
-<p><img alt="modis" src="../_images/data-modis.png" /></p>
-<p><strong>About the data</strong></p>
+<p>The MOD11A1 V6 product provides daily land surface temperature (LST) and emissivity values in a 1200 x 1200 kilometer grid. The temperature value is derived from the MOD11_L2 swath product. Above 30 degrees latitude, some pixels may have multiple observations where the criteria for clear-sky are met. When this occurs, the pixel value is the average of all qualifying observations. Provided along with both the day-time and night-time surface temperature bands and their quality indicator layers are MODIS bands 31 and 32 and six observation layers.<br>
+<br>
+<img alt="modis" src="../_images/data-modis.png" /><br>
+<br>
+<strong>About the data</strong><br>
+<br></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Characteristic</p></th>
@@ -583,155 +608,148 @@ title="Print to PDF"
 <tr class="row-even"><td><p>Unit</p></td>
 <td><p>See list below</p></td>
 </tr>
-</tbody>
-</table>
-<p><strong>List datasets</strong></p>
-<p>We are utilising Google Earth Engine (<a class="reference external" href="https://earthengine.google.com">GEE</a>) to get <a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD11A1#bands">MOD11A1</a> data, and below are list of MOD11A1 bands that available at GEE.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Units</p></th>
-<th class="head"><p>Scale</p></th>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
 </tr>
-</thead>
-<tbody>
+<tr class="row-even"><td><p><strong>List datasets</strong><br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>We are utilising Google Earth Engine (<a class="reference external" href="https://earthengine.google.com">GEE</a>) to get <a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD11A1#bands">MOD11A1</a> data, and below are list of MOD11A1 bands that available at GEE.<br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>—</p></td>
+</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LST_Day_1km</span></code></p></td>
 <td><p>Daytime Land Surface Temperature</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Kelvin</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.02</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">QC_Day</span></code></p></td>
 <td><p>Daytime LST Quality Indicators</p></td>
-<td><p></p></td>
-<td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Day_view_time</span></code></p></td>
 <td><p>Local time of day observation</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.1</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Day_view_angle</span></code></p></td>
 <td><p>View zenith angle of day observation</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Degrees</span></code></p></td>
-<td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LST_Night_1km</span></code></p></td>
 <td><p>Nighttime Land Surface Temperature</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Kelvin</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.02</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">QC_Night</span></code></p></td>
 <td><p>Nighttime LST Quality Indicators</p></td>
-<td><p></p></td>
-<td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Night_view_time</span></code></p></td>
 <td><p>Local time of night observation</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.1</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Night_view_angle</span></code></p></td>
 <td><p>View zenith angle of night observation</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Degrees</span></code></p></td>
-<td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Emis_31</span></code></p></td>
 <td><p>Band 31 emissivity</p></td>
-<td><p></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.002</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Emis_32</span></code></p></td>
 <td><p>Band 32 emissivity</p></td>
-<td><p></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.002</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Clear_day_cov</span></code></p></td>
 <td><p>Day clear-sky coverage</p></td>
-<td><p></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.0005</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Clear_night_cov</span></code></p></td>
 <td><p>Night clear-sky coverage</p></td>
+</tr>
+<tr class="row-even"><td><p><br></p></td>
 <td><p></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">0.0005</span></code></p></td>
 </tr>
-</tbody>
-</table>
-<p>We wrote a GEE <a class="reference external" href="https://code.earthengine.google.com/c8733dbad095ad6e5b259142e9d882e7">code</a> to get some variables that required by the team for different purposes. Currently we have data covering Indonesia and Latin America Countries, and the variables are listed below:</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Variables</p></th>
-<th class="head"><p>Units</p></th>
+<tr class="row-odd"><td><p>We wrote a GEE <a class="reference external" href="https://code.earthengine.google.com/c8733dbad095ad6e5b259142e9d882e7">code</a> to get some variables that required by the team for different purposes. Currently we have data covering Indonesia and Latin America Countries, and the variables are listed below:<br></p></td>
+<td><p></p></td>
 </tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Annual 24h mean LST</p></td>
+<tr class="row-even"><td><p><br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Variables</p></td>
+<td><p>Units</p></td>
+</tr>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-odd"><td><p>Annual 24h mean LST</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">degC</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Annual daytime mean LST</p></td>
+<tr class="row-even"><td><p>Annual daytime mean LST</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">degC</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>Number of annual hotdays based on 24h mean daily LST</p></td>
+<tr class="row-odd"><td><p>Number of annual hotdays based on 24h mean daily LST</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">days</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Number of annual hotdays based on daytime daily LST</p></td>
+<tr class="row-even"><td><p>Number of annual hotdays based on daytime daily LST</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">days</span></code></p></td>
 </tr>
-</tbody>
-</table>
-<p><strong>Symbology</strong></p>
-<p>The threshold and the symbology for the <code class="docutils literal notranslate"><span class="pre">daily</span></code> land surface temperature in degree celcius (°C) can follow below colorcodes and image.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Class</p></th>
-<th class="head"><p>Hex</p></th>
-<th class="head"><p>RGB</p></th>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
 </tr>
-</thead>
-<tbody>
+<tr class="row-even"><td><p><strong>Symbology</strong><br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>The threshold and the symbology for the <code class="docutils literal notranslate"><span class="pre">daily</span></code> land surface temperature in degree celcius (°C) can follow below colorcodes and image.<br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Class</p></td>
+<td><p>Hex</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>—</p></td>
+</tr>
 <tr class="row-even"><td><p>-40 and below</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#b2182b</span></code> <img alt="#b2182b" src="https://via.placeholder.com/15/b2182b/000000?text=+" /></p></td>
-<td><p>rgb(178, 24, 43)</p></td>
 </tr>
 <tr class="row-odd"><td><p>-40 to -30</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#d6604d</span></code> <img alt="#d6604d" src="https://via.placeholder.com/15/d6604d/000000?text=+" /></p></td>
-<td><p>rgb(214, 96, 77)</p></td>
 </tr>
 <tr class="row-even"><td><p>-30 to -20</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#f4a582</span></code> <img alt="#f4a582" src="https://via.placeholder.com/15/f4a582/000000?text=+" /></p></td>
-<td><p>rgb(244, 165, 130)</p></td>
 </tr>
 <tr class="row-odd"><td><p>-20 to -10</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#fddbc7</span></code> <img alt="#fddbc7" src="https://via.placeholder.com/15/fddbc7/000000?text=+" /></p></td>
-<td><p>rgb(253, 219, 199)</p></td>
 </tr>
 <tr class="row-even"><td><p>-10 to +10</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#f7f7f7</span></code> <img alt="#f7f7f7" src="https://via.placeholder.com/15/f7f7f7/000000?text=+" /></p></td>
-<td><p>rgb(247, 247, 247)</p></td>
 </tr>
 <tr class="row-odd"><td><p>+10 to +20</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#d1e5f0</span></code> <img alt="#d1e5f0" src="https://via.placeholder.com/15/d1e5f0/000000?text=+" /></p></td>
-<td><p>rgb(209, 229, 240)</p></td>
 </tr>
 <tr class="row-even"><td><p>+20 to +30</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#92c5de</span></code> <img alt="#92c5de" src="https://via.placeholder.com/15/92c5de/000000?text=+" /></p></td>
-<td><p>rgb(146, 197, 222)</p></td>
 </tr>
 <tr class="row-odd"><td><p>+30 to +40</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#4393c3</span></code> <img alt="#4393c3" src="https://via.placeholder.com/15/4393c3/000000?text=+" /></p></td>
-<td><p>rgb(67, 147, 195)</p></td>
 </tr>
 <tr class="row-even"><td><p>+40 and above</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">#2166ac</span></code> <img alt="#2166ac" src="https://via.placeholder.com/15/2166ac/000000?text=+" /></p></td>
-<td><p>rgb(33, 102, 172)</p></td>
+</tr>
+<tr class="row-odd"><td><p><br></p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 </li>
 </ul>
-<p><strong>Data access</strong></p>
-<p>Annual temperature and hotdays also available at DEC S3: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate/data/modis/mod11a1/annual</span></code>.</p>
+<p><strong>Data access</strong><br>
+<br>
+Annual temperature and hotdays also available at DEC S3: <code class="docutils literal notranslate"><span class="pre">s3://wbgdecinternal-ntl/climate/data/modis/mod11a1/annual</span></code>.</p>
 </section>
 
     <script type="text/x-thebe-config">

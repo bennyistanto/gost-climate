@@ -6,12 +6,12 @@ There are so many MODIS products, complete list ara available here [https://modi
 
 * **MOD11A1**
 
-	The MOD11A1 V6 product provides daily land surface temperature (LST) and emissivity values in a 1200 x 1200 kilometer grid. The temperature value is derived from the MOD11_L2 swath product. Above 30 degrees latitude, some pixels may have multiple observations where the criteria for clear-sky are met. When this occurs, the pixel value is the average of all qualifying observations. Provided along with both the day-time and night-time surface temperature bands and their quality indicator layers are MODIS bands 31 and 32 and six observation layers.  
-
-	![modis](../img/data-modis.png)
-
-	**About the data**
-
+	The MOD11A1 V6 product provides daily land surface temperature (LST) and emissivity values in a 1200 x 1200 kilometer grid. The temperature value is derived from the MOD11_L2 swath product. Above 30 degrees latitude, some pixels may have multiple observations where the criteria for clear-sky are met. When this occurs, the pixel value is the average of all qualifying observations. Provided along with both the day-time and night-time surface temperature bands and their quality indicator layers are MODIS bands 31 and 32 and six observation layers.<br>
+	<br>
+	![modis](../img/data-modis.png)<br>
+	<br>
+	**About the data**<br>
+	<br>
 	| Characteristic  | Description  |
 	|---|---|
 	| Function  | Displays daily day and nighttime LST  |
@@ -21,11 +21,11 @@ There are so many MODIS products, complete list ara available here [https://modi
 	| Temporal resolution  | daily  |
 	| Original format  | HDF-EOS  |
 	| Unit  | See list below  |
-
-	**List datasets**
-
-	We are utilising Google Earth Engine ([GEE](https://earthengine.google.com)) to get [MOD11A1](https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD11A1#bands) data, and below are list of MOD11A1 bands that available at GEE.  
-
+	<br>
+	**List datasets**<br>
+	<br>
+	We are utilising Google Earth Engine ([GEE](https://earthengine.google.com)) to get [MOD11A1](https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD11A1#bands) data, and below are list of MOD11A1 bands that available at GEE.<br>  
+	<br>
 	| Name  | Description  | Units | Scale |
 	|---|---|---|---|
 	| `LST_Day_1km`  | Daytime Land Surface Temperature  | `Kelvin` | `0.02` |
@@ -40,20 +40,20 @@ There are so many MODIS products, complete list ara available here [https://modi
 	| `Emis_32`  | Band 32 emissivity  |  | `0.002` |
 	| `Clear_day_cov`  | Day clear-sky coverage  |  | `0.0005` |
 	| `Clear_night_cov`  | Night clear-sky coverage  |  | `0.0005` |
-
-	We wrote a GEE [code](https://code.earthengine.google.com/c8733dbad095ad6e5b259142e9d882e7) to get some variables that required by the team for different purposes. Currently we have data covering Indonesia and Latin America Countries, and the variables are listed below:
-
+	<br>
+	We wrote a GEE [code](https://code.earthengine.google.com/c8733dbad095ad6e5b259142e9d882e7) to get some variables that required by the team for different purposes. Currently we have data covering Indonesia and Latin America Countries, and the variables are listed below:<br>
+	<br>
 	| Variables  | Units |
 	|---|---|
 	| Annual 24h mean LST  | `degC` |
 	| Annual daytime mean LST  | `degC` |
 	| Number of annual hotdays based on 24h mean daily LST  | `days` |
 	| Number of annual hotdays based on daytime daily LST  | `days` |
-
-	**Symbology**
-
-	The threshold and the symbology for the `daily` land surface temperature in degree celcius (°C) can follow below colorcodes and image.  
-
+	<br>
+	**Symbology**<br>
+	<br>
+	The threshold and the symbology for the `daily` land surface temperature in degree celcius (°C) can follow below colorcodes and image.<br>  
+	<br>
 	| Class  | Hex  | RGB  |
 	|---|---|---|
 	| -40 and below  | `#b2182b` ![#b2182b](https://via.placeholder.com/15/b2182b/000000?text=+) | rgb(178, 24, 43)  |
@@ -65,7 +65,7 @@ There are so many MODIS products, complete list ara available here [https://modi
 	| +20 to +30  | `#92c5de` ![#92c5de](https://via.placeholder.com/15/92c5de/000000?text=+)  | rgb(146, 197, 222)  |
 	| +30 to +40  | `#4393c3` ![#4393c3](https://via.placeholder.com/15/4393c3/000000?text=+)  | rgb(67, 147, 195)  |
 	| +40 and above  | `#2166ac` ![#2166ac](https://via.placeholder.com/15/2166ac/000000?text=+)  | rgb(33, 102, 172)  |
-
-**Data access**
-
+	<br>
+**Data access**<br>
+<br>
 Annual temperature and hotdays also available at DEC S3: `s3://wbgdecinternal-ntl/climate/data/modis/mod11a1/annual`.  
