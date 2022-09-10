@@ -2,22 +2,16 @@
 
 Project: [PACIFIC OBSERVATORY (P177189)](https://operationsportal.worldbank.org/secure/P177189/home). 
 
-Weather conditions and climate variations have profound impacts on agriculture, water resources and on the socioeconomic opportunities and adaptations of a region. The purpose of this activity is to thoroughly monitor the climate of the Pacific Island Countries (PIC) to show how it affects both irrigated and dryland agriculture. 
+Weather conditions and climate variations have profound impacts on agriculture, water resources and on the socioeconomic opportunities and adaptations of a region. Populations in the Pacific Island Countries (PIC) are at disproportionately higher risk of adverse consequences from global warming. Current impacts include increasing droughts and water scarcity, coastal flooding and erosion, and changes in rainfall that affect food production (IPCC 2018). At the same time, there is wealth of underutilized satellite data that can be useful to monitor climate events and provide insights for better preparedness and mitigation strategies. 
 
-Through collaborative efforts, we will be better able to prepare for and address the challenges of a changing environment. By knowing past and current climate conditions, local and regional climate variability and how current conditions compare to the past, we help assess current and future water supplies, agricultural production, and other natural resources. 
+Climate indices with high resolution have long been very limited, for example Standardized Precipitation Evapotranspiration Index (SPEI) only available at 0.5 deg (~ 55 km) resolution for global coverage. This often leave small island countries like Pacific not captured well. Since 2014, a number of high gridded climate have been produced. GOST team is able to calculate climate indices with spatial resolution ranging from 11 to 4 km. It is interesting to unlock access to climate datasets and investigate how the changing climate is affecting irrigated and dryland agriculture in the Pacific Island Countries (PICs) via this activity. 
 
-Weather and climate effects not only agriculture but recreation, transportation, energy supply and demand and many aspects of resource management. Climate information is important for short and long range planning, operational decision making, development of adaptive infrastructure and the management of climate-sensitive risks. Through diverse means of climate monitoring and many channels of information delivery, this activity will help the citizens of PIC see and understand how climate affects their lives and livelihoods.
+Climate data is a critical resource to help us prepare for and address the challenges of a changing environment. Through a better understanding of past climate conditions, local and regional climate variability and how current conditions compare to the past, we can assess the status of water supplies, agricultural production, and other natural resources.
 
-These following example mostly use low to medium spatial resolution Earth Observation (EO) data for monitoring hydro-meteorological condition and growing seasons (food access, availability and utilizations).
+Weather and climate affect not only agriculture but recreation, transportation, energy supply and demand, and many aspects of resource management. Climate information is important for short- and long-term planning, operational decision making, development of adaptive infrastructure and the management of climate-sensitive risks. Through diverse means of climate monitoring and multiple channels of information delivery, this activity will help the citizens of PIC see and understand how climate affects their livelihoods.
 
-- Food access: there are market accessibility that usually affected by extreme events which will hindering the transportation.
+These following examples use low to medium spatial resolution Earth Observation (EO) data to monitor hydro-meteorological condition and growing seasons.
 
-- Food availability: we can get information on cultivation and harvested areas, utilization for domestic consumption or else. 
-
-``````{admonition} Disclaimer
-:class: dropdown
-Country borders or names do not necessarily reflect the World Bank Group's official position. This map is for illustrative purposes and does not imply the expression of any opinion on the part of the World Bank, concerning the legal status of any country or territory or concerning the delimitation of frontiers or boundaries.
-``````
 
 ## Climate Variability
 
@@ -25,9 +19,17 @@ Climate variability directly influences many aspects of food and nutrition secur
 
 Global climate factors including El Niño-Southern Oscillation (ENSO); regional factors include the Madden-Julian Oscillation, West Pacific Gradient (WPG) and fluctuations in the sea surface temperature (SST) of the Pacific Ocean; and local factors can include elevation, island position, the circulation of land and sea breezes, and land cover.
 
-The level of climate risk is measured based on the strength of ENSO signal on rainfall variability using correlation analysis. This approach is applied because production loss of food crops in Southeast Asia and the Pacific is closely associated with the ENSO phenomena. El Nino years is normally associated with drought years, while La-Nina is often related to wet years which can cause flood hazards. The correlation analysis is applied to monthly rainfall anomaly and sea surface temperature anomaly in NINO region.
+The level of climate risk is measured based on the strength of ENSO signal on rainfall variability using correlation analysis. This approach is applied because production loss of food crops in Southeast Asia and the Pacific is closely associated with the ENSO phenomena (Naylor et al, [2001](https://doi.org/10.1023/A:1010662115348) , [2007](http://dx.doi.org/10.1073/pnas.0701825104)). Anderson ([2018](https://doi.org/10.1016/j.agrformet.2018.07.023))  specifically indicates ENSO poses risks to crop production in greater [Pacific Basin region](https://en.wikipedia.org/wiki/Pacific_Rim). El Nino years is normally associated with drought years, while La-Nina is often related to wet years which can cause flood hazards. The correlation analysis is applied to monthly rainfall anomaly and sea surface temperature anomaly in in the in four NINO regions along the equator:
+* Niño 1 (80°-90°W and 5°-10°S)
+* Niño 2 (80°-90°W and 0°-5°S)
+* Niño 3 (90°-150°W and 5°N-5°S)
+* Niño 4 (150°-160°E and 5°N-5°S)
 
-The NINO region is optimal for monitoring ENSO and its impacts, while the WPG is measured as the difference in SST between the NINO4 region and the West Pacific region. When the WP is warm during La Nina events, the changes accross the globe can be extreme.
+![nino](../img/case-P177189-ninoregion.png)
+
+**Figure 1.** NINO regions. Source: https://www.weather.gov/jetstream/enso
+
+The NINO region is optimal for monitoring ENSO and its impacts, while the WPG is measured as the difference in SST between the NINO4 region and the West Pacific region. When the WP is warm during La Nina events, the changes across the globe can be extreme.
 
 Simple regression applied to indicate the correlation between rainfall anomaly in each area to anomaly of SST in the Pacific Ocean which represent ENSO signals.
 
@@ -35,44 +37,45 @@ Simple regression applied to indicate the correlation between rainfall anomaly i
 
 ![nino34](../img/case-P177189-pci-precip-sst.png)
 
-Figure 1. General sensitivity of rainfall to SST changes in NINO3.4 region
+**Figure 2.** General sensitivity of rainfall to SST changes in NINO3.4 region
 
-Slope map shows the changes in monthly rainfall likely to result from a 1°C change in SST. The map demonstrates the change in rainfall associated with a one degree rise in SST in NINO-3.4 region. Dark blue areas represent more than 50mm increase in monthly rainfall.
+Slope map shows the changes in monthly rainfall likely to result from a 1°C change in SST. The map demonstrates the change in rainfall associated with a one degree decrease in SST in NINO-3.4 region. Red highlighted areas on the map such as Tuvalu, Kiribati, Nauru, and partly New Britain and Bougainville Island of PNG would be severely affected or experience >=10 - 50 mm below normal rainfall in the respective month by 1°C change in SST. In contrast, dark blue highlighted areas would experience >50mm higher monthly rainfall.
 
-ENSO signals used to be the key indicators for agriculture production in some areas. However negative impacts of the signals to production have been reduced with a wide range of adaptations like improvement of irrigation facilities, innovations of drought/flood tolerant variety, etc.
-
-However, the signals remain helpful for hydro-meteorological disasters forecast.
+ENSO signals used to be the key indicators for agriculture production in some areas. However negative impacts of the signals to production have been reduced with a wide range of adaptations like improvement of irrigation facilities, innovations of drought/flood crop tolerant varieties. Still, the signals remain helpful for hydro-meteorological disasters forecast.
 
 
 ## Climate Monitoring
 
 This involves data of near real-time monitoring of satellite derived precipitation, temperature, evapotranspiration and vegetation indexes. The analysis allows early detection of water stress conditions of vegetation and monitoring of derived phenological parameters.
 
-Now let’s talk about how we can utilize EO data to do climate monitoring for different time period.  
-1. Monthly seasonal, for planning and scenario development
-2. Daily and forecast, for early warning, disaster preparedness and response, and seasonal planning
+Now let’s talk about how we can utilize EO data to do climate monitoring for different time period.
+1. Monthly seasonal, for planning and scenario development.
+2. Daily and forecast, for early warning, disaster preparedness and response, and seasonal planning.
+3. Forecast, for early warning early action, and seasonal planning.
 
 ### Monthly and Seasonal
 
-Standardized Precipitation-Evapotranspiration Index (SPEI) as one of proxy to measure dry and wet condition that related to soil moisture (agriculture). 
+The Standardized Precipitation-Evapotranspiration Index (SPEI) is an established indicator to detect, monitor, and analyze droughts. The SPEI considers how various climate indicators (precipitation, evapotranspiration, temperature) relate to normal conditions and can be calculated according to different temporal scales. The multi-scalar character of this indicator makes it a suitable proxy to identify dry and wet conditions related to soil moisture, which can have significant impacts on agriculture. 
 
 ![spei-wet](../img/case-P177189-png-spei-wet.png)
 
-Figure 2. Wet condition
+**Figure 3.** Wet condition
 
-Country averages, Papua New Guinea is wet in the last 20 years, but ENSO signal striking a dry period during 2015-2016.
+Figure 3 and Figure 4 indicate total area (in percentage) of a country or admin boundary that experience certain category of SPEI (dryness or wetness) monthly. For example, the above Figure informed that on Dec 2020 there were more than 75% of the country experienced wetness, only about 10% are under normal condition, and 25% of the area were exceptionally wet.
+
+When considering country averages, Papua New Guinea has been considered wet in the last 20 years, but ENSO signal strikes a significant dry period during 2015-2016.
 
 ![spei-dry](../img/case-P177189-png-spei-dry.png)
 
-Figure 3. Dry condition
+**Figure 4.** Dry condition
 
-This chart still related with previous one (ENSO signal, but this is more useful for seasonal or longer time frame. Like slow onset disasters monitoring. We can learn how the dry or wet situation are evolving month-by-month, year-by-year.
+Showing the inverse of Figure 3, Figure 4 indicates months with dryer than usual climate for example during the strong El Nino of 2015-2016. These figures are interlinked with Figure 1 and provide the information of ENSO signal. Compared to Figure 2, these figures provide more explicit seasonal pattern or time frame. Like slow onset disasters monitoring. We can learn how the dry or wet situation are evolving month-by-month, year-by-year.
 
-Still related with seasonal or longer time frame. below map is comparing situation in 2 different periods, Dec 2015 for Strong El Nino and Dec 2020 for Moderate La Nina.
+The map below compares the SPEI monthly indicator in two different periods: December 2015 for Strong El Nino and December 2020 for Moderate La Nina.
 
 ![spei-wet](../img/case-P177189-png-spei-maps.png)
 
-Figure 4. SPEI 12-months
+**Figure 5.** SPEI 12-months
 
 Long-term historical information is a key for us to understand what happened in the past and see climate variabilities in the areas.
 60-years SPEI data is available to better understand and captures the main impact of increased temperatures on water demand.
@@ -80,60 +83,71 @@ Long-term historical information is a key for us to understand what happened in 
 
 ### Daily
 
-Next is daily extreme rainfall based on satellite precipitation estimates, as an example on how we utilized daily weather data to produce early warning and for disaster response.
+This section explores daily extreme rainfall based on satellite precipitation estimates. Our objective here is to showcase how we can utilize daily weather data to inform early warning systems and disaster response policies.
 
 ![extreme-rain](../img/case-P177189-png-extreme-rain.png)
 
-Figure 5. Extreme rainfall
+**Figure 6.** Extreme rainfall
 
-There are at least five application of this information
+There are at least five questions that can be explored with this type of data:
 1. Availability monitoring and forecast data on daily extreme rainfall is important to support early warning and anticipatory actions.
-2. Will it trigger a landslide too?
+2. Will it trigger a landslide?
 3. Which transportation network will be affected?
 4. How many population and cropland will be affected by extreme rainfall in the next 3 days?
 5. Which area is in early planting and will be damaged?
 
-Other dailiy indices will be meteorological drought based on maximum of consecutive dry days, in its simplest form be described by a lack of precipitation.
+Another high-frequency indicator of meteorological is maximum consecutive dry days (CDD). In its simplest form, this index can be described by a lack of precipitation (number of consecutive days with < 1 mm of rain). CDD is updated on daily basis and can serve as an effective measure of extreme events and seasonal droughts.
 
 ![max-cdd](../img/case-P177189-fiji-max-cdd.png)
 
-Figure 6. Maximum consecutive dry days in 2021
+**Figure 7.** Maximum consecutive dry days in 2021
 
 ### Forecast
 
+[Subseasonal forecasts](http://iridl.ldeo.columbia.edu/maproom/Global/ForecastsS2S/index.html) and [Seasonal forecast](http://iridl.ldeo.columbia.edu/maproom/Global/Forecasts/index.html) of precipitation and temperature are coming from International Research Institute (IRI) of Columbia University. 
+
+The forecasts may allow delivering relevant information about key climate characteristics such as the timing of the onset of a rainy season for agriculture, the risk of extreme rainfall events or heat waves in regard to public health. 
+
+Color scales are colors indicating that the distribution of the forecast tends towards drier (shades of brown) or wetter (shades of blue) conditions than normal (moccasin).
+
 1.	Short-term/Sub-seasonal Forecast: Optimum planting/harvest potential
 
-	Historical records of planting in combination with temperature and rainfall forecasts are helpful to draw a recommendation on optimum planting/harvest potential. Once we have the weather forecast during the 2nd/3rd planting season, we can analyse the type of crops (main or other secondary crops) to grow optimally.
+	Sub-seasonal forecasts are known to focus on prediction of key variables such as temperature or precipitation at weekly up to 1 month interval.
 
 	![subx-precip](../img/case-P177189-subx-precip.png)
 
-	Figure 7. Sub-seasonal Forecast Precipitation
+	**Figure 8.** Sub-seasonal Forecast Precipitation. Source: IRI
+
+	Historical records of planting in combination with temperature and rainfall forecasts are helpful to draw a recommendation on optimum planting/harvest potential. Weather forecasts released during the 2nd or 3rd planting season allow us to plan optimum yield, meaning that we can identify what type of crops (main or secondary crops) grow optimally for the forecasted precipitation level, which area can and cannot grow secondary crops, distribution of seeds, and other relevant planning.
 
 	![subx-temp](../img/case-P177189-subx-temp.png)
 
-	Figure 8. Sub-seasonal Forecast Temperature
+	**Figure 9.** Sub-seasonal Forecast Temperature. Source: IRI
 
 2.	Seasonal Forecast: Opportunities during climate extreme events
 
-	Seasonal forecast provides prediction of weather (rainfall) throughout the season. In combination with sub-seasonal forecasts, such information is necessary for improving the Planting Index and optimising harvested areas. As an example, if a certain planted area is damaged by flood/drought, we are able to better plan replantation programs by taking into account the information from long-term forecasts. If the rainfall in the longer term allows, replantation programs can be initiated.
+	Seasonal forecasts provides longer interval compared to sub-seasonal forecasts, it usually available up to 7 months. Accuracy of sub-seasonal forecast is slightly higher than seasonal as is is predicting less far into the future. It is scientifically challenging to maintain accuracy level at longer timeframe.
 
 	![seasonal-precip](../img/case-P177189-seasonal-precip.png)
 
-	Figure 9. Seasonal Forecast Precipitation
+	**Figure 10.** Seasonal Forecast Precipitation. Source: IRI
 
+	Seasonal forecast provides prediction of weather (rainfall) throughout the season. In combination with sub-seasonal forecasts, such information is necessary for improving the Planting Index and optimising harvested areas. As an example, if a certain planted area is damaged by flood/drought, we are able to better plan replantation programs by taking into account the information from long-term forecasts. If the rainfall in the longer term allows, replantation programs can be initiated.
+	
 	![seasonal-temp](../img/case-P177189-seasonal-temp.png)
 
-	Figure 10. Seasonal Forecast Temperature
+	**Figure 11.** Seasonal Forecast Temperature. Source: IRI
 
 
 ### Cyclone Season
+
+Currently we only have historical cyclones track. Yet, this informed us if certain areas are vulnerable to agriculture production loss due to extreme rainfall caused by cyclones. The following parts of this section provide description of cyclones occur in Pacific and their timeline passing Southern and Western Pacific Ocean. 
 
 Traditionally, areas of tropical cyclone formation are divided into seven basins. These include the north Atlantic Ocean, the eastern and western parts of the northern Pacific Ocean, the southwestern Pacific, the southwestern and southeastern Indian Oceans, and the northern Indian Ocean (Arabian Sea and the Bay of Bengal). 
 
 ![tc-regions](../img/case-P177189-tc-regions.png)
 
-Figure 11. Tropical cyclone centers and regions. 
-Source: https://en.wikipedia.org/wiki/File:Tropical_Cyclone_Centers_and_Regions.png 
+**Figure 12.** Tropical cyclone centers and regions. Source: https://en.wikipedia.org/wiki/File:Tropical_Cyclone_Centers_and_Regions.png 
 
 1. Western Pacific Ocean
 
@@ -141,8 +155,7 @@ Source: https://en.wikipedia.org/wiki/File:Tropical_Cyclone_Centers_and_Regions.
 
 	![tc-north](../img/case-P177189-pci-tc-north.jpeg)
 
-	Figure 12. Tracks of all tropical cyclones in the northwestern Pacific Ocean between 1980 and 2005. The vertical line to the right is the International Date Line.
-	Source: https://en.wikipedia.org/wiki/Tropical_cyclone_basins
+	**Figure 13.** Tracks of all tropical cyclones in the northwestern Pacific Ocean between 1980 and 2005. The vertical line to the right is the International Date Line. Source: https://en.wikipedia.org/wiki/Tropical_cyclone_basins
 
 2. South Pacific Ocean
 
@@ -150,15 +163,13 @@ Source: https://en.wikipedia.org/wiki/File:Tropical_Cyclone_Centers_and_Regions.
 
 	![tc-south](../img/case-P177189-pci-tc-south.jpeg)
 
-	Figure 13. Tracks of all tropical cyclones in the southwestern Pacific Ocean between 1980 and 2005
-	Source: https://en.wikipedia.org/wiki/Tropical_cyclone_basins
+	**Figure 14.** Tracks of all tropical cyclones in the southwestern Pacific Ocean between 1980 and 2005. Source: https://en.wikipedia.org/wiki/Tropical_cyclone_basins
 
 The below picture indicates that during December to May cyclone events occur mostly in South Pacific Ocean, and from June to December most cyclone events happen in West Pacific Ocean.
 
 ![tc-2019](../img/case-P177189-tc-2019.png)
 
-Figure 14. Tropical cyclone happen in 2019. 
-Source: https://upload.wikimedia.org/wikipedia/en/timeline/4dea2f730b024e57a1db72e8dc62f515.png 
+**Figure 15.** Tropical cyclone happen in 2019. Source: https://upload.wikimedia.org/wikipedia/en/timeline/4dea2f730b024e57a1db72e8dc62f515.png 
 
 ## Agriculture Monitoring
 
@@ -166,48 +177,48 @@ Climate and vegetation data sourced from remote sensing satellites (earth observ
 
 These data provide useful information for:
 
-- Providing early warning when climate shocks occur against food security.
+1. Providing early warning when climate shocks occur against food security.
 
-- Contextual analysis (food security analysis:food access, availability and utilizations) needed for planning interventions, for example: market operations when crop scarcity occurs. 
+2. Contextual analysis (food security analysis:food access, availability and utilizations) needed for planning interventions, for example: market operations when crop scarcity occurs. 
 
-	- Food access: market accessibility, extreme events (disaster, war)  hindering the transportation
+	* Food access: market accessibility, extreme events (disaster, war)  hindering the transportation
 
-	- Food availability: cultivation and harvested areas, utilization for domestic consumption or else.
+	* Food availability: cultivation and harvested areas, utilization for domestic consumption or else.
 
-- Availability of cropland area for spring crop planting possibly damaged during conflict will help the team to assess the social, poverty, and economic impacts of climate change.
+3. Availability of cropland area for spring crop planting possibly damaged during conflict will help the team to assess the social, poverty, and economic impacts of climate change.
 
 
 ### Ideal remote sensing data characteristics for vegetation monitoring
 
 Operational data production – routinely produce the same data products at a set time interval.
 
-- Example: production a vegetation condition map each month.
+* Example: production a vegetation condition map each month.
 
 Anomaly, Percent of Normal, Change, or Ranking Maps
 
-- Provide historical context of how current conditions compare to the historical conditions for a specific location and time during the year.
+* Provide historical context of how current conditions compare to the historical conditions for a specific location and time during the year.
 
-- Easier to differentiate moderate, severe, and extreme drought events.
+* Easier to differentiate moderate, severe, and extreme drought events.
 
 Data easily accessible and in multiple formats
 
-- Digital data in analysis using GIS and computers
+* Digital data in analysis using GIS and computers
 
-- Graphical maps that can be downloaded and printed for visual analysis
+* Graphical maps that can be downloaded and printed for visual analysis
 
 ### Vegetation Index
 
 The Enhanced Vegetation Index (EVI) is an 'optimized' index designed to enhance the vegetation signal with improved sensitivity in high biomass regions and improved vegetation monitoring through a de-coupling of the canopy background signal and a reduction in atmosphere influences. 
 
-Whereas the Normalized Difference Vegetation Index (NDVI) is chlorophyll sensitive, the EVI is more responsive to canopy structural variations, including leaf area index (LAI), canopy type, plant physiognomy, and canopy architecture.
-
 ![EVI](../img/case-P177189-evi-2021.png)
 
-Figure 15. MODIS EVI, 2021
+**Figure 16.** MODIS EVI, 2021
+
+Whereas the Normalized Difference Vegetation Index (NDVI) is chlorophyll sensitive, the EVI is more responsive to canopy structural variations, including leaf area index (LAI), canopy type, plant physiognomy, and canopy architecture.
 
 ![NDVI](../img/case-P177189-ndvi-2021.png)
 
-Figure 16. MODIS NDVI, 2021
+**Figure 17.** MODIS NDVI, 2021
 
 
 ### Methodology
@@ -218,13 +229,13 @@ For this example, we use MODIS MOD13Q1 data, available at 250m spatial resolutio
 
 ![TIMESAT-gs](../img/case-P177189-growing-season.png)
 
-Figure 17. Growing season
+**Figure 18.** Growing season
 
-State of planting and harvesting estimates were determined by importing Vegetation Indices (VI) data into TIMESAT (http://web.nateko.lu.se/timesat/timesat.asp) – a program for analyzing time-series satellite sensor data. TIMESAT conducts pixel-by-pixel classification of satellite images to determine whether planting has started or not. This process was followed for all of areas over multiple years in order to evaluate current planting vis-à-vis historical years from 2003 - 2021 (case using MODIS VI).
+State of planting and harvesting estimates were determined by importing Vegetation Indices (VI) data into [TIMESAT](http://web.nateko.lu.se/timesat/timesat.asp) – a program for analyzing time-series satellite sensor data. TIMESAT conducts pixel-by-pixel classification of satellite images to determine whether planting has started or not. This process was followed for all of areas over multiple years in order to evaluate current planting vis-à-vis historical years from 2003 - 2021 (case using MODIS VI).
 
 ![TIMESAT](../img/case-P177189-timesat-parameters.png)
 
-Figure 18. TIMESAT Parameters
+**Figure 19.** TIMESAT Parameters
 
 Some of the seasonality parameters generated in TIMESAT: (a) beginning of season, (b) end of season, (c) length of season, (d) base value, (e) time of middle of season, (f) maximum value, (g) amplitude, (h) small integrated value, (h+i) large integrated value.
 
@@ -238,15 +249,15 @@ These phenological parameters are related to the seasonal vegetation productivit
 
 Information on the onset of planting seasons (and harvest time) are relevant for decision makers like to see.
 
-![TIMESAT](../img/case-P177189-timesat-sos.png)
+![TIMESAT-sos](../img/case-P177189-timesat-sos.png)
 
-Figure 19. Beginning of Season.
+**Figure 20.** Beginning of Season.
 
 The map informs us on the crop planting status.
 
 1. How's the crop planting progress?
 2. How many districts are behind in planting?
-	- This is also will trigger another question, if there is a delay in some district, should government do planting acceleration?
+	* This is also will trigger another question, if there is a delay in some district, should government do planting acceleration?
 3. How many hectares crop area that available for next planting?
 4. Are the current harvest enough for domestic consumption?
 
@@ -262,15 +273,15 @@ Other potential analysis is also related with the mitigation and adaptation of a
 
 ### Limitations and Assumptions
 
-- Getting VI data with good quality for all period are challenging (pixels covered with cloud, snow/ice, aerosol quantity, shadow) for optic data (MODIS). Radar VI is a good alternative for this.
+* Getting VI data with good quality for all period are challenging (pixels covered with cloud, snow/ice, aerosol quantity, shadow) for optic data (MODIS). Radar VI is a good alternative for this.
 
-- Cultivated area year by year are varies, due to MODIS data quality.
+* The analysis of cultivated area year by year are varies, due to MODIS data quality.
 
-- Crop type is not described, so the seasonal parameters are for general cropland.
+* Crop type is not described, so the seasonal parameters are for general cropland.
 
-- This value may not represent for smaller cropland. 
+* This value may not represent for smaller cropland. 
 
-- Presented result are only based on publicly available data on the internet.
+* Presented result are only based on publicly available data on the internet.
 
 
 ## Future Projections
@@ -279,14 +290,19 @@ This section is about the future climate projection and it's impact on agricultu
 
 The WBG Climate Change Knowledge Portal [CCKP](https://climateknowledgeportal.worldbank.org/country/papua-new-guinea) provide projections of Annual number of days with Heat Index >35°C, Anomaly of Precipitation, and Anomaly of Maximum Temperature.
 
-This can be a basis for the projection of crop yield changes. [Elisabeth Vogel et al. (2019)](https://iopscience.iop.org/article/10.1088/1748-9326/ab154b) identified sensitivity of maize, soybeans, spring wheat, and rice to warm day frequency and cold night frequency. [Easterling, W. E. et al. (2007)](https://pubs.giss.nasa.gov/docs/2007/2007_Easterling_ea01000b.pdf) studied cereals, wheat, and rice sensitivity to 1°C increase of temperature in different latitude. Changes in short-term temperature extremes can also be critical, if they coincide with key stages of development. [Wheeler et al. (2000)](https://www.sciencedirect.com/science/article/abs/pii/S0167880900002243?via%3Dihub) identified only a few days of extreme temperature (greater that 32°C) at the flowering stage of many crops can drastically reduce yield
+This can be a basis for the projection of crop yield changes. Elisabeth Vogel et al. ([2019](https://iopscience.iop.org/article/10.1088/1748-9326/ab154b)) identified sensitivity of maize, soybeans, spring wheat, and rice to warm day frequency and cold night frequency. Easterling, W. E. et al. ([2007](https://pubs.giss.nasa.gov/docs/2007/2007_Easterling_ea01000b.pdf)) studied cereals, wheat, and rice sensitivity to 1°C increase of temperature in different latitude. Changes in short-term temperature extremes can also be critical, if they coincide with key stages of development. Wheeler et al. ([2000](https://www.sciencedirect.com/science/article/abs/pii/S0167880900002243?via%3Dihub)) identified only a few days of extreme temperature (greater that 32°C) at the flowering stage of many crops can drastically reduce yield
 
 ![future-projection](../img/case-P177189-futureprojection.png)
 
-Figure 19. PNG Projections: Annual number of days with heat index > 35oC, Anomaly of precipitation, and Anomaly of Tmax in 2040 – 2059.[^1]
+**Figure 21.** PNG Projections: Annual number of days with heat index > 35oC, Anomaly of precipitation, and Anomaly of Tmax in 2040 – 2059.[^1]
 
 The maps are based on Shared Socioeconomic Pathways [(SSPs)](https://en.wikipedia.org/wiki/Shared_Socioeconomic_Pathways) Scenario 8.5 (worst scenario) for the period 2040 - 2059.
 
 This data allow us to identify relevant adaptation measure or longterm agriculture development plan.
 
-[^1] Reference period: 1995 – 2014. Source: https://climateknowledgeportal.worldbank.org/country/papua-new-guinea/climate-data-projections
+``````{admonition} Map Disclaimer
+:class: dropdown
+Country borders or names do not necessarily reflect the World Bank Group's official position. This map is for illustrative purposes and does not imply the expression of any opinion on the part of the World Bank, concerning the legal status of any country or territory or concerning the delimitation of frontiers or boundaries.
+``````
+
+[^1]: Reference period: 1995 – 2014. Source: https://climateknowledgeportal.worldbank.org/country/papua-new-guinea/climate-data-projections
