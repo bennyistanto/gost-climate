@@ -25,7 +25,7 @@ The level of climate risk is measured based on the strength of ENSO signal on ra
 * Niño 3 (90°-150°W and 5°N-5°S)
 * Niño 4 (150°-160°E and 5°N-5°S)
 
-![nino](../img/case-P177189-ninoregion.png)
+![nino](../img/case-P177189-ninoregion.jpeg)
 
 **Figure 1.** NINO regions. Source: https://www.weather.gov/jetstream/enso
 
